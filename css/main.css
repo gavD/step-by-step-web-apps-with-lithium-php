@@ -158,3 +158,16 @@ a:visited { color: #a0a; }
 .post pre.terminal code {
   background-color: #333;
 }
+
+
+blockquote {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #CCC;
+    border: #333 1px outset;
+
+}
+
+img {
+    max-width: 100%;
+}
