@@ -3,8 +3,6 @@ layout: post
 title:  "Getting started"
 ---
 
-# Getting started
-
 OK, so we know what we're going to build! Roughly. Well, we know what we want to get out of it, anyway.
 
 I guess to get started we'd better get Lithium installed... Before that, though, make sure you have PHP installed and a web server - I generally use Nginx but Lithium has instructions for plenty of servers.

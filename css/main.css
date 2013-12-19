@@ -171,3 +171,13 @@ blockquote {
 img {
     max-width: 100%;
 }
+
+h2 {
+    padding-top: 20px;
+}
+
+#nav {
+    position: fixed;
+    left: 5px;
+    top: 5px;
+}
