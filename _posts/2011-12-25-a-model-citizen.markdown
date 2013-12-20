@@ -11,7 +11,7 @@ So, your models, they're generally the things that model the real world - the th
 > Models are tasked with providing meaning to otherwise raw and unprocessed data (e.g.
 > user profile).
 
-- From the [Lithium source code](https://github.com/UnionOfRAD/lithium/blob/master/data/Model.php) (which is marvellously well documented!)
+_From the [Lithium source code](https://github.com/UnionOfRAD/lithium/blob/master/data/Model.php) (which is marvellously well documented!)_
 
 # Schemas
 
