@@ -114,4 +114,8 @@ This should render something like:
 
 ![Here's one I made earlier]({{ site.url }}/assets/layout.png)
 
-Right, we have a homepage, we have Bootstrap, now we can start building interactivity...
+# Why was this so cool?
+
+Well, we've set up a route, very quickly, and we have a working site, and we didn't have to edit 1023 YAML files (or, worse still, XML!) to accomplish this! Now, of course, up until this point we could have achieved the same with static HTML, or even Post-It notes and crayons! Lithium offers us so much more though...
+
+We have a homepage, we have Bootstrap, now we can start building interactivity... On to the next!
