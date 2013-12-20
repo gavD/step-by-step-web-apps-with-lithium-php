@@ -47,3 +47,8 @@ Apply this to the confusing bit about routes:
 15:51 <gavin__> Yeah I'm with you
 
 </pre>
+
+
+TODO:
+Running the quality tests
+Running tests from CLI
