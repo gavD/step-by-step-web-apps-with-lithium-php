@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Fixing the template"
+title:  "Testing the controller"
 ---
 
 Well it's not BROKEN exactly, but our template has a "Homepage" link but NOT a "Rolodex" link, so if we  click on "Homepage" we can come unstuck!
