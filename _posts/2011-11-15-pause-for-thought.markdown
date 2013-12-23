@@ -19,14 +19,12 @@ The controller at app/controllers/StaffController.php is pretty much the same as
 
 {% highlight php %}
 <?php
-
-// ...
+	// ...
 	public function index() {
 		$staffs = Staff::all();
 		return compact('staffs');
 	}
-// ...
-
+	// ...
 {% endhighlight %}
 
 This pulls out ALL the staff. Notice that it uses the Staff model and makes a **static method call** to all(). If you've tried Doctrine, Hibernate or another ORM (Object-Relational Mapper), you'll be a bit familiar with these concepts. Lithium's model is quite straightforward - it's got static methods for all the data retrieval operations.
@@ -39,14 +37,12 @@ The [compact function](http://www.php.net/compact) is documented on PHP.Net. A l
 
 {% highlight php %}
 <?php
-
-// ...
+	// ...
 	public function view($id) {
-        $staff = Staff::first($id);
+		$staff = Staff::first($id);
 		return compact('staff');
 	}
-// ...
-
+	// ...
 {% endhighlight %}
 
 This is similar, except a single member of staff is pulled out by ID. Lithium is smart enough to know the auto incremented primary key field "id" is the one to use. This member of staff is returned and sent off to the view. We're not going to go into huge detail on the request lifecycle (this is more a "how to" than a "how it does things"), but you can read more about this in the [Lithium manual section on handling HTTP requests](http://lithify.me/docs/manual/handling-http-requests/).

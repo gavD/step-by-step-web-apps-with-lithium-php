@@ -13,14 +13,14 @@ namespace app\models;
 
 class Staff extends \lithium\data\Model {
 	public $validates = array(
-        'department' => array(
-            array(
-                'notEmpty',
-                'required' => true,
-                'message' => 'Please let us know what department this person works in.'
-            )
-        )
-    );
+		'department' => array(
+			array(
+				'notEmpty',
+				'required' => true,
+				'message' => 'Please let us know what department this person works in.'
+			)
+		)
+	);
 {% endhighlight %}
 
 Now, we're going to modify app/views/staff/add.html.php and add some error output:

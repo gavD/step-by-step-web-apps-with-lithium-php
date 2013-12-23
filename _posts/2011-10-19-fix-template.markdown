@@ -11,16 +11,16 @@ Anyway, open up app/views/layouts/default.html.php and find the navbar HTML:
 
 {% highlight php %}
 ...
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <ul class="nav nav-pills pull-right">
-                    <li><a href="<?= $this->url(array('Home::index')); ?>">Homepage</a></li>
-                    <li><a href="<?= $this->url(array('Staff::index')); ?>">Staff</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav nav-pills pull-right">
+					<li><a href="<?= $this->url(array('Home::index')); ?>">Homepage</a></li>
+					<li><a href="<?= $this->url(array('Staff::index')); ?>">Staff</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 ...
 
 {% endhighlight %}

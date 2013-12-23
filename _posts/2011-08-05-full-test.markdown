@@ -3,10 +3,65 @@ layout: post
 title:  "Full test"
 ---
 
-We're going to do a full implementation of testing:
+We're going to do a full test that checks that user input actually goes through the controller. I'll quit my jibber jabber and simply show the relevant code:
 
-* List users
-* View user
-* Add user
+{% highlight php %}
+<?php
+namespace app\tests\cases\controllers;
 
-TODO routes.php does not get included in TEST
+use app\controllers\StaffController;
+use lithium\action\Request;
+use app\models\Staff;
+use li3_fixtures\test\Fixtures;
+use lithium\net\http\Router;
+
+class StaffControllerTest extends \lithium\test\Integration {
+	public function setUp() {
+		Fixtures::config(array(
+			'db' => array(
+				'adapter' => 'Connection',
+				'connection' => 'test',
+				'fixtures' => array(
+					'staff' => 'app\tests\fixture\StaffFixture',
+				)
+			)
+		));
+		Fixtures::save('db');
+
+		Router::connect('/{:controller}/{:action}/{:args}');
+	}
+
+	public function tearDown() {
+		Fixtures::clear('db');
+	}
+
+    // ...
+
+	public function testAdd() {
+		$this->assertEqual(2, count(Staff::all()));
+		$request = new Request();
+		$request->data = array(
+			'name' => 'Brand new user'
+		);
+		$controller = new StaffController(array('request' => $request));
+		/* @var $response \lithium\action\Response */
+		$response = $controller->add();
+		$this->assertEqual(302, $response->status['code']);
+		$this->assertEqual(3, count(Staff::all()));
+	}
+	// ...
+}
+?>
+{% endhighlight %}
+
+app/config/routes.php does not get included in TEST - tests are isolated so they don't know about routes. Therefore: Notice that we included:
+
+    Router::connect('/{:controller}/{:action}/{:args}');
+
+This is because of the aforementioned issue whereby test doesn't include the whole environment, but runs everything in isolation (which is actually desirable so you can target tests). There may well be a better way of testing controllers than what I've done here, but this works for me! Feel free to send me a correction if you have a better way of doing this!
+
+Notice that we run a couple of counts to make sure the new Staff member has been created:
+
+    $this->assertEqual(2, count(Staff::all()));
+
+Well, that's a test that a user, using the controller, can actually create a Staff entry.
