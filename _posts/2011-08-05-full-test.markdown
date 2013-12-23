@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Full test"
+---
+
+We're going to do a full implementation of testing:
+
+* List users
+* View user
+* Add user
+
+TODO routes.php does not get included in TEST

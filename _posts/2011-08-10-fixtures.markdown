@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Fixtures"
+title:  "Super pro testing with fixtures"
 ---
 
 We made some progress with testing, but really, we need to be able to write to and read from a database. For that, we're going to use **fixtures**. Fixtures are a way of setting the system up with some mock data, where we know exactly what said data is and it's the same every time, so we can make our assertions against that.
