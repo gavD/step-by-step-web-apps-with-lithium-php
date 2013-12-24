@@ -42,6 +42,7 @@ Feel free to skip this bit if you know this bit! There aren't any good jokes in 
 
 MVC is a way of organising an application (we call it a "design pattern" because it's a common pattern in software design to organise code this way). It separates code into Model (the data gubbins and all the thinky-worky bits), View (the pretty-looky HTML and so forth that displays the model) and Controller (the thing that sends information to and from models and plonks said information into views for display).
 
-MVC is very common in web applications and Lithium works well with this pattern right out of the box. It's a metaphorical box, not an actual box
+MVC is very common in web applications and Lithium works well with this pattern right out of the box (not a real box).
 
-TODO include diagram here
+![My crummy MVC diagram]({{ site.url }}/assets/mvc.png)
+

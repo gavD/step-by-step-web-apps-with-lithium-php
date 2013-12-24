@@ -3,7 +3,7 @@ layout: post
 title:  "Getting started"
 ---
 
-OK, so we know what we're going to build! Roughly. Well, we know what we want to get out of it, anyway.
+OK, so we know what Lithium is and what we're going to build with it! Roughly. Well, we know what we want to get out of it, anyway.
 
 I guess to get started we'd better get Lithium installed... Before that, though, make sure you have PHP installed and a web server - I generally use Nginx but Lithium has instructions for plenty of servers.
 
@@ -15,7 +15,7 @@ We'll start with the sample app and go from there! Check out [Union of Rad's Fra
 
 ## Here's how I did it
 
-This section is just how I set it up. This is not "documentation", this is just what I did, it's better to read lithify.me/docs/manual and follow their guide, but I'm including my gubbins for reference.
+This section is just how I set it up. This is not "documentation", this is just what I did, it's better to read [lithify.me/docs/manual](http://lithify.me/docs/manual) and follow their guide, but I'm including my gubbins for reference.
 
 Open a terminal and run:
 
