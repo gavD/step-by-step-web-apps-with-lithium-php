@@ -3,9 +3,9 @@ layout: post
 title:  "There's no place like home"
 ---
 
-"There's no place like home, there's no place like home" I used to mutter to myself as rain lashed down at scout camp... Well actually that's not strictly true, I loved camping until I went to Glastonbury in 2003 and got mild heat stroke. Still, most web applications need a homepage!
+"There's no place like home, there's no place like home" I used to mutter to myself as rain lashed down at scout camp... Well actually that's not strictly true, I loved camping until I went to Glastonbury in 2003 and got mild heat stroke... Still, most web applications need a homepage!
 
-With that in mind, we'll leave the default homepage alone for the time being and make our own responding on /home. Let's try browsing to http://staff-rolodex.localhost/home right away!
+With that in mind, we'll leave the default homepage alone for the time being and make our own responding on /home. Let's try browsing to [/home](http://staff-rolodex.localhost/home) right away!
 
 You should, if you have error reporting turned on in PHP (and for development, you should have ALL THE ERRORS switched on!):
 
@@ -56,9 +56,11 @@ RESULT!
 Now, we still have a lot of the Union of RAD's sample code in here - we can see it in the footer, for example - but for now we're going to leave that alone. We wouldn't go to market with their code still there though - we'd want to build our own theme! It's great for getting us up and running though, which is what it's there for :-) Notice that your code is sat inside the template - if you do a "view source" or "inspect" you can see what's going on there. Have a look at app/views/layouts/default.html.php - that's the "wrapper" template that is being applied, by, well, by default to any view. YOUR bit is shown here:
 
 {% highlight html %}
+    <!-- ... -->
 		<div class="content">
 			<?php echo $this->content(); ?>
 		</div>
+    <!-- ... -->
 {% endhighlight %}
 
 So, your code "This is a HOME PAGE!" in app/views/home/index.html.php, that is pulled out by the line <?php echo $this->content(); ?>.
@@ -114,8 +116,8 @@ This should render something like:
 
 ![Here's one I made earlier]({{ site.url }}/assets/layout.png)
 
-# Why was this so cool?
+# Tell me again why this is cool?
 
-Well, we've set up a route, very quickly, and we have a working site, and we didn't have to edit 1023 YAML files (or, worse still, XML!) to accomplish this! Now, of course, up until this point we could have achieved the same with static HTML, or even Post-It notes and crayons! Lithium offers us so much more though...
+Well, we've set up a route, very quickly, and we have a working site, and we didn't have to edit 1023 YAML files (or, worse still, XML!) to accomplish this! Now, of course, up until this point we could have achieved the same with static HTML, or even Post-It notes and crayons! Lithium offers us so much more though... It will become clear how Lithium can get us building real, interactive applications lickety-split!
 
 We have a homepage, we have Bootstrap, now we can start building interactivity... On to the next!

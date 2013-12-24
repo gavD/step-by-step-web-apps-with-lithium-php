@@ -58,3 +58,5 @@ This one would require a delete form. We'll leave it alone for now.
 # All good?
 
 OK, how are we doing? All caught up and making at least some loose semblance of sense? I hope so! If not, feel free to tinker around. Most of learning Lithium will come from reading docs, trying things out, and experience. It won't happen overnight but don't worry, it'll come!
+
+Let's crack on and become more pro!

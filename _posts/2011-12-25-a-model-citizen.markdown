@@ -3,7 +3,7 @@ layout: post
 title:  "A model citizen"
 ---
 
-"I wish I looked like Cindy Crawford" - Cindy Crawford
+_"I wish I looked like Cindy Crawford" - Cindy Crawford_
 
 So, your models, they're generally the things that model the real world - the things that represent your data and the things you can do to or with your data.
 
@@ -11,7 +11,7 @@ So, your models, they're generally the things that model the real world - the th
 > Models are tasked with providing meaning to otherwise raw and unprocessed data (e.g.
 > user profile).
 
-_From the [Lithium source code](https://github.com/UnionOfRAD/lithium/blob/master/data/Model.php) (which is marvellously well documented!)_
+_From the [Lithium source code](https://github.com/UnionOfRAD/lithium/blob/master/data/Model.php) (which is marvellously well documented! It's a good idea to have a look through the source when you're trying to work out a problem. I certainly had to when I was writing this book!)_
 
 # Schemas
 
@@ -19,8 +19,7 @@ You might have used Symfony2 or Zend where you generally define model fields in 
 
 The schema (TODO DEFINE) is:
 
-> Lazy-initialize the schema for this Model object, if it is not already manually set in the
-> object. You can declare `protected $_schema = array(...)` to define the schema manually.
+> Lazy-initialize the schema for this Model object, if it is not already manually set in the object. You can declare `protected $_schema = array(...)` to define the schema manually.
 
 So this means you can either say up front what fields something has, or you can let Lithium inspect the database to work it out. Either approach has pros and cons - managing changes to a database can be quite a headache.
 
@@ -70,13 +69,15 @@ See `li3 help COMMAND` for more information on a specific command.
 
 So what have we just done? Well, this is the Lithium console - it's a command line utility that can do helpful jobs for you! It's nothing to be scared of, and it can help you out quite a bit! We're going to use the "create" command. I suggest you try "./libraries/lithium/console/li3 help create" to find out a bit more about this!
 
+> A lot of people alias this command so they can type "li3" rather than banging in the full path to the command. That's probably a good idea but I'll stick with the full path!
+
 Righty-ho, let's create our "Staff" model. Generally the convention in Lithium is that you create the model in the plural, although "Staff" is plural already, if I stuck an "S" on the end it would sound like a breed of dog or an English Cricket club, and I don't know anything about either of those things, so "Staff" it is!
 
 {% highlight bash %}
 ./libraries/lithium/console/li3 create Staff
 {% endhighlight %}
 
-Here's the output from my terminal (side note - I use Terminator and Zsh with Oh My Zsh for maximum terminal sickness!)
+Here's the output from my terminal (side note - I use [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) and [Zsh](http://www.zsh.org/) with [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) for maximum terminal sickness!)
 
 <pre>
 ➜  staff-rolodex git:(master) ./libraries/lithium/console/li3 create Staff
@@ -116,4 +117,4 @@ Soooo, this test is for the model. There's one more test:
 
 This is an automated test for the controller. It's bare bones, there's no actual implementation, but it serves as a nice reminder to write the tests!
 
-Wow, we covered a LOT there! Let's take a break and play pong for a bit.
+Wow, we covered a LOT there! Let's take a break and play Pong for a bit.
