@@ -1,17 +1,19 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
 
-<div id="nav">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
 
-<div class="post">
-{{ content }}
+<div class="row">
+	<div class="col-md-4">
+		<h1>Chapters</h1>
+		<ul class="posts">
+		{% for post in site.posts %}
+			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-8">
+		<h1>{{ page.title }}</h1>
+		{{ content }}
+	</div>
 </div>
