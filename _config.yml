@@ -1,3 +1,5 @@
 name: Building PHP Web Applications in Lithium
 markdown: redcarpet
 pygments: true
+permalink: /:title.html
+
