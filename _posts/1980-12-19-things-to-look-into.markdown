@@ -19,6 +19,7 @@ Specific things to read:
 * [http://unassumingphp.com/lithium-getting-stuff-from-your-database/](http://unassumingphp.com/lithium-getting-stuff-from-your-database/)
 * http://www.komposta.net/article/lithium-model-schema-caching - cache schema
 * https://github.com/heptat/li3_ruckusing_migrations?
+* http://www.slideshare.net/nateabele/lithium-the-framework-for-people-who-hate-frameworks - presentation from Nate Abele on Lithium. A few years old but still worth a browse.
 
 Apply this to the confusing bit about routes:
 
