@@ -2,18 +2,37 @@
 layout: default
 ---
 
-
 <div class="row">
-	<div class="col-md-4">
+	<div class="col-md-3 hidden-sm hidden-xs">
 		<h1>Chapters</h1>
-		<ul class="posts">
+		<ol class="posts">
+		{% assign url = page.url|remove:'index.html' %}
 		{% for post in site.posts %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			<li>
+				{% if url == post.url %}
+					&raquo; {{ post.title }}
+				{% else %}
+					<a href="{{ post.url }}">{{ post.title }}</a>
+				{% endif %}
+			</li>
 		{% endfor %}
-		</ul>
+		</ol>
 	</div>
-	<div class="col-md-8">
+	<div class="col-md-9" role="main">
 		<h1>{{ page.title }}</h1>
 		{{ content }}
+
+		<div id="page-navigation">
+
+			{% if page.next.url %}
+				<a class="btn btn-large btn-danger" href="{{page.next.url}}" title="Previous chapter
+	{{page.previous.title}}">&laquo; Previous chapter</a>
+			{% endif %}
+
+			{% if page.previous.url %}
+				<a class="btn btn-large btn-success" href="{{page.previous.url}}" title="Next chapter
+	{{page.previous.title}}">Next chapter &raquo;</a>
+			{% endif %}
+		</div>
 	</div>
 </div>

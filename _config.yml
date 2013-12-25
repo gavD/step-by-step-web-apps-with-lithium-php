@@ -2,4 +2,3 @@ name: Step By Step Web Apps with Lithium PHP
 markdown: redcarpet
 pygments: true
 permalink: :title.html
-

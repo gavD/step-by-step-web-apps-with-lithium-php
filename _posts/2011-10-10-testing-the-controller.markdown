@@ -3,8 +3,6 @@ layout: post
 title:  "Testing the controller"
 ---
 
-# Test what now?
-
 Remember a couple chapters back, we looked at unit testing our models? Here's how I approach testing:
 
 ![Testing Pyramid]({{ site.url }}/assets/testing-pyramid.png)
