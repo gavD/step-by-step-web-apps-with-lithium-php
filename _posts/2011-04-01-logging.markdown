@@ -46,6 +46,27 @@ Logger::config(array(
 ));
 {% endhighlight %}
 
+OK, now we're going to modify app/controllers/StaffController.php a bit:
+
+{% highlight php %}
+<?php
+namespace app\controllers;
+
+use app\models\Staff;
+use lithium\action\DispatchException;
+use lithium\analysis\Logger;
+
+class StaffController extends \lithium\action\Controller {
+
+	public function index() {
+		$staffs = Staff::all();
+		Logger::alert('Someone listed users...');
+		return compact('staffs');
+	}
+
+    // ...
+{% endhighlight %}
+
 Now, hit the URL [http://staff-rolodex.localhost/staff](http://staff-rolodex.localhost/staff) to trigger a log write.
 
 Finally, from the terminal, let's have a look at our log file:
@@ -65,14 +86,8 @@ Right, so what did we do here? Well, we defined two logging destinations - one t
 		'priority' => array('emergency', 'alert', 'critical', 'error')
 </pre>
 
-here, we can see that the file logger is only "paying attention" to 4 types of log events.
+here, we can see that the file logger is only "paying attention" to 4 types of log events (called "message priority levels". The message priority levels which Logger supports are emergency, alert, critical, error, warning, notice, info and debug. By saying "Logger::alert('Someone listed users...');", we are using the "alert" level. We could equally to "Logger::critical" or "Logger::debug".
 
 # Over to you!
 
 That was pretty straightforward, right? At this point, I suggest adding logging to the methods of our controller. Don't worry, I'll wait while you do :-)
-
-# What else could we do with logging?
-
-Back so soon? Great, well done!
-
-In a production system, you might want to log to a database rather than a file - for example, if you have multiple front ends, you might not want to have to pick through each box's logs separately. Both have their advantages, of course - sometimes, it might be a single node that is exhibiting a problem. So, it's good to log locally, and also to have a shared log - perhaps to something like MongoDB or another database.
