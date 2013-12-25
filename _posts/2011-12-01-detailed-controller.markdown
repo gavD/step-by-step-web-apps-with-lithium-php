@@ -13,7 +13,7 @@ That will create a database "staff" (assuming you have mysql installed, you don'
 
 Let's go to our controller at [http://staff-rolodex.localhost/staff](http://staff-rolodex.localhost/staff)!
 
-![Uncaught exception 'lithium\core\ConfigException' with message 'The data connection `default` is not configured.']({{ site.url }}/assets/crashy-controller.png)
+![Uncaught exception 'lithium\core\ConfigException' with message 'The data connection `default` is not configured.'](assets/crashy-controller.png)
 
 _Ruh roh!_
 
@@ -46,7 +46,7 @@ Total nonsense aside:
 
 Right, back to [http://staff-rolodex.localhost/staff](http://staff-rolodex.localhost/staff)! Will it work? Will it not work? Will it catapult your HDD into space? Only several ways to find out!
 
-![ Uncaught exception 'lithium\data\model\QueryException' with message 'SELECT * FROM `staffs` AS `Staff`;: Table 'staff.staffs' doesn't exist' i]({{ site.url }}/assets/crashy-db.png)
+![ Uncaught exception 'lithium\data\model\QueryException' with message 'SELECT * FROM `staffs` AS `Staff`;: Table 'staff.staffs' doesn't exist' i](assets/crashy-db.png)
 
 Right so the table doesn't exist. That makes sense, right? After all, we created our database but there's nothing in it, and we told the Staff model it had some fields... So, open up MySQL and run:
 
@@ -67,7 +67,7 @@ Query OK, 0 rows affected (0.02 sec)
 
 Right! Let's hit this controller again! Back to [http://staff-rolodex.localhost/staff](http://staff-rolodex.localhost/staff)!
 
-![Template not found at path `/var/www/staff-rolodex/app/views/staff/index.html.php`']({{ site.url }}/assets/crashy-no-template.png)
+![Template not found at path `/var/www/staff-rolodex/app/views/staff/index.html.php`'](assets/crashy-no-template.png)
 
 So, do you remember way back in the mists of time when we built our own controller? It were alllll fields back then... Ah, happy times. Anyway, we need to build some basic templates now.
 
@@ -88,7 +88,7 @@ _Please overlook the clumsy pluralisation of Staff to Staffs! Allow it, fam!_
 
 You should now see:
 
-![Staff list]({{ site.url }}/assets/staff-list.png)
+![Staff list](assets/staff-list.png)
 
 YESSSSSSssssss..... It might not look like it, but we have created our first bit of properly dynamic code! Notice the "foreach" loop - it goes through each staff member and lists hir name. There are no staff right now, so let's add a function to add them!
 
@@ -113,7 +113,7 @@ Create app/views/staff/add.html.php and give it the contents:
 
 This should render something like the following:
 
-![Add form]({{ site.url }}/assets/add-form.png)
+![Add form](assets/add-form.png)
 
 > _Don't worry, we're going to go back and explain all that we've done in this section, I just want to 'close the loop' and make sure we can add a member of staff first!_
 
@@ -145,7 +145,7 @@ Only one more thing! Please edit app/controllers/StaffController.php and change 
 
 For some reason, the generated version uses $this->request->id, which for me, didn't work. Your Mileage May Vary! Do the same for the edit method. You can now use the web application to add and list staff! When you add a user you should get a screen like this:
 
-![Staff]({{ site.url }}/assets/staff.png)
+![Staff](assets/staff.png)
 
 Now let's update app/views/staff/index.html.php:
 

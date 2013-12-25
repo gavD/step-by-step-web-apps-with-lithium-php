@@ -44,5 +44,5 @@ MVC is a way of organising an application (we call it a "design pattern" because
 
 MVC is very common in web applications and Lithium works well with this pattern right out of the box (not a real box).
 
-![My crummy MVC diagram]({{ site.url }}/assets/mvc.png)
+![My crummy MVC diagram](assets/mvc.png)
 _My crummy effort at an MVC diagram_

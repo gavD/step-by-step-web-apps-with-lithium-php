@@ -5,7 +5,7 @@ title:  "Testing the controller"
 
 Remember a couple chapters back, we looked at unit testing our models? Here's how I approach testing:
 
-![Testing Pyramid]({{ site.url }}/assets/testing-pyramid.png)
+![Testing Pyramid](assets/testing-pyramid.png)
 
 I think I copped this off Kent Beck or Bob Martin, but here's my take on it. **Unit tests** are for the developer. For us, developing our Lithium application, we're testing the low level logic in our models behaves _as we understand it_, so we're verifying our comprehension of the system (as well as looking out for regressions).
 

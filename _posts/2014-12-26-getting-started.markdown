@@ -11,7 +11,7 @@ I won't duplicate the Lithium docs here - see [the requirements page for Lithium
 
 We'll start with the sample app and go from there! Check out [Union of Rad's Framework from Github](https://github.com/UnionOfRAD/framework) and set it up as per the Lithium docs. What you want to get to is seeing this screen:
 
-![Default Lithium framework screen]({{ site.url }}/assets/default-lithium.png)
+![Default Lithium framework screen](assets/default-lithium.png)
 
 ## Here's how I did it
 
@@ -77,6 +77,6 @@ git submodule init && git submodule update
 
 Now, if you browse to [http://staff-rolodex.localhost/](http://staff-rolodex.localhost/) you should see a nice screen!
 
-![Default Lithium framework screen]({{ site.url }}/assets/default-lithium.png)
+![Default Lithium framework screen](assets/default-lithium.png)
 
 OK that's pretty sweet right now, we have a page up! Let's do some coding!
