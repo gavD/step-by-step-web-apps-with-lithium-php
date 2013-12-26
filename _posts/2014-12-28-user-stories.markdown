@@ -9,28 +9,28 @@ No, this is about another kind of story. It's a story that defines a person usin
 
 Here are the user stories for the web application we'll be building:
 
-## Story
+## Story 1
 
-> **As an** _employee_<br/>
-> **I want to** browse the staff<br/>
-> **So that** I can see who my colleagues are
+> **As an** _employee_  
+**I want to** browse the staff  
+**So that** I can see who my colleagues are
 
-## Story
+## Story 2
 
-> **As an** _employee_<br/>
-> **I want to** search the staff<br/>
-> **So that** I can find a particular colleagues
+> **As an** _employee_  
+**I want to** search the staff  
+**So that** I can find a particular colleagues
 
-## Story
+## Story 3
 
-> **As an** _administrator_<br/>
-> **I want to** manage the staff in my index<br/>
-> **So that** I can add and remove staff as they join and leave my company
+> **As an** _administrator_  
+**I want to** manage the staff in my index  
+**So that** I can add and remove staff as they join and leave my company
 
-## Story
+## Story 4
 
-> **As an** _administrator_<br/>
-> **I want to** log in and log out<br/>
+> **As an** _administrator_  
+> **I want to** log in and log out  
 > **So that** I can access user management but others cannot
 
 So that's a pretty small set of features, but it's enough for us :-) The application will be publically accessible from the company's intranet, but administrators will be able to log in and administrate the database.
