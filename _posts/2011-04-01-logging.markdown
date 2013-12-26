@@ -88,6 +88,6 @@ Right, so what did we do here? Well, we defined two logging destinations - one t
 
 here, we can see that the file logger is only "paying attention" to 4 types of log events (called "message priority levels". The message priority levels which Logger supports are emergency, alert, critical, error, warning, notice, info and debug. By saying "Logger::alert('Someone listed users...');", we are using the "alert" level. We could equally to "Logger::critical" or "Logger::debug".
 
-# Over to you!
+## Over to you!
 
 That was pretty straightforward, right? At this point, I suggest adding logging to the methods of our controller. Don't worry, I'll wait while you do :-)

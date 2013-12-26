@@ -5,7 +5,7 @@ title:  "Notes on style"
 
 This is just a quick section about the style this book's written in. A lot of other books have one, so why not this one?
 
-# Code snippets
+## Code snippets
 
 I've included a lot of code snippets. Please note that where I put:
 
@@ -13,11 +13,11 @@ I've included a lot of code snippets. Please note that where I put:
 
 that means I've snipped something out, or skipped over something - this means I don't have to include the whole entire file every time I want to just highlight a couple of lines! (Also, it means I can use the <?php opening tag, so I get all that syntax highlighting gubbins with no effort ;-))
 
-# Chapter lengths
+## Chapter lengths
 
 I'm keeping each chapter short. I don't know about you, but when reading long tech books, I get bored and discouraged when reading 40-page chapters! There are bite marks on the edge of my desk where I've gnawed it in frustration at such times. All the chapters in this book will be short!
 
-# Why step-by-step?
+## Why step-by-step?
 
 Firstly, Lithium is, in some ways, pretty well documented - the code itself is wonderfully commented in great detail and has a whole bunch of unit tests. The documentation at [http://lithify.me/docs/manual](lithify.me) is really well written (although there are some bits missing) and takes you through the features very well. What I wanted, when I was getting to grips with it, was an end-to-end tutorial that covered the things that I want to know.
 

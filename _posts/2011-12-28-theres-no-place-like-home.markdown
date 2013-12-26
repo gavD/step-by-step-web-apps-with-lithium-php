@@ -116,7 +116,7 @@ This should render something like:
 
 ![Here's one I made earlier](assets/layout.png)
 
-# Tell me again why this is cool?
+## Tell me again why this is cool?
 
 Well, we've set up a route, very quickly, and we have a working site, and we didn't have to edit 1023 YAML files (or, worse still, XML!) to accomplish this! Now, of course, up until this point we could have achieved the same with static HTML, or even Post-It notes and crayons! Lithium offers us so much more though... It will become clear how Lithium can get us building real, interactive applications lickety-split!
 

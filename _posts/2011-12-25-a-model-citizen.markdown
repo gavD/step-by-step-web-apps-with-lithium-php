@@ -13,7 +13,7 @@ So, your models, they're generally the things that model the real world - the th
 
 _From the [Lithium source code](https://github.com/UnionOfRAD/lithium/blob/master/data/Model.php) (which is marvellously well documented! It's a good idea to have a look through the source when you're trying to work out a problem. I certainly had to when I was writing this book!)_
 
-# Schemas
+## Schemas
 
 You might have used Symfony2 or Zend where you generally define model fields in PHP. In Lithium, you can have the fields automatically loaded from the database, which is pretty interesting. In MySQL, for example, Lithium uses DESCRIBE on a corresponding table to work out what fields a data type has.
 
@@ -25,7 +25,7 @@ So this means you can either say up front what fields something has, or you can 
 
 If we have the fields in the database only, it means we have less code, but it's a bit harder to write automated tests for because our code doesn't "know" about those fields.
 
-# Enough with the schemas already!
+## Enough with the schemas already!
 
 I ended a sentence with "already". I'm not American but I am "from the Internet" so my sentence structure is pretty globalised! More on "G11n" later...
 
@@ -89,7 +89,7 @@ StaffControllerTest created in tests/cases/controllers/StaffControllerTest.php.
 
 Wow, so this has created four files! Right, I know I said I wouldn't do this, and I don't mean to nag, but now is a really good time to do a "git status" to see what's changed, and then make a "git commit". Safety is number 1 priority!
 
-# Whaddayagaaht?!
+## Whaddayagaaht?!
 
 Have you seen The Trip? Coogan and Brydon? If not, that chapter title will make no sense to you ;-)
 
@@ -109,7 +109,7 @@ A unit test for the Staff model. I've mentioned testing but essentially, if you'
 
 _For a less facetious treatment of testing, please see my book [Deal With It: Attitude for Coders](https://leanpub.com/dealwithit/). You'll like it!_
 
-In my opinion, you should NEVER code without tests. This is like doing a tightrope walk over a raging river whilst drunk. With no safety net. In the rain. With pirates. And a monkey is chewing on that rope. And it’s on fire. And everyone is shouting at you. You get the picture.
+In my opinion, you should NEVER code without tests. This is like doing a tightrope walk over a raging river whilst drunk. With no safety net. In the rain. With pirates. And a monkey is chewing on that rope. And it's on fire. And everyone is shouting at you. You get the picture.
 
 Soooo, this test is for the model. There's one more test:
 

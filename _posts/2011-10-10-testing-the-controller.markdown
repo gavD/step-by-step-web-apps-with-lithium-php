@@ -17,7 +17,7 @@ To summarise with an extremely leaky abstraction: if our system were a duck, uni
 
 So, we're going to test our controllers, to make sure our systems integrate well.
 
-# Writing our test
+## Writing our test
 
 There is already a test case created for us in app/tests/cases/controllers/StaffControllerTest.php - seems like a good place to start!
 
@@ -177,7 +177,7 @@ Here's the corresponding code from the controller:
 
 Notice that it simply returns the result of the all() static method on the Staff model, which pulls back all the staff.
 
-# So what did we just test? And what do we need to test next?
+## So what did we just test? And what do we need to test next?
 
 We tested that the controller returns a collection of Staff. It would be useful, at this point, to have a test database and some fixtures perhaps, rather than using the MySQL connection we set up earlier. Otherwise, our system isn't in a "known state", and you using the app could affect results of tests. Tests have to be **idempotent** (i.e. same results no matter how they are run and in what sequence).
 

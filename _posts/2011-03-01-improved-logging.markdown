@@ -9,7 +9,7 @@ In a production system, you might want to log to a database rather than a file -
 
 It's a good idea to make use of the full spectrum of logging levels. In development and debugging, you might want debug messages turned on, but in a production environment, it could well be overkill.
 
-# What's wrong with this picture?
+## What's wrong with this picture?
 
 Well, if you run your tests again (which, by the way, you should do if you make any changes. Sorry, I probably should have said that earlier! It helps to prevent bugs from creeping in!), you'll notice that, because we have a test that covers StaffController::index, that writes to the log file now! I don't particularly want my unit tests writing to the logs.
 

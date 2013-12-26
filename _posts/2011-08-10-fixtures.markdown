@@ -127,7 +127,7 @@ OK
 0 fails and 0 exceptions
 </pre>
 
-# Notes on running tests in Lithium
+## Notes on running tests in Lithium
 
 * Each "test*" method has setUp automatically run before it and tearDown run at the end.
 * If you're used to PHPUnit, one quirk of Lithium's testing is that, if you're expecting it to stop if an assertion fails! It'll carry on executing the test!
