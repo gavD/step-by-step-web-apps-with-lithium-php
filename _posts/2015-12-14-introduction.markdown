@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Introduction"
+title:  Introduction
 ---
 
 As is traditional, like my father before me, I issue the greeting of our people:

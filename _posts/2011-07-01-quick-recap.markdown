@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Quick recap"
+title:  Quick recap
 ---
 
 Wow, we've covered a lot, well done us!

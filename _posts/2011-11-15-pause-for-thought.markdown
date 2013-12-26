@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pause for thought"
+title:  Pause for thought
 ---
 
 That was a LOT of stuff very quickly. Let's take a breath and go back through some parts.

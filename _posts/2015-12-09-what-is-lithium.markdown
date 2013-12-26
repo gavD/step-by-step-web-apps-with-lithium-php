@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is Lithium?"
+title:  What is Lithium?
 ---
 
 Lithium is a PHP web framework.

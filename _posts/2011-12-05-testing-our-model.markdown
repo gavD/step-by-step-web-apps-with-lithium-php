@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Testing our model"
+title:  Testing our model
 ---
 
 Right, let's give this a test! A lot of people leave testing to later on. Not me, no! Over to app/tests/cases/models/StaffTest.php:

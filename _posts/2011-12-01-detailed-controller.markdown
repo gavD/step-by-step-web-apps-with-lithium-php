@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Detailed controller"
+title:  Detailed controller
 ---
 
 Remember a couple of things we've covered - MVC (Model View Controller) and the "scaffolding" that created our model? As we mentioned back in the chapter "A Model Citizen", that scaffolding also generated a controller - and that's what we're going to focus on here: now that our model is sitting pretty, now we want to hook into it and do actual stuff with it! First things first, let's actually set up a database. Now, a full treatment of how to set up your database is outside the scope of this book - but here's what I've done:
@@ -61,9 +61,7 @@ CREATE TABLE staffs (
 
 You should get a message like:
 
-<pre>
-Query OK, 0 rows affected (0.02 sec)
-</pre>
+	Query OK, 0 rows affected (0.02 sec)
 
 Right! Let's hit this controller again! Back to [http://staff-rolodex.localhost/staff](http://staff-rolodex.localhost/staff)!
 

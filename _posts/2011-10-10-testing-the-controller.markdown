@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Testing the controller"
+title:  Testing the controller
 ---
 
 Remember a couple chapters back, we looked at unit testing our models? Here's how I approach testing:
@@ -75,30 +75,28 @@ Remember how we used the web based test runner? Well, that's cool and all but no
 
 Here's my console output:
 
-<pre>
-$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/StaffControllerTest.php
-----
-Test
-----
+	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/StaffControllerTest.php
+	----
+	Test
+	----
 
-F
+	F
 
-FAIL
+	FAIL
 
-0 / 1 passes
-1 fail and 0 exceptions
+	0 / 1 passes
+	1 fail and 0 exceptions
 
-Failed assertion assertTrue.
- File    : /var/www/staff-rolodex/app/tests/cases/controllers/StaffControllerTest.php
- Class   : app\tests\cases\controllers\StaffControllerTest
- Method  : testIndex()
- Line    : 21
- ________
-expected: true
-result: false
+	Failed assertion assertTrue.
+	 File    : /var/www/staff-rolodex/app/tests/cases/controllers/StaffControllerTest.php
+	 Class   : app\tests\cases\controllers\StaffControllerTest
+	 Method  : testIndex()
+	 Line    : 21
+	 ________
+	expected: true
+	result: false
 
- ________
-</pre>
+	 ________
 
 Hey, that's pretty cool - it's told us that our test has failed, which is exactly what we wanted! Now we're not scared of failing tests because we know it tells us what line the problem is on! It's very important to not be scared to try stuff! For me, tests are one of the main ways I build my confidence as I go.
 
@@ -137,19 +135,17 @@ class StaffControllerTest extends \lithium\test\Unit {
 
 So I run this test again:
 
-<pre>
-$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/StaffControllerTest.php
-----
-Test
-----
+	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/StaffControllerTest.php
+	----
+	Test
+	----
 
-..
+	..
 
-OK
+	OK
 
-2 / 2 passes
-0 fails and 0 exceptions
-</pre>
+	2 / 2 passes
+	0 fails and 0 exceptions
 
 Two nice little dots, 2 / 2 passes - great!
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Validation - checking data"
+title:  Validation - checking data
 ---
 
 It's a common requirement to have some checks on data. For example, we might not want to save a member of staff unless the department has been entered. Thankfully, in Lithium, this is quite straightforward!

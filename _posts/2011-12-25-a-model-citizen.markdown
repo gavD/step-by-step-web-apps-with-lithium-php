@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A model citizen"
+title:  A model citizen
 ---
 
 _"I wish I looked like Cindy Crawford" - Cindy Crawford_
@@ -39,33 +39,31 @@ From the command line, go to the root of your project and type:
 
 You should see something along the lines of:
 
-<pre>
-Lithium console started in the development environment. Use the --env=environment key to alter this.
-COMMANDS via lithium
-    create
-    The `create` command allows you to rapidly develop your models, views, controllers, and tests
-    by generating the minimum code necessary to test and run your application.
+	Lithium console started in the development environment. Use the --env=environment key to alter this.
+	COMMANDS via lithium
+		create
+		The `create` command allows you to rapidly develop your models, views, controllers, and tests
+		by generating the minimum code necessary to test and run your application.
 
-    g11n
-    The `G11n` set of commands deals with the extraction and merging of message templates.
+		g11n
+		The `G11n` set of commands deals with the extraction and merging of message templates.
 
-    help
-    Get information about a particular class including methods, properties,
-    and descriptions.
+		help
+		Get information about a particular class including methods, properties,
+		and descriptions.
 
-    library
-    The Library command is used to archive and extract Phar::GZ archives. Requires zlib extension.
-    In addition, communicate with the a given server to add plugins and extensions to the
-    current application. Push archived plugins to the server.
+		library
+		The Library command is used to archive and extract Phar::GZ archives. Requires zlib extension.
+		In addition, communicate with the a given server to add plugins and extensions to the
+		current application. Push archived plugins to the server.
 
-    route
-    The route command lets you inspect your routes and issue requests against the router.
+		route
+		The route command lets you inspect your routes and issue requests against the router.
 
-    test
-    Runs a given set of tests and outputs the results.
+		test
+		Runs a given set of tests and outputs the results.
 
-See `li3 help COMMAND` for more information on a specific command.
-</pre>
+	See `li3 help COMMAND` for more information on a specific command.
 
 So what have we just done? Well, this is the Lithium console - it's a command line utility that can do helpful jobs for you! It's nothing to be scared of, and it can help you out quite a bit! We're going to use the "create" command. I suggest you try "./libraries/lithium/console/li3 help create" to find out a bit more about this!
 
@@ -79,13 +77,11 @@ Righty-ho, let's create our "Staff" model. Generally the convention in Lithium i
 
 Here's the output from my terminal (side note - I use [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) and [Zsh](http://www.zsh.org/) with [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) for maximum terminal sickness!)
 
-<pre>
-➜  staff-rolodex git:(master) ./libraries/lithium/console/li3 create Staff
-Staff created in models/Staff.php.
-StaffController created in controllers/StaffController.php.
-StaffTest created in tests/cases/models/StaffTest.php.
-StaffControllerTest created in tests/cases/controllers/StaffControllerTest.php.
-</pre>
+	$ ./libraries/lithium/console/li3 create Staff
+	Staff created in models/Staff.php.
+	StaffController created in controllers/StaffController.php.
+	StaffTest created in tests/cases/models/StaffTest.php.
+	StaffControllerTest created in tests/cases/controllers/StaffControllerTest.php.
 
 Wow, so this has created four files! Right, I know I said I wouldn't do this, and I don't mean to nag, but now is a really good time to do a "git status" to see what's changed, and then make a "git commit". Safety is number 1 priority!
 

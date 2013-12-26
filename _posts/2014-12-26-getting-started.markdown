@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting started"
+title:  Getting started
 ---
 
 OK, so we know what Lithium is and what we're going to build with it! Roughly. Well, we know what we want to get out of it, anyway.

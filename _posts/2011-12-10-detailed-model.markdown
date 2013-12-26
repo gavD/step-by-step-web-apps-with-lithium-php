@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Detailed model"
+title:  Detailed model
 ---
 
 Right, let's zoom in on this here model app/models/Staff.php:

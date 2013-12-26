@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Caching"
+title:  Caching
 ---
 
 Now we have a loose idea of how many danks* our code can go at. Now let's see if we can make it go faster! It's quite satisfying to have some actual figures to compare.

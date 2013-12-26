@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Logging"
+title:  Logging
 ---
 
 It's extremely important to have logging in your application - things WILL go wrong, and the more insight you have into problems, the better.
@@ -25,11 +25,9 @@ require __DIR__ . '/bootstrap/logging.php';
 
 Then, hit [http://staff-rolodex.localhost/staff](http://staff-rolodex.localhost/staff). You should see an error message:
 
-<pre>
-Warning: require(/var/www/staff-rolodex/app/config/bootstrap/logging.php): failed to open stream: No such file or directory in /var/www/staff-rolodex/app/config/bootstrap.php on line 62
+	Warning: require(/var/www/staff-rolodex/app/config/bootstrap/logging.php): failed to open stream: No such file or directory in /var/www/staff-rolodex/app/config/bootstrap.php on line 62
 
-Fatal error: require(): Failed opening required '/var/www/staff-rolodex/app/config/bootstrap/logging.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/staff-rolodex/app/config/bootstrap.php on line 62
-</pre>
+	Fatal error: require(): Failed opening required '/var/www/staff-rolodex/app/config/bootstrap/logging.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/staff-rolodex/app/config/bootstrap.php on line 62
 
 Now we create app/bootstrap/logging.php with these contents:
 
@@ -71,10 +69,8 @@ Now, hit the URL [http://staff-rolodex.localhost/staff](http://staff-rolodex.loc
 
 Finally, from the terminal, let's have a look at our log file:
 
-<pre>
-$ cat app/resources/tmp/logs/alert.log
-2013-12-25 10:47:58 Someone listed users...
-</pre>
+	$ cat app/resources/tmp/logs/alert.log
+	2013-12-25 10:47:58 Someone listed users...
 
 _Yes, I am writing this on Christmas day!_
 
@@ -82,9 +78,7 @@ _Yes, I am writing this on Christmas day!_
 
 Right, so what did we do here? Well, we defined two logging destinations - one to the system log, for all logging, and the other, 'problems', to a File. Lithium's File logger will log to app/resources/tmp/logs/{message type}.log. Because we used Logger::alert, it created alert.log. If we used "error", it would write to "error.log". Notice also this line:
 
-<pre>
 		'priority' => array('emergency', 'alert', 'critical', 'error')
-</pre>
 
 here, we can see that the file logger is only "paying attention" to 4 types of log events (called "message priority levels". The message priority levels which Logger supports are emergency, alert, critical, error, warning, notice, info and debug. By saying "Logger::alert('Someone listed users...');", we are using the "alert" level. We could equally to "Logger::critical" or "Logger::debug".
 

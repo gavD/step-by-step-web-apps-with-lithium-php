@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  "Poking around"
-date:   2013-12-27 11:08:50
+title:  Poking around
 ---
 
 Open the project in your favourite editor or IDE. I tend to use Netbeans - which is free and pretty good - although lots of people prefer the commercial PHPStorm. I'm not going to tell you what to use, I'm only mentioning a couple that I know are good in case you don't have one :-).

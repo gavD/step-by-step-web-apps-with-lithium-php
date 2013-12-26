@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Improved logging"
+title:  Improved logging
 ---
 
 Back so soon? Great, well done!

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "There's no place like home"
+title:  There's no place like home
 ---
 
 "There's no place like home, there's no place like home" I used to mutter to myself as rain lashed down at scout camp... Well actually that's not strictly true, I loved camping until I went to Glastonbury in 2003 and got mild heat stroke... Still, most web applications need a homepage!

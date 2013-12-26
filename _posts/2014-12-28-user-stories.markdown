@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "User stories"
+title:  User stories
 ---
 
 At this point we're going to describe the system we're going to build. You might not have heard of user stories - that's OK. What they are NOT is the kind of stories users tend to tell me sometimes. Stories like "the website is broken". These stories are mystery stories because often that's all they say\*!

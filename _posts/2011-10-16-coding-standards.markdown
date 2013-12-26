@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Coding standards"
+title:  Coding standards
 ---
 
 Now that we've got a couple of simple things up and running, we're going to introduce the concept of **coding standards**. Having a set of coding standards help us to write code in a consistent style and avoid common pitfalls.
@@ -17,24 +17,22 @@ Take a few minutes to make sure your code meets the coding standards. Don't worr
 
 I ended up with:
 
-<pre>
-$ ./libraries/lithium/console/li3 quality syntax app
---------------------
-Lithium Syntax Check
---------------------
-Performing 26 rules on 7 classes.
-[OK] app\tests\cases\models\MockStaff
-[OK] app\tests\cases\models\StaffTest
-[OK] app\tests\cases\controllers\StaffControllerTest
-[OK] app\models\Staff
-[FAIL] app\controllers\HelloWorldController
-Line	Position	Violation
-----	--------	---------
-11  	-       	Function "to_string" is not in camelBack style
-11  	-       	Function "to_json" is not in camelBack style
-[OK] app\controllers\HomeController
-[OK] app\controllers\StaffController
-</pre>
+	$ ./libraries/lithium/console/li3 quality syntax app
+	--------------------
+	Lithium Syntax Check
+	--------------------
+	Performing 26 rules on 7 classes.
+	[OK] app\tests\cases\models\MockStaff
+	[OK] app\tests\cases\models\StaffTest
+	[OK] app\tests\cases\controllers\StaffControllerTest
+	[OK] app\models\Staff
+	[FAIL] app\controllers\HelloWorldController
+	Line	Position	Violation
+	----	--------	---------
+	11  	-       	Function "to_string" is not in camelBack style
+	11  	-       	Function "to_json" is not in camelBack style
+	[OK] app\controllers\HomeController
+	[OK] app\controllers\StaffController
 
 (I moved MockStaff into its own file - which is good practise!)
 

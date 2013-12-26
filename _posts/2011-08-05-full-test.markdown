@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Full test"
+title:  Full test
 ---
 
 We're going to do a full test that checks that user input actually goes through the controller. I'll quit my jibber jabber and simply show the relevant code:

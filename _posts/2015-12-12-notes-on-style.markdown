@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Notes on style"
+title:  Notes on style
 ---
 
 This is just a quick section about the style this book's written in. A lot of other books have one, so why not this one?

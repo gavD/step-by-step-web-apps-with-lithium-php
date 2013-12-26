@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Unscientific benchmarking"
+title:  Unscientific benchmarking
 ---
 
 What we need to do now is figure out roughly how much computar machines we need to make our application run! It depends on a lot of factors - most notably, how many users we are likely to need to support.
