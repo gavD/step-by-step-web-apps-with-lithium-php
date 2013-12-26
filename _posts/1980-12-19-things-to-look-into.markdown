@@ -20,6 +20,7 @@ Specific things to read:
 * http://www.komposta.net/article/lithium-model-schema-caching - cache schema
 * https://github.com/heptat/li3_ruckusing_migrations?
 * http://www.slideshare.net/nateabele/lithium-the-framework-for-people-who-hate-frameworks - presentation from Nate Abele on Lithium. A few years old but still worth a browse.
+* https://sites.google.com/a/mattvanandel.com/lithium-framework/home - very old now but still mostly accurate
 
 Apply this to the confusing bit about routes:
 
@@ -49,7 +50,3 @@ Apply this to the confusing bit about routes:
 
 </pre>
 
-
-TODO:
-Running the quality tests
-Running tests from CLI
