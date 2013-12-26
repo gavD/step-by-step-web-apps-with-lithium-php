@@ -43,7 +43,7 @@ if (count($errors) > 0) {
 
 Then, if you try to create a user with no department, you'll see something like this:
 
-![Validation](assets/validation.png)
+![Validation](images/validation.png)
 
 Sweet! This will break our tests, though, so what we're going to do is update our test so it states a department. Open up app/tests/cases/StaffControllerTest.php and add a 'department' to $_records, e.g.:
 

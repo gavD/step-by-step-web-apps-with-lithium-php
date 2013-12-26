@@ -50,13 +50,13 @@ class StaffTest extends \lithium\test\Unit {
 
 I've removed setUp and tearDown because we don't need them yet, but we have a whole other class now (MockStaff) - sorry about that! I'll explain, I promise, but first head over to [http://staff-rolodex.localhost/test/](http://staff-rolodex.localhost/test/) and you should see something like this:
 
-![Homepage of the test runner](assets/test-home.png)
+![Homepage of the test runner](images/test-home.png)
 
 Here is Lithium's web based test runner. OK now you see StaffTest under app? Click it! Click it now! Drink your weak lemon drink and click that fussy little link!
 
 What you should get is:
 
-![Result of the test runner](assets/test-staff-1.png)
+![Result of the test runner](images/test-staff-1.png)
 
 1/1 passes - great! Now, I know I promised I'd explain why there's so much code.
 

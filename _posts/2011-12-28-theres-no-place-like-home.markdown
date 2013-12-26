@@ -9,7 +9,7 @@ With that in mind, we'll leave the default homepage alone for the time being and
 
 You should, if you have error reporting turned on in PHP (and for development, you should have ALL THE ERRORS switched on!):
 
-![Homeless website!](assets/homeless.png)
+![Homeless website!](images/homeless.png)
 
 Oh dear! Hmm. Let's take a look at this error message in detail. The pertinent bit is:
 
@@ -33,7 +33,7 @@ class HomeController extends \lithium\action\Controller {
 
 Right, back on over to our homepage! Now I see:
 
-![No template](assets/no-template.png)
+![No template](images/no-template.png)
 
 So that's a _different_ error message! They say that a change is as good as a rest, and in 15 years of software development, getting a _different_ error message is almost as encouraging as actually fixing something - at least it's progress! Let's zoom in on this message:
 
@@ -49,7 +49,7 @@ This is a HOME PAGE!
 
 Yep! Just that! Just a bit of text.
 
-![There's no place like home](assets/no-place-like-home.png)
+![There's no place like home](images/no-place-like-home.png)
 
 RESULT!
 
@@ -114,7 +114,7 @@ Feel free to tinker around with these templates! Here's one I've made as an exam
 
 This should render something like:
 
-![Here's one I made earlier](assets/layout.png)
+![Here's one I made earlier](images/layout.png)
 
 ## Tell me again why this is cool?
 
