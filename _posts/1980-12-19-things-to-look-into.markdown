@@ -46,3 +46,8 @@ Apply this to the confusing bit about routes:
 	15:49 <wms> otherwise, the default route on L95 will catch it, which will call view($id) rather than setting request->id
 	15:51 <gavin__> aha!
 	15:51 <gavin__> Yeah I'm with you
+
+
+
+> **Note on filters** Here we've seen, for the first time, the concept of a **Filter**. The [Lithium docs on filters](http://lithify.me/docs/manual/lithium-basics/filters.wiki) are worth reading - filters are a very powerful concept in Lithium, rooted in AOP (Aspect Oriented Programming).
+
