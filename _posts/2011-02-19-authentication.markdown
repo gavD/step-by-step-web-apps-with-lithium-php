@@ -166,42 +166,4 @@ Right, now let's log in using the credentials username "brucewayne", password "g
 
 > You might want to add a flash message at this point. [Here's a tutorial on doing just that](http://www.jblotus.com/2011/08/17/adding-a-session-flash-message-to-your-site-in-lithium-php/).
 
-## Creating a user
-
-We mustn't go around sticking users straight into the database. It's really important that the passwords are **hashed**.
-
-> Hashing is a one-way encryption. When we come to check a password, we never compare directly the actual password directly, but we compare hashes. Also, a good hashing algorithm should be quite slow so that it's hard for an attacker to brute force.
-
-Lithium is pretty smart in that it will pick the best encryption available on your system. We will add a filter, [as per the Lithium docs on the matter](http://lithify.me/docs/manual/auth/simple-auth-user.wiki), that will automatically encrypt passwords. I've added this code the the Administrators model:
-
-{% highlight php %}
-<?php
-namespace app\models;
-
-use lithium\security\Password;
-
-class Administrators extends \lithium\data\Model {
-    public $validates = array(
-        'username' => array(
-            array('notEmpty', 'message'=>'Please enter a username')
-        ),
-        'password' => array(
-            array('notEmpty', 'message'=>'Please enter a password')
-        ),
-    );
-}
-
-Administrators::applyFilter('save', function($self, $params, $chain) {
-    if ($params['data']) {
-        $params['entity']->set($params['data']);
-        $params['data'] = array();
-    }
-    if (!$params['entity']->exists()) {
-        $params['entity']->password = Password::hash($params['entity']->password);
-    }
-    return $chain->next($self, $params, $chain);
-});
-?>
-{% endhighlight %}
-
-Right, but... Just one problem here. How do we create our FIRST user? Find out, in the next THRILLING installment!
+That's the groundwork laid, what's next?

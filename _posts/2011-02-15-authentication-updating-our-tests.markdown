@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Updating our tests
+title:  Authentication - updating our tests
 ---
 
 A quick test run shows a problem:

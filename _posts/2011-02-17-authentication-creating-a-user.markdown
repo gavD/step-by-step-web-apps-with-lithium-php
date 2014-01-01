@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Creating a user
+title:  Authentication - creating a user
 ---
 
 We went through all that business, and we can't even log in! There's not point trying to add the user in MySQL because the password would not be hashed, and as Tempa T might say, that would be a STRONG PAR.
