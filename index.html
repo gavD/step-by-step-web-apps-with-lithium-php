@@ -1,13 +1,27 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Step By Step Web Apps with Lithium PHP
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="row">
+	<div class="col-md-3 hidden-sm hidden-xs">
+		<h1>Chapters</h1>
+		<ol class="posts">
+		{% assign url = page.url|remove:'index.html' %}
+		{% for post in site.posts %}
+			<li>
+				{% if url == post.url %}
+					&raquo; {{ post.title }}
+				{% else %}
+					<a href="{{ post.url  | remove_first:'/' }}">{{ post.title }}</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+		</ol>
+	</div>
+	<div class="col-md-9" role="main">
+		<h1>Step By Step Web Apps with Lithium PHP</h1>
+		
+		<p>Welcome! Please get started with the <a href="introduction.html">introduction</a>!</p>
+	</div>
 </div>

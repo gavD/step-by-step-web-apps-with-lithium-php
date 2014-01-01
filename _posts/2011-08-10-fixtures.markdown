@@ -16,25 +16,43 @@ What a fixture is is a set of data. We have a few things to do first.
 
 In app/config/bootstrap/connections.php, we're going to define a new connection. What we're going to do is have an in-memory database using SQLite3. If you have't got [SQLite](http://www.sqlite.org/) installed, do it now! SQLite is a great tool for testing because it works pretty much like any other relational database, but you can store it in memory so it's nice and clean and it's all gone after the test run - the perfect crime!
 
-In app/config/bootstrap/connections.php, add:
+In app/config/bootstrap/connections.php, update it to the following:
 
 {% highlight php %}
 <?php
-
-// ...
- Connections::add('test', array(
- 	'type' => 'database',
- 	'adapter' => 'Sqlite3',
- 	'host' => 'localhost',
- 	'login' => 'root',
- 	'password' => '',
- 	'database' => 'staff',
- 	'encoding' => 'UTF-8'
- ));
+Connections::add('default', array(
+    'development' => array(
+		'type' => 'database',
+		'adapter' => 'MySql',
+		'host' => 'localhost',
+		'login' => 'root',
+		'password' => '',
+		'database' => 'staff',
+		'encoding' => 'UTF-8'
+	), 
+    'test' => array(
+		'type' => 'database',
+		'adapter' => 'Sqlite3',
+		'database' => ':memory:'
+	),
+    'production' => array(
+		'type' => 'database',
+		'adapter' => 'MySql',
+		'host' => 'localhost',
+		'login' => 'root',
+		'password' => '',
+		'database' => 'rolodex-production',
+		'encoding' => 'UTF-8'
+    )
+));
 ?>
 {% endhighlight %}
 
-So, this is in addition to the MySQL connection "default" that we already have defined, so now you have TWO connections. What we need to do is tell our tests to use the right one so we don't throw away or create data accidentally in our dev workspace!
+## Environments
+
+So now you have TWO connections. Because Lithium will automatically work out which database to use.. TODO - more on environments
+
+> For more on environments in Lithium, see http://nitschinger.at/Using-Environments-in-Lithium
 
 In app/tests/fixture/StaffFixture.php, put the following code:
 
@@ -76,7 +94,7 @@ class StaffControllerTest extends \lithium\test\Unit {
         Fixtures::config(array(
             'db' => array(
                 'adapter' => 'Connection',
-                'connection' => 'test',
+                'connection' => 'default',
                 'fixtures' => array(
                     'staff' => 'app\tests\fixture\StaffFixture',
                 )

@@ -75,7 +75,7 @@ class StaffTest extends \lithium\test\Unit {
         Fixtures::config(array(
             'db' => array(
                 'adapter' => 'Connection',
-                'connection' => 'test',
+                'connection' => 'default',
                 'fixtures' => array(
                     'staff' => 'app\tests\fixture\StaffFixture',
                 )
