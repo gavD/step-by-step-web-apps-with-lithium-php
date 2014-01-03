@@ -95,7 +95,8 @@ So I've chucked out the `testIndex` method and written `testIndexListsEmployeesI
 
 So now, we've got a pretty cool test that has a temporary database, puts some data in there, then runs the controller using that temporary database and checks the output. Nice!
 
-	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/EmployeesControllerTest.php
+	$ ./libraries/lithium/console/li3 test \
+		app/tests/cases/controllers/EmployeesControllerTest.php
 	----
 	Test
 	----

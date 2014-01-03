@@ -21,7 +21,10 @@ Create `app/views/employees/add.html.php` and give it the contents:
 <?= $this->form->submit('Save Employee'); ?>
 <?= $this->form->end(); ?>
 
-<p><a class="btn btn-large" href="<?= $this->url(array('Employees::index')); ?>">Back to employee index</a></p>
+<p><a class="btn btn-large"
+		href="<?= $this->url(array('Employees::index')); ?>">
+	Back to employee index
+</a></p>
 {% endhighlight %}
 
 This should render something like the following:
@@ -39,7 +42,10 @@ Create `app/views/employees/view.html.php` and give it the following contents:
 <p> Notes: <?= $employee->notes ?></p>
 <p> Department: <?= $employee->department ?></p>
 
-<p><a class="btn btn-large" href="<?= $this->url(array('Employees::index')); ?>">Back to Employee index</a></p>
+<p><a class="btn btn-large"
+		href="<?= $this->url(array('Employees::index')); ?>">
+	Back to employee index
+</a></p>
 {% endhighlight %}
 
 You can now use the web application to add and list Employee! When you add a user you should get a screen like this:

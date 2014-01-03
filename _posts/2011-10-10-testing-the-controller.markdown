@@ -75,7 +75,8 @@ Remember how we used the web based test runner? Well, that's cool and all but no
 
 Here's my console output:
 
-	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/EmployeesControllerTest.php
+	$ ./libraries/lithium/console/li3 test \
+		app/tests/cases/controllers/EmployeesControllerTest.php
 	----
 	Test
 	----
@@ -88,7 +89,7 @@ Here's my console output:
 	1 fail and 0 exceptions
 
 	Failed assertion assertTrue.
-	 File    : /var/www/employee-rolodex/app/tests/cases/controllers/EmployeesControllerTest.php
+	 File    : app/tests/cases/controllers/EmployeesControllerTest.php
 	 Class   : app\tests\cases\controllers\EmployeesControllerTest
 	 Method  : testIndex()
 	 Line    : 21
@@ -135,7 +136,8 @@ class EmployeesControllerTest extends \lithium\test\Unit {
 
 So I run this test again:
 
-	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/EmployeesControllerTest.php
+	$ ./libraries/lithium/console/li3 test \
+		 app/tests/cases/controllers/EmployeesControllerTest.php
 	----
 	Test
 	----

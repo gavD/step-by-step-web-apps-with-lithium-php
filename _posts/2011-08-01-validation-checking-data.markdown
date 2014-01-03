@@ -19,7 +19,8 @@ class Employees extends \lithium\data\Model {
 			array(
 				'notEmpty',
 				'required' => true,
-				'message' => 'Please let us know what department this person works in.'
+				'message' =>
+					'Please let us know what department this person works in.'
 			)
 		)
 	);
@@ -36,7 +37,9 @@ Next, edit `app/controllers/EmployeesController.php` and add the error checking:
 	public function add() {
 		$employee = Employees::create();
 		if (($this->request->data) && $employee->save($this->request->data)) {
-			return $this->redirect(array('Employees::view', 'args' => array($employee->id)));
+			return $this->redirect(
+				array('Employees::view', 'args' => array($employee->id))
+			);
 		}
 
 		$errors = $employee->errors();

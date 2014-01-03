@@ -19,7 +19,8 @@ _Ruh roh!_
 
 So this business:
 
-    "Uncaught exception 'lithium\core\ConfigException' with message 'The data connection `default` is not configured.'"
+    "Uncaught exception 'lithium\core\ConfigException' with message
+    'The data connection `default` is not configured.'"
 
 Let's get that sorted now! The `app/config` folder contains a file `bootstrap.php`, which includes a bunch of gubbins from the `app/config/bootstrap` folder. This is where the config lives, broken up nicely into PHP files. Nice. NICE!
 
@@ -32,7 +33,7 @@ use lithium\data\Connections;
  	'type' => 'database',
  	'adapter' => 'MySql',
  	'host' => 'localhost',
- 	'login' => 'root', // <== Never use root on production! Feel free to create a user!
+ 	'login' => 'root', // <== Never use root on production! Create a user!
  	'password' => '', // <== Set this to your user's password.
  	'database' => 'staff', // <=== notice this line!
  	'encoding' => 'UTF-8'

@@ -14,10 +14,12 @@ Anyway, open up `app/views/layouts/default.html.php` and find the navbar HTML:
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<ul class="nav nav-pills pull-right">
-					<li><a href="<?= $this->url(array('Home::index')); ?>">Homepage</a></li>
-					<li><a href="<?= $this->url(array('Employees::index')); ?>">Employees</a></li>
-				</ul>
+			<ul class="nav nav-pills pull-right">
+			<li><a href="<?= $this->url(array('Home::index')); ?>">
+				Homepage</a></li>
+			<li><a href="<?= $this->url(array('Employees::index')); ?>">
+				Employees</a></li>
+			</ul>
 			</div>
 		</div>
 	</div>

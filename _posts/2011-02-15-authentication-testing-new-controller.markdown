@@ -3,10 +3,10 @@ layout: post
 title:  Authentication - testing our new controller
 ---
 
-Let's test our admin controller. First, create the fixture app/tests/fixture/AdministratorsFixture.php:
+Let's test our admin controller. First, we're going to set up an administrator available to tests by creating the fixture `app/tests/fixture/AdministratorsFixture.php`:
 
 {% highlight php %}
-	<?php
+<?php
 namespace app\tests\fixture;
 
 class AdministratorsFixture extends \li3_fixtures\test\Fixture {
@@ -22,10 +22,9 @@ class AdministratorsFixture extends \li3_fixtures\test\Fixture {
 ?>
 {% endhighlight %}
 
-Then create the test app/tests/cases/controllers/AdministratorsControllerTest.php:
+Then create the test `app/tests/cases/controllers/AdministratorsControllerTest.php`:
 
 {% highlight php %}
-<?php
 <?php
 namespace app\tests\cases\controllers;
 
@@ -90,10 +89,28 @@ class AdministratorsControllerTest extends \lithium\test\Integration {
 ?>
 {% endhighlight %}
 
-There are a few things to note here. I create $sut for "System Under Test". This is just a little convention I use, you don't have to. The SUT is the controller, and I feed it a standard request. It works when there is a user in the database, just as we expect.
+There are a few things to note here. I create `$sut` for "System Under Test". This is just a little convention I use, you don't have to. The SUT is the controller, and I feed it a standard request. It works when there is a user in the database, just as we expect.
 
-Notice also I clear the session on every tearDown - Lithium persists the session between tests otherwise so always work to make your tests **idempotent** - that is, that they can be run in any order, that they don't affect one another.
+Notice also I clear the session on every `tearDown` - Lithium persists the session between tests otherwise so always work to make your tests **idempotent** - that is, that they can be run in any order, that they don't affect one another.
 
+Let's run just this new test, let's not run the whole suite just yet:
+
+	$ ./libraries/lithium/console/li3 test \
+		app/tests/cases/controllers/AdministratorsControllerTest.php
+	----
+	Test
+	----
+
+	...
+
+	OK
+
+	3 / 3 passes
+	0 fails and 0 exceptions
+
+	
 ## Why can't I define my users in my fixture?
 
-Good question! It's because the fixture does some hashing of the password, so it's safer to create it in the test here. I'm sure there's some way of doing it in the fixture.
+Good question! It's because the fixture does some hashing of the password (remember that filter we built in to `app/models/Administrators.php`?), so it's safer to create it in the test here. It's possible to do it in the fixture, but we're keeping things simple for now.
+
+OK, now we need to bring the rest of our test suite up to date with the changes we've made...

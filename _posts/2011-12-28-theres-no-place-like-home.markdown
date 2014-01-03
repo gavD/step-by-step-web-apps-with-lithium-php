@@ -80,8 +80,8 @@ So, open up `app/views/layouts/default.html.php` and enter the following:
     <?php echo $this->styles(); ?>
     <?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
     <style type="text/css">
-        /* This should really be in the css files but I've put it here for
-           simplicity's sake! */
+        /* This should really be in the css files but I've put
+			it here for simplicity's sake! */
         body {
             padding-top: 60px;
         }
@@ -92,7 +92,8 @@ So, open up `app/views/layouts/default.html.php` and enter the following:
         <div class="navbar-inner">
             <div class="container">
                 <ul class="nav nav-pills pull-right">
-                    <li><a href="<?= $this->url(array('Home::index')); ?>">Homepage</a></li>
+                    <li><a href="<?= $this->url(array('Home::index')); ?>">
+						Homepage</a></li>
                 </ul>
             </div>
         </div>

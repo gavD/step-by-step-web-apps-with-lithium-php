@@ -25,7 +25,6 @@ At this point, I suggest committing to Git. You could push up to your personal G
 
 I really don't recommend doing ANY software development without version control. That's probably all I'll say about version control as that's a whole separate topic, but don't leave /home without it! ;-)
 
-
 ## Going a bit deeper
 
 So far so good, all makes sense... Now let's delve into the `app` directory. Again there are `.htaccess`, `index.php` and `web.config` files and the same advice applies and the same question of what they're doing there! Forgive my ignorance on the purpose of these files! If you check "webroot" that's where they "really" belong as far as I can tell...
@@ -33,14 +32,18 @@ So far so good, all makes sense... Now let's delve into the `app` directory. Aga
 With that said, there are a bunch of folders in here where you put your 1337 c0d3z:
 
 * `app/config` - application configuration lives in here
-* `controllers` - we'll talk about MVC (Model/View/Controller) - the controllers are the C of this!
-* `extensions` - you can create custom commands and extend Lithium in here
-* `libraries`
-* `models` - The M of MVC!
-* `resources` - holds, well, resources for your application - things like translations and so forth
-* `tests` - very important! Store your automated tests in here
-* `views` - the bits of HTML and so forth that render your application. You guessed it - this is the V of MVC! (unless you didn't guess it, don't feel bad about that, you're probably just tired. I'm pretty tired. I just had a drum lesson!)
-* `webroot` - this is where you point your web server. The rest of the application should never be directly exposed to the public (hence my questioning the wisdom of putting index.php files at the two tiers above)
+* `app/controllers` - we'll talk about MVC (Model/View/Controller) - the controllers are the C of this!
+* `app/extensions` - you can create custom commands and extend Lithium in here
+* `app/libraries`
+* `app/models` - The M of MVC!
+* `app/resources` - holds, well, resources for your application - things like translations and so forth
+* `app/tests` - very important! Store your automated tests in here
+* `app/views` - the bits of HTML and so forth that render your application. You guessed it - this is the V of MVC! (unless you didn't guess it, don't feel bad about that, you're probably just tired. I'm pretty tired. I just had a drum lesson!)
+* `app/webroot` - this is where you point your web server. The rest of the application should never be directly exposed to the public (hence my questioning the wisdom of putting index.php files at the two tiers above)
+
+## The Front Controller pattern
+
+`app/webroot/index.php` is what is known as a **front controller**. This is a **design pattern** that all requests should be routed through. It's a very common pattern in the web application framework world. It rescues us from having to have "homepage.php", "contact.php", "gubbins.php" ad infinitum... It gives you a lot more flexibility and reduces the cost of changing the system.
 
 ## A note about MVC
 

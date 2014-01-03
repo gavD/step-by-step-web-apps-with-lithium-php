@@ -23,13 +23,13 @@ require __DIR__ . '/bootstrap/logging.php';
 // ...
 {% endhighlight %}
 
-Then, hit [http://employee-rolodex.localhost/employees](http://employee-rolodex.localhost/employees). You should see an error message:
+Then, hit [http://employee-rolodex.localhost/employees](http://employee-rolodex.localhost/employees). You should see an error message similar to the following:
 
-	Warning: require(/var/www/employee-rolodex/app/config/bootstrap/logging.php): failed to open stream: No such file or directory in /var/www/employee-rolodex/app/config/bootstrap.php on line 62
+	Warning: require(employee-rolodex/app/config/bootstrap/logging.php):
+   failed to open stream: No such file or directory in
+   /var/www/employee-rolodex/app/config/bootstrap.php on line 62
 
-	Fatal error: require(): Failed opening required '/var/www/employee-rolodex/app/config/bootstrap/logging.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/employee-rolodex/app/config/bootstrap.php on line 62
-
-Now we create `app/config/bootstrap/logging.php` with these contents:
+So, we create `app/config/bootstrap/logging.php` with these contents:
 
 {% highlight php %}
 <?php

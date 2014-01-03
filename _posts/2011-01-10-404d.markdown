@@ -9,7 +9,7 @@ What if someone types in a bad URL? Or if something else goes wrong?
 
 Yikes! That's pretty nasty! Don't worry, though, we can set something up to catch these.
 
-Open up app/config/bootstrap.php and uncomment the errors.php require:
+Open up `app/config/bootstrap.php` and uncomment line that requires `errors.php`:
 
 {% highlight php %}
 <?php
@@ -22,9 +22,9 @@ Now, if you hit a missing route, you should see something like:
 
 ![404'd!](images/404-default-error.png)
 
-This is the default Lithium Framework distribution error page, and it pretty much tells you what to do to make custom error pages :-) Let's open up app/views/layouts/error.html.php and have a look!
+This is the default Lithium Framework distribution error page, and it pretty much tells you what to do to make custom error pages :-) Let's open up `app/views/layouts/error.html.php` and have a look!
 
-What I'd recommend doing now is making app/views/layouts/error.html.php and app/views/layouts/default.html.php similar - I created two **elements** (partial templates):
+What I'd recommend doing now is making `app/views/layouts/error.html.php` and `app/views/layouts/default.html.php` similar - I created two **elements** (partial templates):
 
 ## app/views/elements/header.html.php
 
@@ -39,8 +39,8 @@ What I'd recommend doing now is making app/views/layouts/error.html.php and app/
     <?php echo $this->styles(); ?>
     <?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
     <style type="text/css">
-        /* This should really be in the css files but I've put it here for
-           simplicity's sake! */
+        /* This should really be in the css files but I've put
+			it here for simplicity's sake! */
         body {
             padding-top: 60px;
         }
@@ -50,12 +50,16 @@ What I'd recommend doing now is making app/views/layouts/error.html.php and app/
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <ul class="nav nav-pills pull-right">
-                    <li><a href="<?= $this->url(array('Home::index')); ?>">Homepage</a></li>
-					<li><a href="<?= $this->url(array('Employees::index')); ?>">Employees</a></li>
-					<li><a href="<?= $this->url(array('Administrators::login')); ?>">Admin log in</a></li>
-					<li><a href="<?= $this->url(array('Administrators::logout')); ?>">Log out</a></li>
-                </ul>
+			<ul class="nav nav-pills pull-right">
+			<li><a href="<?= $this->url(array('Home::index')); ?>">
+				Homepage</a></li>
+			<li><a href="<?= $this->url(array('Employees::index')); ?>">
+				Employees</a></li>
+			<li><a href="<?= $this->url(array('Administrators::login')); ?>">
+				Admin log in</a></li>
+			<li><a href="<?= $this->url(array('Administrators::logout')); ?>">
+				Log out</a></li>
+			</ul>
             </div>
         </div>
     </div>

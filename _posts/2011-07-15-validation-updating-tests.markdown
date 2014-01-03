@@ -53,7 +53,10 @@ class EmployeesTest extends \lithium\test\Unit {
 		$employee->save();
 
 		$errors = $employee->errors();
-		$this->assertEqual('Please let us know what department this person works in.', $errors['department'][0]);
+		$this->assertEqual(
+			'Please let us know what department this person works in.',
+			$errors['department'][0]
+		);
 	}
 }
 ?>
@@ -75,7 +78,10 @@ use app\models\Employees;
 		$request->data = array('name' => 'Departmentless user');
 		$controller = new EmployeesController(array('request' => $request));
 		$response = $controller->add();
-		$this->assertEqual('Please let us know what department this person works in.', $response['errors']['department'][0]);
+		$this->assertEqual(
+			'Please let us know what department this person works in.',
+			$response['errors']['department'][0]
+		);
 		$this->assertEqual(2, count(Employees::all()));
 	}
 {% endhighlight %}

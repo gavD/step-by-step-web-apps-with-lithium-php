@@ -5,7 +5,7 @@ title:  Authentication
 
 We have a working app that we can add users to. Thing is, we don't want just any old sausage coming along and mucking things up! Let's modify the app so that there are administrators (as per our user stories, waaaay back in the mists of time!)
 
-We *could* use our existing Employees object as the Administrator - we could call it "User" and make it more generic. Instead, though, we're going to simply have the model "Administrator".
+We *could* use our existing Employees object as the Administrator - we could call it "User" and make it more generic. Instead, though, we're going to simply have the model "`Administrators`".
 
 We'll need to add:
 
@@ -29,8 +29,8 @@ Now open `app/config/bootstrap.php` - you should have something like:
 // ...
 
 /**
- * This file contains configuration for session (and/or cookie) storage, and user or web service
- * authentication.
+ * This file contains configuration for session (and/or cookie) storage, and
+ * user or web service authentication.
  */
 // require __DIR__ . '/bootstrap/session.php';
 {% endhighlight %}
@@ -46,15 +46,15 @@ use lithium\storage\Session;
 
 $name = basename(LITHIUM_APP_PATH);
 Session::config(array(
-	'default' => array('adapter' => 'Php', 'session.name' => $name)
+    'default' => array('adapter' => 'Php', 'session.name' => $name)
 ));
 
 Auth::config(array(
-    'admin' => array(
-        'adapter' => 'Form',
-        'model'   => 'Administrators',
-        'fields'  => array('username', 'password')
-    )
+	'admin' => array(
+		'adapter' => 'Form',
+		'model'   => 'Administrators',
+		'fields'  => array('username', 'password')
+	)
 ));
 ?>
 {% endhighlight %}
@@ -82,7 +82,7 @@ class Administrators extends \lithium\data\Model {
 ?>
 {% endhighlight %}
 
-> ** Note on fields** Although we've used validation, we haven't defined fields for this class. In Lithium, we don't need to, but it'll perform a tiny bit better if we do as it skips a DESCRIBE operation (or equivalent).
+> ** Note on fields** Although we've used validation, we haven't defined fields for this class. In Lithium, we don't need to, but it'll perform a tiny bit better if we do as it skips a DESCRIBE operation (or equivalent). In Employees, we specified fields. I've not specified fields here so you can get a feel for both options.
 
 ## Creating our controller
 
@@ -133,7 +133,9 @@ Create `app/views/administrators/login.html.php`:
 
 This creates a small, simple form, much like the add user form. Now, head on over to [http://employee-rolodex.localhost/administrators/login](http://employee-rolodex.localhost/administrators/login) and you should get an error like:
 
-    Fatal error: Uncaught exception 'lithium\data\model\QueryException' with message 'DESCRIBE `administrators`: Table 'Employee.administrators' doesn't exist'
+    Fatal error: Uncaught exception 'lithium\data\model\QueryException' with
+    message 'DESCRIBE `administrators`: Table 'Employee.administrators' doesn't
+    exist'
 
 Right, I guess we'd better create one! Open your database in MySQL and enter:
 
@@ -148,7 +150,7 @@ Now, when we go to [http://employee-rolodex.localhost/administrators/login](http
 
 ![Login screen](images/loginscreen.png)
 
-Now, before we log in, let's actually secure something. Open app/controllers/EmployeesController.php and stick a bit of code at the top of the add method:
+Now, before we log in, let's actually secure something. Open `app/controllers/EmployeesController.php` and stick a bit of code at the top of the add method:
 
 {% highlight php %}
 <?php
@@ -166,8 +168,8 @@ Now, still not logged in, let's try adding a user by clicking "Employees" at the
 
 Right, now let's log in using the credentials username "brucewayne", password "gothamknight" (of course, he wouldn't be so stupid as to use those credentials, but I can't guess what the great detective would choose!) - but obviously there are no users so we get an error message:
 
-![Login screen](images/loginscreen.png)
+![Login screen](images/loginfail.png)
 
-> You might want to add a flash message at this point. [Here's a tutorial on doing just that](http://www.jblotus.com/2011/08/17/adding-a-session-flash-message-to-your-site-in-lithium-php/).
+> You might want to add a flash message at this point. [Here's a tutorial on doing just that](http://www.jblotus.com/2011/08/17/adding-a-session-flash-message-to-your-site-in-lithium-php/). Also, feel free to style your error messages better than this yucky purple I have here! ;-)
 
 That's the groundwork laid, what's next?

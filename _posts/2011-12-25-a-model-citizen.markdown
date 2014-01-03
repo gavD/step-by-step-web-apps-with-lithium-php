@@ -37,26 +37,34 @@ From the command line, go to the root of your project and type:
 
 You should see something along the lines of:
 
-	Lithium console started in the development environment. Use the --env=environment key to alter this.
+	Lithium console started in the development environment. Use the
+    --env=environment key to alter this.
+
 	COMMANDS via lithium
 		create
-		The `create` command allows you to rapidly develop your models, views, controllers, and tests
-		by generating the minimum code necessary to test and run your application.
+		The `create` command allows you to rapidly develop your models, views,
+        controllers, and tests by generating the minimum code necessary to test
+        and run your application.
 
 		g11n
-		The `G11n` set of commands deals with the extraction and merging of message templates.
+		The `G11n` set of commands deals with the extraction and merging of
+        message templates.
 
 		help
 		Get information about a particular class including methods, properties,
 		and descriptions.
 
 		library
-		The Library command is used to archive and extract Phar::GZ archives. Requires zlib extension.
-		In addition, communicate with the a given server to add plugins and extensions to the
-		current application. Push archived plugins to the server.
+		The Library command is used to archive and extract Phar::GZ archives. 
+        Requires zlib extension.
+
+		In addition, communicate with the a given server to add plugins and
+        extensions to the current application. Push archived plugins to the
+        server.
 
 		route
-		The route command lets you inspect your routes and issue requests against the router.
+		The route command lets you inspect your routes and issue requests
+        against the router.
 
 		test
 		Runs a given set of tests and outputs the results.
@@ -79,7 +87,8 @@ Here's the output from my terminal (side note - I use [Terminator](http://gnomet
 	Employees created in models/Employees.php.
 	EmployeesController created in controllers/EmployeesController.php.
 	EmployeesTest created in tests/cases/models/EmployeesTest.php.
-	EmployeesControllerTest created in tests/cases/controllers/EmployeesControllerTest.php.
+	EmployeesControllerTest created in
+      tests/cases/controllers/EmployeesControllerTest.php.
 
 Wow, so this has created four files! Right, I know I said I wouldn't do this, and I don't mean to nag, but now is a really good time to do a "git status" to see what's changed, and then make a "git commit". Safety is number 1 priority!
 
