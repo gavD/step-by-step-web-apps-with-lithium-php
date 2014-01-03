@@ -19,16 +19,16 @@ So, we're going to test our controllers, to make sure our systems integrate well
 
 ## Writing our test
 
-There is already a test case created for us in app/tests/cases/controllers/StaffControllerTest.php - seems like a good place to start!
+There is already a test case created for us in app/tests/cases/controllers/EmployeesControllerTest.php - seems like a good place to start!
 
 {% highlight php %}
 <?php
 
 namespace app\tests\cases\controllers;
 
-use app\controllers\StaffController;
+use app\controllers\EmployeesController;
 
-class StaffControllerTest extends \lithium\test\Unit {
+class EmployeesControllerTest extends \lithium\test\Unit {
 
 	public function setUp() {}
 
@@ -51,10 +51,10 @@ Well, that's a lot of tests that don't do anything! Let's add a test that we can
 
 namespace app\tests\cases\controllers;
 
-use app\controllers\StaffController;
+use app\controllers\EmployeesController;
 use lithium\action\Request;
 
-class StaffControllerTest extends \lithium\test\Unit {
+class EmployeesControllerTest extends \lithium\test\Unit {
 
 	public function setUp() {}
 
@@ -75,7 +75,7 @@ Remember how we used the web based test runner? Well, that's cool and all but no
 
 Here's my console output:
 
-	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/StaffControllerTest.php
+	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/EmployeesControllerTest.php
 	----
 	Test
 	----
@@ -88,8 +88,8 @@ Here's my console output:
 	1 fail and 0 exceptions
 
 	Failed assertion assertTrue.
-	 File    : /var/www/staff-rolodex/app/tests/cases/controllers/StaffControllerTest.php
-	 Class   : app\tests\cases\controllers\StaffControllerTest
+	 File    : /var/www/staff-rolodex/app/tests/cases/controllers/EmployeesControllerTest.php
+	 Class   : app\tests\cases\controllers\EmployeesControllerTest
 	 Method  : testIndex()
 	 Line    : 21
 	 ________
@@ -107,10 +107,10 @@ Right, let's actually test this thing. What's really cool about controllers in L
 
 namespace app\tests\cases\controllers;
 
-use app\controllers\StaffController;
+use app\controllers\EmployeesController;
 use lithium\action\Request;
 
-class StaffControllerTest extends \lithium\test\Unit {
+class EmployeesControllerTest extends \lithium\test\Unit {
 
 	public function setUp() {}
 
@@ -119,10 +119,10 @@ class StaffControllerTest extends \lithium\test\Unit {
 	public function testIndex() {
         $request = new Request();
         $request->data = array();
-        $controller = new StaffController(array('request' => $request));
+        $controller = new EmployeesController(array('request' => $request));
 
         $result = $controller->index();
-        $this->assertTrue(array_key_exists('staffs', $result));
+        $this->assertTrue(array_key_exists('Employees', $result));
         $this->assertFalse(array_key_exists('bungle', $result));
     }
 	public function testView() {}
@@ -135,7 +135,7 @@ class StaffControllerTest extends \lithium\test\Unit {
 
 So I run this test again:
 
-	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/StaffControllerTest.php
+	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/EmployeesControllerTest.php
 	----
 	Test
 	----
@@ -156,7 +156,7 @@ So you know what I was saying about the controller returning an array?
 
 // ...
         $result = $controller->index();
-        $this->assertTrue(array_key_exists('staffs', $result));
+        $this->assertTrue(array_key_exists('Employees', $result));
 {% endhighlight %}
 
 Here's the corresponding code from the controller:
@@ -166,16 +166,16 @@ Here's the corresponding code from the controller:
 
 // ...
 	public function index() {
-		$staffs = Staff::all();
-		return compact('staffs');
+		$employees = Employees::all();
+		return compact('Employees');
 	}
 {% endhighlight %}
 
-Notice that it simply returns the result of the all() static method on the Staff model, which pulls back all the staff.
+Notice that it simply returns the result of the all() static method on the Employees model, which pulls back all the Employees.
 
 ## So what did we just test? And what do we need to test next?
 
-We tested that the controller returns a collection of Staff. It would be useful, at this point, to have a test database and some fixtures perhaps, rather than using the MySQL connection we set up earlier. Otherwise, our system isn't in a "known state", and you using the app could affect results of tests. Tests have to be **idempotent** (i.e. same results no matter how they are run and in what sequence).
+We tested that the controller returns a collection of Employees. It would be useful, at this point, to have a test database and some fixtures perhaps, rather than using the MySQL connection we set up earlier. Otherwise, our system isn't in a "known state", and you using the app could affect results of tests. Tests have to be **idempotent** (i.e. same results no matter how they are run and in what sequence).
 
 > For more on testing controllers in Lithium, [see this article from Richard McIntyre](http://mackstar.com/blog/2012/02/02/testing-controllers-lithium).
 

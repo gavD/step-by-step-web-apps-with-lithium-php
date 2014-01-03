@@ -22,20 +22,20 @@ I ended up with:
 	Lithium Syntax Check
 	--------------------
 	Performing 26 rules on 7 classes.
-	[OK] app\tests\cases\models\MockStaff
-	[OK] app\tests\cases\models\StaffTest
-	[OK] app\tests\cases\controllers\StaffControllerTest
-	[OK] app\models\Staff
+	[OK] app\tests\cases\models\MockEmployees
+	[OK] app\tests\cases\models\EmployeesTest
+	[OK] app\tests\cases\controllers\EmployeesControllerTest
+	[OK] app\models\Employees
 	[FAIL] app\controllers\HelloWorldController
 	Line	Position	Violation
 	----	--------	---------
 	11  	-       	Function "to_string" is not in camelBack style
 	11  	-       	Function "to_json" is not in camelBack style
 	[OK] app\controllers\HomeController
-	[OK] app\controllers\StaffController
+	[OK] app\controllers\EmployeesController
 
-(I moved MockStaff into its own file - which is good practise!)
-
-Notice there are still a couple of problems in the HelloWorldController - I think we can just delete that one now, we're not using it :-)
+(I moved MockEmployees into its own file - which is good practise! One class per file.)
 
 > See  [https://github.com/UnionOfRAD/li3_quality](https://github.com/UnionOfRAD/li3_quality) for full documentation of the li3 quality library - it's definitely worth getting to grips with!
+
+You may notice that there are still a couple of problems in the HelloWorldController - I think we can just delete that one now, we're not using it :-) In fact, what else can we declutter? Onwards!

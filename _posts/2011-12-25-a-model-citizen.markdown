@@ -69,19 +69,19 @@ So what have we just done? Well, this is the Lithium console - it's a command li
 
 > A lot of people alias this command so they can type "li3" rather than banging in the full path to the command. That's probably a good idea but I'll stick with the full path!
 
-Righty-ho, let's create our "Staff" model. Generally the convention in Lithium is that you create the model in the plural, although "Staff" is plural already, if I stuck an "S" on the end it would sound like a breed of dog or an English Cricket club, and I don't know anything about either of those things, so "Staff" it is!
+Righty-ho, let's create our "Employees" model.
 
 {% highlight bash %}
-./libraries/lithium/console/li3 create Staff
+./libraries/lithium/console/li3 create Employees
 {% endhighlight %}
 
-Here's the output from my terminal (side note - I use [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) and [Zsh](http://www.zsh.org/) with [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) for maximum terminal sickness!)
+Here's the output from my terminal (side note - I use [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) and [Zsh](http://www.zsh.org/) with [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) for maximum terminal goodness!)
 
-	$ ./libraries/lithium/console/li3 create Staff
-	Staff created in models/Staff.php.
-	StaffController created in controllers/StaffController.php.
-	StaffTest created in tests/cases/models/StaffTest.php.
-	StaffControllerTest created in tests/cases/controllers/StaffControllerTest.php.
+	$ ./libraries/lithium/console/li3 create Employees
+	Employees created in models/Employees.php.
+	EmployeesController created in controllers/EmployeesController.php.
+	EmployeesTest created in tests/cases/models/EmployeesTest.php.
+	EmployeesControllerTest created in tests/cases/controllers/EmployeesControllerTest.php.
 
 Wow, so this has created four files! Right, I know I said I wouldn't do this, and I don't mean to nag, but now is a really good time to do a "git status" to see what's changed, and then make a "git commit". Safety is number 1 priority!
 
@@ -91,25 +91,27 @@ Have you seen The Trip? Coogan and Brydon? If not, that chapter title will make 
 
 OK, file by file, here's what we've got:
 
-## models/Staff.php
+## models/Employees.php
 
-The Staff model. This is the bit that will represent and manipulate staff in the system.
+The Employees model. This is the bit that will represent and manipulate Employee in the system.
 
-## controllers/StaffController.php
+> I chose "Employees" over "Staff" because "Employees" allows me to follow the Lithium convention of plurality in model names. As "Staff" is already plural, it didn't work! Also "Person" doesn't pluralise neatly to "Persons". Yes, there are ways around these things, but consistency is very important when you're learning a new framework!
 
-A controller for interacting with staff. Very similar to the controller we made manually in the last chapter! I often think it's good to do stuff manually to learn it and then use a tool to abstract away the grunt work - otherwise, when the tool breaks, so do you!
+## controllers/EmployeesController.php
 
-## tests/cases/models/StaffTest.php
+A controller for interacting with Employees. Very similar to the controller we made manually in the last chapter! I often think it's good to do stuff manually to learn it and then use a tool to abstract away the grunt work - otherwise, when the tool breaks, so do you!
 
-A unit test for the Staff model. I've mentioned testing but essentially, if you're not familiar with the concept, it's automated tests that you write that test your code for you. Then, when you make a change, you have some confidence that you haven't broken anything. Remember, it's not WRITING CODE that takes the time (at least, not if you're a pro-level typist like me on my [Das Keyboard](http://shop.daskeyboard.com/)!); it's thinking, learning, refactoring, maintaining and explaining that take the lion's share of time! Having tests, even though it's MORE code, makes me faster. It works for me and it's my book so if you disagree, tough!
+## tests/cases/models/EmployeesTest.php
 
-_For a less facetious treatment of testing, please see my book [Deal With It: Attitude for Coders](https://leanpub.com/dealwithit/). You'll like it!_
+A unit test for the Employees model. I've mentioned testing but essentially, if you're not familiar with the concept, it's automated tests that you write that test your code for you. Then, when you make a change, you have some confidence that you haven't broken anything. Remember, it's not WRITING CODE that takes the time (at least, not if you're a pro-level typist like me on my [Das Keyboard](http://shop.daskeyboard.com/)!); it's thinking, learning, refactoring, maintaining and explaining that take the lion's share of time! Having tests, even though it's MORE code, makes me faster. It works for me and it's my book so if you disagree, tough!
+
+> For a less facetious treatment of testing, please see my book [Deal With It: Attitude for Coders](https://leanpub.com/dealwithit/). You'll like it!
 
 In my opinion, you should NEVER code without tests. This is like doing a tightrope walk over a raging river whilst drunk. With no safety net. In the rain. With pirates. And a monkey is chewing on that rope. And it's on fire. And everyone is shouting at you. You get the picture.
 
 Soooo, this test is for the model. There's one more test:
 
-## tests/cases/controllers/StaffControllerTest.php
+## tests/cases/controllers/EmployeesControllerTest.php
 
 This is an automated test for the controller. It's bare bones, there's no actual implementation, but it serves as a nice reminder to write the tests!
 

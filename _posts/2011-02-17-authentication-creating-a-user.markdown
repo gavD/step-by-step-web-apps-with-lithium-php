@@ -53,4 +53,8 @@ Notice "COMMANDS via app" now has a new task "administrator-create" - let's run 
 	Creating an admin...
 	Created user brucewayne
 
-So now we have a user! Let's log in as username "brucewayne", password "gothamknight". You should be logged in now, and you should be able to add users! Also, "regular" users can't add users, only the administrator.
+So now we have a user!
+
+> You'd probably want to parameterise this command so that you can pass in the username and password as command line arguments, rather than hard code it like this
+
+Let's log in as username "brucewayne", password "gothamknight". You should be logged in now, and you should be able to add users! Also, "regular" users can't add users, only the administrator.

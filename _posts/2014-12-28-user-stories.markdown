@@ -12,20 +12,20 @@ Here are the user stories for the web application we'll be building:
 ## Story 1
 
 > **As an** _employee_  
-**I want to** browse the staff  
+**I want to** browse the employees  
 **So that** I can see who my colleagues are
 
 ## Story 2
 
 > **As an** _employee_  
-**I want to** search the staff  
+**I want to** search the employees  
 **So that** I can find a particular colleagues
 
 ## Story 3
 
 > **As an** _administrator_  
-**I want to** manage the staff in my index  
-**So that** I can add and remove staff as they join and leave my company
+**I want to** manage the employees in my index  
+**So that** I can add and remove employees as they join and leave my company
 
 ## Story 4
 
@@ -33,7 +33,7 @@ Here are the user stories for the web application we'll be building:
 > **I want to** log in and log out  
 > **So that** I can access user management but others cannot
 
-So that's a pretty small set of features, but it's enough for us :-) The application will be publically accessible from the company's intranet, but administrators will be able to log in and administrate the database.
+So that's a pretty small set of features, but it's enough for us :-) The application will be publicly accessible from the company's intranet, but administrators will be able to log in and administrate the database.
 
 
   \* obviously, such light descriptions of problems are an opportunity to educate your users and engage better with them. Please don't go thinking I'm all gung-ho about customer support! I'd hate someone to read this book and think "Davies is a total cowboy, I'm not hiring him!" ;-)

@@ -1,0 +1,114 @@
+---
+layout: post
+title:  404'd! Custom errors
+---
+
+What if someone types in a bad URL? Or if something else goes wrong?
+
+![404'd!](images/404d.png)
+
+Yikes! That's pretty nasty! Don't worry, though, we can set something up to catch these.
+
+Open up app/config/bootstrap.php and uncomment the errors.php require:
+
+{% highlight php %}
+<?php
+// ...
+require __DIR__ . '/bootstrap/errors.php';
+// ...
+{% endhighlight %}
+
+Now, if you hit a missing route, you should see something like:
+
+![404'd!](images/404-default-error.png)
+
+This is the default Lithium Framework distribution error page, and it pretty much tells you what to do to make custom error pages :-) Let's open up app/views/layouts/error.html.php and have a look!
+
+What I'd recommend doing now is making app/views/layouts/error.html.php and app/views/layouts/default.html.php similar - I created two **elements** (partial templates):
+
+## app/views/elements/header.html.php
+
+{% highlight php %}
+<!doctype html>
+<html>
+<head>
+    <?php echo $this->html->charset(); ?>
+    <title>Employee Rolodex <?php echo $this->title(); ?></title>
+    <?php echo $this->html->style(array('bootstrap.min', 'lithified')); ?>
+    <?php echo $this->scripts(); ?>
+    <?php echo $this->styles(); ?>
+    <?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
+    <style type="text/css">
+        /* This should really be in the css files but I've put it here for
+           simplicity's sake! */
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="<?= $this->url(array('Home::index')); ?>">Homepage</a></li>
+					<li><a href="<?= $this->url(array('Employees::index')); ?>">Employees</a></li>
+					<li><a href="<?= $this->url(array('Administrators::login')); ?>">Admin log in</a></li>
+					<li><a href="<?= $this->url(array('Administrators::logout')); ?>">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Rolodex</h1>
+        <hr>
+
+        <div class="content">
+{% endhighlight %}
+
+> Notice that I added "login"/"logout" links in the menu. Really, it should detect if you're logged in before showing it. TODO
+
+## app/views/elements/footer.html.php
+
+{% highlight php %}
+        </div>
+
+        <hr>
+        <div class="footer">
+            <p>Employee Rolodex</p>
+        </div>
+    </div>
+</body>
+</html>
+{% endhighlight %}
+
+## app/views/layouts/default.html.php
+
+{% highlight php %}
+<?= $this->_render('element', 'header'); ?>
+	<?php echo $this->content(); ?>
+<?= $this->_render('element', 'footer'); ?>
+{% endhighlight %}
+
+Notice how it includes the header and footer using _render? We can do this in the error page too:
+
+## app/views/layouts/error.html.php
+
+{% highlight php %}
+<?php
+use lithium\core\Libraries;
+$path = Libraries::get(true, 'path');
+?>
+<?= $this->_render('element', 'header'); ?>
+	<div class="content">
+		<h2>Something went wrong!</h2>
+		<?php echo $this->content(); ?>
+	</div>
+<?= $this->_render('element', 'footer'); ?>
+{% endhighlight %}
+
+![Custom error page](images/404-custom-error.png)
+
+Great! Now our errors are rendered in the same style as the rest of our application :-)
+
+> Now would be a really good time to run the code quality static analysis ;-)

@@ -5,7 +5,7 @@ title:  Authentication
 
 We have a working app that we can add users to. Thing is, we don't want just any old sausage coming along and mucking things up! Let's modify the app so that there are administrators (as per our user stories, waaaay back in the mists of time!)
 
-We *could* use our existing Staff object as the Administrator - we could call it "User" and make it more generic. Instead, though, we're going to simpy have the model "Administrator".
+We *could* use our existing Employees object as the Administrator - we could call it "User" and make it more generic. Instead, though, we're going to simpy have the model "Administrator".
 
 We'll need to add:
 
@@ -98,7 +98,7 @@ class AdministratorsController extends \lithium\action\Controller {
 
 	public function login() {
 		if (Auth::check('admin', $this->request)) {
-			return $this->redirect(array('Staff::index'));
+			return $this->redirect(array('Employees::index'));
 		}
 		
 		$loginFailed = false;
@@ -107,6 +107,11 @@ class AdministratorsController extends \lithium\action\Controller {
 		}
 		return compact('loginFailed');
 	}
+
+	public function logout() {
+        Auth::clear('admin');
+        return $this->redirect('/');
+    }
 }
 ?>
 {% endhighlight %}
@@ -128,7 +133,7 @@ Create app/views/administrators/login.html.php:
 
 This creates a small, simple form, much like the add user form. Now, head on over to [http://staff-rolodex.localhost/administrators/login](http://staff-rolodex.localhost/administrators/login) and you should get an error like:
 
-    Fatal error: Uncaught exception 'lithium\data\model\QueryException' with message 'DESCRIBE `administrators`: Table 'staff.administrators' doesn't exist'
+    Fatal error: Uncaught exception 'lithium\data\model\QueryException' with message 'DESCRIBE `administrators`: Table 'Employee.administrators' doesn't exist'
 
 Right, I guess we'd better create one! Open your database in MySQL and enter:
 
@@ -143,7 +148,7 @@ Now, when we go to [http://staff-rolodex.localhost/administrators/login](http://
 
 ![Login screen](images/loginscreen.png)
 
-Now, before we log in, let's actually secure something. Open app/controllers/StaffController.php and stick a bit of code at the top of the add method:
+Now, before we log in, let's actually secure something. Open app/controllers/EmployeesController.php and stick a bit of code at the top of the add method:
 
 {% highlight php %}
 <?php
@@ -157,7 +162,7 @@ use lithium\security\Auth;
 		}
 {% endhighlight %}
 
-Now, still not logged in, let's try adding a user by clicking "Staff" at the top and then "Add" - and we get taken to the administrator login form - great!
+Now, still not logged in, let's try adding a user by clicking "Employees" at the top and then "Add" - and we get taken to the administrator login form - great!
 
 
 Right, now let's log in using the credentials username "brucewayne", password "gothamknight" (of course, he wouldn't be so stupid as to use those credentials, but I can't guess what the great detective would choose!) - but obviously there are no users so we get an error message:

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Super pro testing with fixture
+title:  Super pro testing with fixtures
 ---
 
-We made some progress with testing, but really, we need to be able to write to and read from a database. For that, we're going to use **fixtures**. Fixtures are a way of setting the system up with some mock data, where we know exactly what said data is and it's the same every time, so we can make our assertions against that.
+We made some progress with testing, but really, we need to be able to write to and read from some kind of database to simulate real-world usage. In the last chapter, we set up our environment to have a connection just for testing. Now, we're going to use **fixtures**. Fixtures are a way of setting the system up with some mock data, where we know exactly what said data is and it's the same every time, so we can make our assertions against that.
 
 Fixtures is a library that Union Of RAD supply:
 
@@ -12,57 +12,17 @@ cd app/libraries
 git clone https://github.com/UnionOfRAD/li3_fixtures.git
 {% endhighlight %}
 
-What a fixture is is a set of data. We have a few things to do first.
+A fixture is basically a set of known-state data. So, rather than testing with a system with any old data in, we know exactly what to expect.
 
-In app/config/bootstrap/connections.php, we're going to define a new connection. What we're going to do is have an in-memory database using SQLite3. If you have't got [SQLite](http://www.sqlite.org/) installed, do it now! SQLite is a great tool for testing because it works pretty much like any other relational database, but you can store it in memory so it's nice and clean and it's all gone after the test run - the perfect crime!
-
-In app/config/bootstrap/connections.php, update it to the following:
-
-{% highlight php %}
-<?php
-Connections::add('default', array(
-    'development' => array(
-		'type' => 'database',
-		'adapter' => 'MySql',
-		'host' => 'localhost',
-		'login' => 'root',
-		'password' => '',
-		'database' => 'staff',
-		'encoding' => 'UTF-8'
-	), 
-    'test' => array(
-		'type' => 'database',
-		'adapter' => 'Sqlite3',
-		'database' => ':memory:'
-	),
-    'production' => array(
-		'type' => 'database',
-		'adapter' => 'MySql',
-		'host' => 'localhost',
-		'login' => 'root',
-		'password' => '',
-		'database' => 'rolodex-production',
-		'encoding' => 'UTF-8'
-    )
-));
-?>
-{% endhighlight %}
-
-## Environments
-
-So now you have TWO connections. Because Lithium will automatically work out which database to use.. TODO - more on environments
-
-> For more on environments in Lithium, see http://nitschinger.at/Using-Environments-in-Lithium
-
-In app/tests/fixture/StaffFixture.php, put the following code:
+ We have a few things to do. In app/tests/fixture/EmployeesFixture.php, put the following code:
 
 {% highlight php %}
 <?php
 namespace app\tests\fixture;
 
-class StaffFixture extends \li3_fixtures\test\Fixture {
+class EmployeesFixture extends \li3_fixtures\test\Fixture {
 
-    protected $_model = 'app\models\Staff';
+    protected $_model = 'app\models\Employees';
 
     protected $_fields = array(
 		'id' => array('type' => 'id'),
@@ -79,24 +39,24 @@ class StaffFixture extends \li3_fixtures\test\Fixture {
 ?>
 {% endhighlight %}
 
-What we've just defined here is a fixture for the Staff model that has some canned data in the **$_records** field. We've got two users that we've created there called "Foobar" and "Bazbip". Next thing we're going to do is to run the controller's index method using this test data. Back over to app/tests/cases/controllers/StaffController.php:
+What we've just defined here is a fixture for the Employees model that has some canned data in the **$_records** field. We've got two users that we've created there called "Foobar" and "Bazbip". Next thing we're going to do is to run the controller's index method using this test data. Back over to app/tests/cases/controllers/EmployeesController.php:
 
 {% highlight php %}
 <?php
 namespace app\tests\cases\controllers;
 
-use app\controllers\StaffController;
+use app\controllers\EmployeesController;
 use lithium\action\Request;
 use li3_fixtures\test\Fixtures;
 
-class StaffControllerTest extends \lithium\test\Unit {
+class EmployeesControllerTest extends \lithium\test\Unit {
     public function setUp() {
         Fixtures::config(array(
             'db' => array(
                 'adapter' => 'Connection',
                 'connection' => 'default',
                 'fixtures' => array(
-                    'staff' => 'app\tests\fixture\StaffFixture',
+                    'Employees' => 'app\tests\fixture\EmployeesFixture',
                 )
             )
         ));
@@ -107,15 +67,15 @@ class StaffControllerTest extends \lithium\test\Unit {
         Fixtures::clear('db');
     }
 
-	public function testIndexListsStaffInTheDatabase() {
+	public function testIndexListsEmployeesInTheDatabase() {
 		$request = new Request();
 		$request->data = array();
-		$controller = new StaffController(array('request' => $request));
+		$controller = new EmployeesController(array('request' => $request));
 
 		$result = $controller->index();
-		$this->assertEqual("Foobar", $result['staffs'][1]->name);
-		$this->assertEqual("Bazbip", $result['staffs'][2]->name);
-		$this->assertNull($result['staffs'][3]);
+		$this->assertEqual("Foobar", $result['employees'][1]->name);
+		$this->assertEqual("Bazbip", $result['employees'][2]->name);
+		$this->assertNull($result['employees'][3]);
  	}
 //	public function testView() {}
 //	public function testAdd() {}
@@ -125,13 +85,13 @@ class StaffControllerTest extends \lithium\test\Unit {
 ?>
 {% endhighlight %}
 
-So I've chucked out the testIndex method and written testIndexListsStaffInTheDatabase, which is pretty similar but we're actually verifying the results that come from the SQLite3 database come through correctly. The setUp method is saying "hey let's use the test database and let's load the Staff Fixture into it". The tearDown method clears out the database that's connected to in setUp.
+So I've chucked out the testIndex method and written testIndexListsEmployeesInTheDatabase, which is pretty similar but we're actually verifying the results that come from the SQLite3 database come through correctly. The setUp method is saying "hey let's use the test database and let's load the Employees Fixture into it". The tearDown method clears out the database that's connected to in setUp.
 
-> Exercise: using this test connection from within your unit test, run Staff::all(); and print out their names. You should see that they're coming from the test connection. This is cool because we've swapped the connection out for testing so we don't have to change our code.
+> Exercise: using this test connection from within your unit test, run Employees::all(); and print out their names. You should see that they're coming from the test connection. This is cool because we've swapped the connection out for testing so we don't have to change our code.
 
 So now, we've got a pretty cool test that has a temporary database, puts some data in there, then runs the controller using that temporary database and checks the output. Nice!
 
-	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/StaffControllerTest.php
+	$ ./libraries/lithium/console/li3 test app/tests/cases/controllers/EmployeesControllerTest.php
 	----
 	Test
 	----

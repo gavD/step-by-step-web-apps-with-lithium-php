@@ -72,7 +72,7 @@ Feel free to tinker around with these templates! Here's one I've made as an exam
 <html>
 <head>
     <?php echo $this->html->charset(); ?>
-    <title>Staff Rolodex <?php echo $this->title(); ?></title>
+    <title>Employee Rolodex <?php echo $this->title(); ?></title>
     <?php echo $this->html->style(array('bootstrap.min', 'lithified')); ?>
     <?php echo $this->scripts(); ?>
     <?php echo $this->styles(); ?>
@@ -96,7 +96,7 @@ Feel free to tinker around with these templates! Here's one I've made as an exam
         </div>
     </div>
     <div class="container">
-        <h1>Staff Rolodex</h1>
+        <h1>Employee Rolodex</h1>
         <hr>
 
         <div class="content">
@@ -105,7 +105,7 @@ Feel free to tinker around with these templates! Here's one I've made as an exam
 
         <hr>
         <div class="footer">
-            <p>Staff Rolodex</p>
+            <p>Employee Rolodex</p>
         </div>
     </div>
 </body>

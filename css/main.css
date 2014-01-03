@@ -6,3 +6,11 @@ img {
 	text-align: right;
 	margin-bottom: 20px;
 }
+
+blockquote p {
+	font-size: 1em;
+}
+blockquote {
+	background: #EEE;
+	border-left: 5px solid #DDD;
+}

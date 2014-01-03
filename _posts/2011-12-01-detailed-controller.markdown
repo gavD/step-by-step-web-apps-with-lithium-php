@@ -11,7 +11,7 @@ Remember a couple of things we've covered - MVC (Model View Controller) and the 
 
 That will create a database "staff" (assuming you have mysql installed, you don't already have such a db, and dozens of other things!). Great, we have a DB now!
 
-Let's go to our controller at [http://staff-rolodex.localhost/staff](http://staff-rolodex.localhost/staff)!
+Let's go to our controller at [http://staff-rolodex.localhost/employees](http://staff-rolodex.localhost/employees)!
 
 ![Uncaught exception 'lithium\core\ConfigException' with message 'The data connection `default` is not configured.'](images/crashy-controller.png)
 
@@ -34,7 +34,7 @@ use lithium\data\Connections;
  	'host' => 'localhost',
  	'login' => 'root', // <== Never use root on production! Feel free to create a user!
  	'password' => '', // <== Set this to your user's password.
- 	'database' => 'staff', // <=== notice this line!
+ 	'database' => 'Employee', // <=== notice this line!
  	'encoding' => 'UTF-8'
  ));
 ?>
@@ -44,14 +44,14 @@ Total nonsense aside:
 
 > I've chopped out all the comments and stuff from the default connections.php file, you don't have to do that! I'm trying to save trees - or pixels or bytes or whatever is inside computers - I hear there's lots of stuff inside computers these days. There used to be 8 "bits", now there are 64 or more "bits"! OK I stole that joke from Mr Biffo. Anyone remember Digitiser? No? Moc-moc-a-moc!
 
-Right, back to [http://staff-rolodex.localhost/staff](http://staff-rolodex.localhost/staff)! Will it work? Will it not work? Will it catapult your HDD into space? Only several ways to find out!
+Right, back to [http://staff-rolodex.localhost/employees](http://staff-rolodex.localhost/employees)! Will it work? Will it not work? Will it catapult your HDD into space? Only several ways to find out!
 
-![ Uncaught exception 'lithium\data\model\QueryException' with message 'SELECT * FROM `staffs` AS `Staff`;: Table 'staff.staffs' doesn't exist' i](images/crashy-db.png)
+![ Uncaught exception 'lithium\data\model\QueryException' with message 'SELECT * FROM `Employees` AS `Employee`;: Table 'Employee.Employees' doesn't exist' i](images/crashy-db.png)
 
-Right so the table doesn't exist. That makes sense, right? After all, we created our database but there's nothing in it, and we told the Staff model it had some fields... So, open up MySQL and run:
+Right so the table doesn't exist. That makes sense, right? After all, we created our database but there's nothing in it, and we told the Employee model it had some fields... So, open up MySQL and run:
 
 {% highlight mysql %}
-CREATE TABLE staffs (
+CREATE TABLE Employees (
     id int AUTO_INCREMENT PRIMARY KEY,
     name varchar(64) NOT NULL,
     notes varchar(255) NOT NULL,
@@ -63,39 +63,37 @@ You should get a message like:
 
 	Query OK, 0 rows affected (0.02 sec)
 
-Right! Let's hit this controller again! Back to [http://staff-rolodex.localhost/staff](http://staff-rolodex.localhost/staff)!
+Right! Let's hit this controller again! Back to [http://staff-rolodex.localhost/employees](http://staff-rolodex.localhost/employees)!
 
-![Template not found at path `/var/www/staff-rolodex/app/views/staff/index.html.php`'](images/crashy-no-template.png)
+![Template not found at path `/var/www/staff-rolodex/app/views/employees/index.html.php`'](images/crashy-no-template.png)
 
 So, do you remember way back in the mists of time when we built our own controller? It were alllll fields back then... Ah, happy times. Anyway, we need to build some basic templates now.
 
-Create app/views/staff/index.html.php and give it the following contents:
+Create app/views/employees/index.html.php and give it the following contents:
 
 {% highlight php %}
-<h2>Staff</h2>
+<h2>Employee</h2>
 <?php
-foreach($staffs as $staff) {
-    echo $h($staff->name);
+foreach($employees as $employee) {
+    echo $h($employee->name);
     echo "<br/>";
 }
 ?>
-<p><a class="btn btn-large" href="<?= $this->url(array('Staff::add')); ?>">Add</a></p>
+<p><a class="btn btn-large" href="<?= $this->url(array('Employees::add')); ?>">Add</a></p>
 {% endhighlight %}
-
-_Please overlook the clumsy pluralisation of Staff to Staffs! Allow it, fam!_
 
 You should now see:
 
-![Staff list](images/staff-list.png)
+![Employee list](images/employees-list.png)
 
-YESSSSSSssssss..... It might not look like it, but we have created our first bit of properly dynamic code! Notice the "foreach" loop - it goes through each staff member and lists hir name. There are no staff right now, so let's add a function to add them!
+YESSSSSSssssss..... It might not look like it, but we have created our first bit of properly dynamic code! Notice the "foreach" loop - it goes through each Employee member and lists hir name. There are no Employee right now, so let's add a function to add them!
 
-Create app/views/staff/add.html.php and give it the contents:
+Create app/views/employees/add.html.php and give it the contents:
 
 {% highlight php %}
-<h2>Add new member of staff</h2>
+<h2>Add new member of Employee</h2>
 
-<?= $this->form->create($staff); ?>
+<?= $this->form->create($employee); ?>
 <label>Name</label>
 <?= $this->form->text('name'); ?>
 <label>Notes</label>
@@ -103,62 +101,62 @@ Create app/views/staff/add.html.php and give it the contents:
 <label>Department</label>
 <?= $this->form->text('department'); ?>
 <br/>
-<?= $this->form->submit('Save staff'); ?>
+<?= $this->form->submit('Save Employee'); ?>
 <?= $this->form->end(); ?>
 
-<p><a class="btn btn-large" href="<?= $this->url(array('Staff::index')); ?>">Back to staff index</a></p>
+<p><a class="btn btn-large" href="<?= $this->url(array('Employees::index')); ?>">Back to Employee index</a></p>
 {% endhighlight %}
 
 This should render something like the following:
 
 ![Add form](images/add-form.png)
 
-> _Don't worry, we're going to go back and explain all that we've done in this section, I just want to 'close the loop' and make sure we can add a member of staff first!_
+> _Don't worry, we're going to go back and explain all that we've done in this section, I just want to 'close the loop' and make sure we can add a member of Employee first!_
 
 Just one more step, then we've got a working system for adding users!
 
-Create app/views/staff/view.html.php and give it the following contents:
+Create app/views/employees/view.html.php and give it the following contents:
 
 {% highlight php %}
-<h2>Staff '<?= $staff->name ?>'</h2>
-<p> Notes: <?= $staff->notes ?></p>
-<p> Department: <?= $staff->department ?></p>
+<h2>Employee '<?= $employee->name ?>'</h2>
+<p> Notes: <?= $employee->notes ?></p>
+<p> Department: <?= $employee->department ?></p>
 
-<p><a class="btn btn-large" href="<?= $this->url(array('Staff::index')); ?>">Back to staff index</a></p>
+<p><a class="btn btn-large" href="<?= $this->url(array('Employees::index')); ?>">Back to Employee index</a></p>
 {% endhighlight %}
 
-Only one more thing! Please edit app/controllers/StaffController.php and change the view method to:
+Only one more thing! Please edit app/controllers/EmployeesController.php and change the view method to:
 
 {% highlight php %}
 <?php
 
 // ...
 	public function view($id) {
-        $staff = Staff::first($id);
-		return compact('staff');
+        $employee = Employees::first($id);
+		return compact('Employee');
 	}
 // ...
 ?>
 {% endhighlight %}
 
-For some reason, the generated version uses $this->request->id, which for me, didn't work. Your Mileage May Vary! Do the same for the edit method. You can now use the web application to add and list staff! When you add a user you should get a screen like this:
+For some reason, the generated version uses $this->request->id, which for me, didn't work. Your Mileage May Vary! Do the same for the edit method. You can now use the web application to add and list Employee! When you add a user you should get a screen like this:
 
-![Staff](images/staff.png)
+![Employee](images/employees.png)
 
-Now let's update app/views/staff/index.html.php:
+Now let's update app/views/employees/index.html.php:
 
 {% highlight php %}
-<h2>Staff</h2>
+<h2>Employee</h2>
 <ul>
 <?php
-foreach($staffs as $staff) {
-    ?><li><a href="<?=$this->url(array('Staff::view', 'args' => array($staff->id)));?>">
-            <?=$staff->name?>
+foreach($employees as $employee) {
+    ?><li><a href="<?=$this->url(array('Employees::view', 'args' => array($employee->id)));?>">
+            <?=$employee->name?>
         </a></li><?php
 }
 ?>
 </ul>
-<p><a class="btn btn-large" href="<?= $this->url(array('Staff::add')); ?>">Add</a></p>
+<p><a class="btn btn-large" href="<?= $this->url(array('Employees::add')); ?>">Add</a></p>
 {% endhighlight %}
 
 You should now have a nice looking index of users that you can click through to view their details - cool!

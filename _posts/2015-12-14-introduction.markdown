@@ -22,10 +22,11 @@ Anyway, this application is a good choice (YES IT IS, HUSH YOU) because it will 
 * MVC architecture
 * Testing
 * Coding standards
-* File uploads [TODO - maybe?]
-* User access control [TODO]
 * Logging
+* Filters
+* User access control
+* Error handling
 * Performance analysis
-* Filters [TODO]
+* File uploads [TODO - maybe?]
 
 Sounds pretty hashtag swag to me! Let's roll.

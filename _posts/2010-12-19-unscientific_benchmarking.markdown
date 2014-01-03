@@ -5,7 +5,7 @@ title:  Unscientific benchmarking
 
 What we need to do now is figure out roughly how much computar machines we need to make our application run! It depends on a lot of factors - most notably, how many users we are likely to need to support.
 
-If we assume we have 1000 staff, and that 10% of them want to use this application at once, what we can do is benchmark the application and work out roughly how many servers we'd need.
+If we assume we have 1000 Employees, and that 10% of them want to use this application at once, what we can do is benchmark the application and work out roughly how many servers we'd need.
 
 > It's a really bad idea to GUESS at how much our application can handle. If you want to know more about this, there's a chapter on it in my book, [Deal With It: Attitude for Coders](https://leanpub.com/dealwithit).
 
