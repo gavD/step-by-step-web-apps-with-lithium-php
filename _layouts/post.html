@@ -25,12 +25,12 @@ layout: default
 		<div id="page-navigation">
 
 			{% if page.next.url %}
-				<a class="btn btn-large btn-danger" href="{{page.next.url  | remove_first:'/' }}" title="Previous chapter
+				<a class="btn btn-danger" href="{{page.next.url  | remove_first:'/' }}" title="Previous chapter
 	{{page.previous.title}}">&laquo; Previous chapter</a>
 			{% endif %}
 
 			{% if page.previous.url %}
-				<a class="btn btn-large btn-success" href="{{page.previous.url  | remove_first:'/' }}" title="Next chapter
+				<a class="btn btn-success" href="{{page.previous.url  | remove_first:'/' }}" title="Next chapter
 	{{page.previous.title}}">Next chapter &raquo;</a>
 			{% endif %}
 		</div>

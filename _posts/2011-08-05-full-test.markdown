@@ -15,7 +15,7 @@ use app\models\Employees;
 use li3_fixtures\test\Fixtures;
 use lithium\net\http\Router;
 
-class EmployeesControllerTest extends \lithium\test\Integration {
+class EmployeesControllerTest extends \lithium\test\Unit {
 	public function setUp() {
 		Fixtures::config(array(
 			'db' => array(
@@ -27,12 +27,8 @@ class EmployeesControllerTest extends \lithium\test\Integration {
 			)
 		));
 		Fixtures::save('db');
-
+		
 		Router::connect('/{:controller}/{:action}/{:args}');
-	}
-
-	public function tearDown() {
-		Fixtures::clear('db');
 	}
 
     // ...
@@ -44,7 +40,6 @@ class EmployeesControllerTest extends \lithium\test\Integration {
 			'name' => 'Brand new user'
 		);
 		$controller = new EmployeesController(array('request' => $request));
-		/* @var $response \lithium\action\Response */
 		$response = $controller->add();
 		$this->assertEqual(302, $response->status['code']);
 		$this->assertEqual(3, count(Employees::all()));
@@ -54,14 +49,16 @@ class EmployeesControllerTest extends \lithium\test\Integration {
 ?>
 {% endhighlight %}
 
-app/config/routes.php does not get included in TEST - tests are isolated so they don't know about routes. Therefore: Notice that we included:
+Notice there are some new `use` statements at the top of the file. Don't miss them out!
+
+`app/config/routes.php` does not get included in TEST - tests are isolated so they don't know about routes. Therefore: Notice that we included:
 
     Router::connect('/{:controller}/{:action}/{:args}');
 
 This is because of the aforementioned issue whereby test doesn't include the whole environment, but runs everything in isolation (which is actually desirable so you can target tests). There may well be a better way of testing controllers than what I've done here, but this works for me! Feel free to send me a correction if you have a better way of doing this!
 
-Notice that we run a couple of counts to make sure the new Employees member has been created:
+Notice that we run a couple of counts to make sure the new Employees member has been created; we make sure at the start there are two and at the end there are three:
 
-    $this->assertEqual(2, count(Employees::all()));
+    $this->assertEqual(3, count(Employees::all()));
 
-Well, that's a test that a user, using the controller, can actually create a Employees entry.
+Well, that's a test that a user, using the controller, can actually create a Employees entry. Next we're going to add some validation to make sure our models have all the data that we want them to!

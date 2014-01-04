@@ -15,13 +15,13 @@ Well, if you run your tests again (which, by the way, you should do if you make 
 
 Once again, Lithium to the rescue! Lithium has the concept of *environments* - if you've done and Rails or Symfony2 or similar you'll probably be familiar with the concept. Generally, environments take the form of:
 
-* **test** - running unit and integration tests.
-* **development** - your workspace on your machine, as you're building and testing your app. Often kind of like a motorbike stripped down and strewn over the living room floor.
-* **production** - the app in "running fully optimised" mode.
+* `test` - running unit and integration tests.
+* `development` - your workspace on your machine, as you're building and testing your app. Often kind of like a motorbike stripped down and strewn over the living room floor.
+* `production` - the app in "running fully optimised" mode.
 
 We're going to tell Lithium "in test mode, don't bother with that logging gubbins".
 
-Open up app/config/bootstrap/logging.php and change it to:
+Open up `app/config/bootstrap/logging.php` and change it to:
 
 {% highlight php %}
 <?php
@@ -40,4 +40,4 @@ if (!Environment::is('test')) {
 ?>
 {% endhighlight %}
 
-TODO why doesn't this work?
+TODO why doesn't this work? - It is because the detector isn't initialised... If we do the test in the controller, it's fine. Placed in routes.php, it works.... Action.php uses a filter, could that work for us?

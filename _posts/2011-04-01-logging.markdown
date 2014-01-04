@@ -9,7 +9,7 @@ Check out [Lithium's Logger.php](https://github.com/UnionOfRAD/lithium/blob/mast
 
 Good news, everybody! It's REALLY EASY to configure logging in Lithium!
 
-OK first up we modify app/config/bootstrap.php and add an include:
+OK first up we modify `app/config/bootstrap.php` and add an include:
 
 {% highlight php %}
 <?php
@@ -29,7 +29,7 @@ Then, hit [http://employee-rolodex.localhost/employees](http://employee-rolodex.
 
 	Fatal error: require(): Failed opening required '/var/www/employee-rolodex/app/config/bootstrap/logging.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/employee-rolodex/app/config/bootstrap.php on line 62
 
-Now we create app/bootstrap/logging.php with these contents:
+Now we create `app/config/bootstrap/logging.php` with these contents:
 
 {% highlight php %}
 <?php
@@ -42,9 +42,10 @@ Logger::config(array(
 		'priority' => array('emergency', 'alert', 'critical', 'error')
 	)
 ));
+?>
 {% endhighlight %}
 
-OK, now we're going to modify app/controllers/EmployeesController.php a bit:
+OK, now we're going to modify `app/controllers/EmployeesController.php` a bit:
 
 {% highlight php %}
 <?php
@@ -74,13 +75,13 @@ Finally, from the terminal, let's have a look at our log file:
 
 _Yes, I am writing this on Christmas day!_
 
-> *Did something go wrong?* Make sure app/resources/tmp/logs exists and is writeable by your web user.
+> *Did something go wrong?* Make sure `app/resources/tmp/logs` exists and is writeable by your web user.
 
-Right, so what did we do here? Well, we defined two logging destinations - one to the system log, for all logging, and the other, 'problems', to a File. Lithium's File logger will log to app/resources/tmp/logs/{message type}.log. Because we used Logger::alert, it created alert.log. If we used "error", it would write to "error.log". Notice also this line:
+Right, so what did we do here? Well, we defined two logging destinations - one to the system log, for all logging, and the other, 'problems', to a File. Lithium's File logger will log to `app/resources/tmp/logs/{message type}.log`. Because we used `Logger::alert`, it created `alert.log`. If we used "error", it would write to "`error.log`". Notice also this line:
 
 		'priority' => array('emergency', 'alert', 'critical', 'error')
 
-here, we can see that the file logger is only "paying attention" to 4 types of log events (called "message priority levels". The message priority levels which Logger supports are emergency, alert, critical, error, warning, notice, info and debug. By saying "Logger::alert('Someone listed users...');", we are using the "alert" level. We could equally to "Logger::critical" or "Logger::debug".
+here, we can see that the file logger is only "paying attention" to 4 types of log events (called "message priority levels". The message priority levels which Logger supports are `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info` and `debug`. By saying `Logger::alert('Someone listed users...');`, we are using the `alert` level. We could equally to `Logger::critical` or `Logger::debug`.
 
 ## Over to you!
 

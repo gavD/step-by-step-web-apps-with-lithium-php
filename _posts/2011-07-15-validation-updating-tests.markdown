@@ -1,51 +1,9 @@
 ---
 layout: post
-title:  Validation - checking data
+title:  Validation - updating tests
 ---
 
-It's a common requirement to have some checks on data. For example, we might not want to save a member of Employee unless the department has been entered. Thankfully, in Lithium, this is quite straightforward!
-
-Open up app/models/Employees.php and replace the validation array:
-
-{% highlight php %}
-<?php
-namespace app\models;
-
-class Employees extends \lithium\data\Model {
-	public $validates = array(
-		'department' => array(
-			array(
-				'notEmpty',
-				'required' => true,
-				'message' => 'Please let us know what department this person works in.'
-			)
-		)
-	);
-{% endhighlight %}
-
-Now, we're going to modify app/views/employees/add.html.php and add some error output:
-
-{% highlight php %}
-<h2>Add new member of Employees</h2>
-
-<?php
-if (count($errors) > 0) {
-	foreach ($errors as $error) {
-	?>
-		<p class="text-error"><?= $error[0]; ?></p>
-	<?php
-	}
-}
-?>
-
-...
-{% endhighlight %}
-
-Then, if you try to create a user with no department, you'll see something like this:
-
-![Validation](images/validation.png)
-
-Sweet! This will break our tests, though, so what we're going to do is update our test so it states a department. Open up app/tests/cases/EmployeesControllerTest.php and add a 'department' to $_records, e.g.:
+Open up `app/tests/cases/EmployeesControllerTest.php` and add a 'department' to `$_records`, e.g.:
 
 {% highlight php %}
 <?php
@@ -60,7 +18,7 @@ Sweet! This will break our tests, though, so what we're going to do is update ou
 		// ...
 {% endhighlight %}
 
-Let's check that the model won't save without a department. We open up app/tests/cases/models/EmployeesTest.php and we're adding a setUp method, as well as testDepartmentIsMandatory. We're also no longer using our MockEmployee because we can connect to our test database for extra realism:
+Let's check that the model won't save without a department. We open up `app/tests/cases/models/EmployeesTest.php` and we're adding a `setUp` method, as well as `testDepartmentIsMandatory`. We're also no longer using our `MockEmployee` because we can connect to our test database for extra realism:
 
 {% highlight php %}
 <?php
@@ -102,10 +60,14 @@ class EmployeesTest extends \lithium\test\Unit {
 {% endhighlight %}
 
 
-Now we're going to add a new test to EmployeesControllerTest:
+Now we're going to add a new test to `app/tests/cases/controllers/EmployeesControllerTest.php`:
 
 {% highlight php %}
 <?php
+// ...
+
+use app\models\Employees;
+
 // ...
 	public function testDepartmentIsMandatory() {
 		$this->assertEqual(2, count(Employees::all()));
@@ -118,6 +80,6 @@ Now we're going to add a new test to EmployeesControllerTest:
 	}
 {% endhighlight %}
 
-This test ensures that the user cannot save a member of Employee to the database without specifying a department.
+This test ensures that the user cannot save a member of Employees to the database without specifying a department.
 
 > For more on validation, read the [Lithium documentation](http://li3.me/docs/manual/working-with-data/validation.wiki)

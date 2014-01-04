@@ -19,7 +19,7 @@ So, we're going to test our controllers, to make sure our systems integrate well
 
 ## Writing our test
 
-There is already a test case created for us in app/tests/cases/controllers/EmployeesControllerTest.php - seems like a good place to start!
+There is already a test case created for us in `app/tests/cases/controllers/EmployeesControllerTest.php` - seems like a good place to start!
 
 {% highlight php %}
 <?php
@@ -122,7 +122,7 @@ class EmployeesControllerTest extends \lithium\test\Unit {
         $controller = new EmployeesController(array('request' => $request));
 
         $result = $controller->index();
-        $this->assertTrue(array_key_exists('Employees', $result));
+        $this->assertTrue(array_key_exists('employees', $result));
         $this->assertFalse(array_key_exists('bungle', $result));
     }
 	public function testView() {}
@@ -156,7 +156,7 @@ So you know what I was saying about the controller returning an array?
 
 // ...
         $result = $controller->index();
-        $this->assertTrue(array_key_exists('Employees', $result));
+        $this->assertTrue(array_key_exists('employees', $result));
 {% endhighlight %}
 
 Here's the corresponding code from the controller:
@@ -167,7 +167,7 @@ Here's the corresponding code from the controller:
 // ...
 	public function index() {
 		$employees = Employees::all();
-		return compact('Employees');
+		return compact('employees');
 	}
 {% endhighlight %}
 
@@ -177,6 +177,4 @@ Notice that it simply returns the result of the all() static method on the Emplo
 
 We tested that the controller returns a collection of Employees. It would be useful, at this point, to have a test database and some fixtures perhaps, rather than using the MySQL connection we set up earlier. Otherwise, our system isn't in a "known state", and you using the app could affect results of tests. Tests have to be **idempotent** (i.e. same results no matter how they are run and in what sequence).
 
-> For more on testing controllers in Lithium, [see this article from Richard McIntyre](http://mackstar.com/blog/2012/02/02/testing-controllers-lithium).
-
-> There is also a very good article on testing Lithium [here](http://nitschinger.at/Testing-the-Lithium-core-for-fun-and-profit)
+> For more on testing controllers in Lithium, [see this article from Richard McIntyre](http://mackstar.com/blog/2012/02/02/testing-controllers-lithium). There is also a very good article on testing Lithium [from Michael Nitschinger](http://nitschinger.at/Testing-the-Lithium-core-for-fun-and-profit).

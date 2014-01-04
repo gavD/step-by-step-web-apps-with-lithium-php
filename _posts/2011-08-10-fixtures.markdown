@@ -5,16 +5,20 @@ title:  Super pro testing with fixtures
 
 We made some progress with testing, but really, we need to be able to write to and read from some kind of database to simulate real-world usage. In the last chapter, we set up our environment to have a connection just for testing. Now, we're going to use **fixtures**. Fixtures are a way of setting the system up with some mock data, where we know exactly what said data is and it's the same every time, so we can make our assertions against that.
 
-Fixtures is a library that Union Of RAD supply:
+Fixtures is a library that Union Of RAD supply, available at [https://github.com/UnionOfRAD/li3_fixtures](https://github.com/UnionOfRAD/li3_fixtures). Here's how I installed it:
 
 {% highlight bash %}
 cd app/libraries
 git clone https://github.com/UnionOfRAD/li3_fixtures.git
 {% endhighlight %}
 
+Then include the library in app/config/bootstrap/libraries.php
+
+    Libraries::add('li3_fixtures');
+
 A fixture is basically a set of known-state data. So, rather than testing with a system with any old data in, we know exactly what to expect.
 
- We have a few things to do. In app/tests/fixture/EmployeesFixture.php, put the following code:
+We have a few things to do. In `app/tests/fixture/EmployeesFixture.php`, put the following code:
 
 {% highlight php %}
 <?php
@@ -39,7 +43,7 @@ class EmployeesFixture extends \li3_fixtures\test\Fixture {
 ?>
 {% endhighlight %}
 
-What we've just defined here is a fixture for the Employees model that has some canned data in the **$_records** field. We've got two users that we've created there called "Foobar" and "Bazbip". Next thing we're going to do is to run the controller's index method using this test data. Back over to app/tests/cases/controllers/EmployeesController.php:
+What we've just defined here is a fixture for the Employees model that has some canned data in the **$_records** field. We've got two users that we've created there called "Foobar" and "Bazbip". Next thing we're going to do is to run the controller's index method using this test data. Back over to `app/tests/cases/controllers/EmployeesControllerTest.php`:
 
 {% highlight php %}
 <?php
@@ -85,7 +89,7 @@ class EmployeesControllerTest extends \lithium\test\Unit {
 ?>
 {% endhighlight %}
 
-So I've chucked out the testIndex method and written testIndexListsEmployeesInTheDatabase, which is pretty similar but we're actually verifying the results that come from the SQLite3 database come through correctly. The setUp method is saying "hey let's use the test database and let's load the Employees Fixture into it". The tearDown method clears out the database that's connected to in setUp.
+So I've chucked out the `testIndex` method and written `testIndexListsEmployeesInTheDatabase`, which is pretty similar but we're actually verifying the results that come from the SQLite3 database come through correctly. The setUp method is saying "hey let's use the test database and let's load the Employees Fixture into it". The tearDown method clears out the database that's connected to in setUp.
 
 > Exercise: using this test connection from within your unit test, run Employees::all(); and print out their names. You should see that they're coming from the test connection. This is cool because we've swapped the connection out for testing so we don't have to change our code.
 

@@ -13,4 +13,4 @@ From there, we looked at testing, coding standards, and fixtures, and how to add
 
 Already, we've built something that looks like a website and actually works! Hopefully you're starting to feel ready to build systems of your own!
 
-Let's not get complacent, though... There's still plenty we haven't covered!
+Let's not get complacent, though... There's still plenty we haven't covered! First up - all apps need to do some form of logging...
