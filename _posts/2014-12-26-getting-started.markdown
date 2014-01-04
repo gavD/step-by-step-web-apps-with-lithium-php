@@ -7,7 +7,7 @@ OK, so we know what Lithium is and what we're going to build with it! Roughly. W
 
 I guess to get started we'd better get Lithium installed... Before that, though, make sure you have PHP installed and a web server - I generally use Nginx but Lithium has instructions for plenty of servers.
 
-I won't duplicate the Lithium docs here - see [the requirements page for Lithium](http://lithify.me/docs/manual/getting-started/requirements.wiki) and [the Lithium installation guide](http://lithify.me/docs/manual/getting-started/installation.wiki) to get up and running.
+I won't duplicate the Lithium docs here - see [the requirements page for Lithium](http://li3.me/docs/manual/getting-started/requirements.wiki) and [the Lithium installation guide](http://li3.me/docs/manual/getting-started/installation.wiki) to get up and running.
 
 We'll start with the sample app and go from there! Check out [Union of Rad's Framework from Github](https://github.com/UnionOfRAD/framework) and set it up as per the Lithium docs. What you want to get to is seeing this screen:
 
@@ -15,7 +15,7 @@ We'll start with the sample app and go from there! Check out [Union of Rad's Fra
 
 ## Here's how I did it
 
-This section is just how I set it up. This is not "documentation", this is just what I did, it's better to read [lithify.me/docs/manual](http://lithify.me/docs/manual) and follow their guide, but I'm including my gubbins for reference.
+This section is just how I set it up. This is not "documentation", this is just what I did, it's better to read [li3.me/docs/manual](http://li3.me/docs/manual) and follow their guide, but I'm including my gubbins for reference.
 
 Open a terminal and run:
 

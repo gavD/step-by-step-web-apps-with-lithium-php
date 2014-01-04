@@ -19,7 +19,7 @@ I'm keeping each chapter short. I don't know about you, but when reading long te
 
 ## Why step-by-step?
 
-Firstly, Lithium is, in some ways, pretty well documented - the code itself is wonderfully commented in great detail and has a whole bunch of unit tests. The documentation at [http://lithify.me/docs/manual](lithify.me) is really well written (although there are some bits missing) and takes you through the features very well. What I wanted, when I was getting to grips with it, was an end-to-end tutorial that covered the things that I want to know.
+Firstly, Lithium is, in some ways, pretty well documented - the code itself is wonderfully commented in great detail and has a whole bunch of unit tests. The documentation at [http://li3.me/docs/manual](li3.me) is really well written (although there are some bits missing) and takes you through the features very well. What I wanted, when I was getting to grips with it, was an end-to-end tutorial that covered the things that I want to know.
 
 I'm a software developer, mostly doing websites and mobile applications. There's a lot of things that we commonly do in web development (routing, MVC, and testing in particular), so I figured we'd go through building something that we might actually build that covers a lot of the concepts we use every day. If you're not from a web background, that's fine, I'm sure you'll pick up some pointers!
 

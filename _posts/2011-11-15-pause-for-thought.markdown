@@ -9,7 +9,7 @@ That was a LOT of stuff very quickly. Let's take a breath and go back through so
 
 If you've done web dev for more than a couple of months, you'll be concerned about sanitising outputs. After all, no-one wants to be the victim of an XSS (Cross-Site Scripting) attack, or SQL injection. Lithium does a lot to protect you from that. The <?= ?> output? That isn't just the regular PHP shorttag echo. That's actually a thing that the template engine in Lithium looks for and anything output through there is escaped. Now, there's more to learn about that but for now, this will suffice.
 
-For more info, see the [Lithium manual's section on auto-escaping](http://lithify.me/docs/manual/handling-http-requests/views.wiki).
+For more info, see the [Lithium manual's section on auto-escaping](http://li3.me/docs/manual/handling-http-requests/views.wiki).
 
 ## About the controller
 
@@ -45,7 +45,7 @@ The [compact function](http://www.php.net/compact) is documented on PHP.Net. A l
 	// ...
 {% endhighlight %}
 
-This is similar, except a single member of Employees is pulled out by ID. Lithium is smart enough to know the auto incremented primary key field "id" is the one to use. This member of Employees is returned and sent off to the view. We're not going to go into huge detail on the request lifecycle (this is more a "how to" than a "how it does things"), but you can read more about this in the [Lithium manual section on handling HTTP requests](http://lithify.me/docs/manual/handling-http-requests/).
+This is similar, except a single member of Employees is pulled out by ID. Lithium is smart enough to know the auto incremented primary key field "id" is the one to use. This member of Employees is returned and sent off to the view. We're not going to go into huge detail on the request lifecycle (this is more a "how to" than a "how it does things"), but you can read more about this in the [Lithium manual section on handling HTTP requests](http://li3.me/docs/manual/handling-http-requests/).
 
 ### Edit
 

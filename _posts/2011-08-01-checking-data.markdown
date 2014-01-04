@@ -120,4 +120,4 @@ Now we're going to add a new test to EmployeesControllerTest:
 
 This test ensures that the user cannot save a member of Employee to the database without specifying a department.
 
-> For more on validation, read the [Lithium documentation](http://lithify.me/docs/manual/working-with-data/validation.wiki)
+> For more on validation, read the [Lithium documentation](http://li3.me/docs/manual/working-with-data/validation.wiki)

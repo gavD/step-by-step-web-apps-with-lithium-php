@@ -22,7 +22,7 @@ class EmployeesTest extends \lithium\test\Unit {
 ?>
 {% endhighlight %}
 
-There's not much going on in here either. Lithium has its own unit testing gubbins - it doesn't use PHPUnit or whatever. I suppose you COULD use PHPUnit but we're going to stick with the [default Lithium testing utilities](http://lithify.me/docs/manual/quality-code/testing.wiki).
+There's not much going on in here either. Lithium has its own unit testing gubbins - it doesn't use PHPUnit or whatever. I suppose you COULD use PHPUnit but we're going to stick with the [default Lithium testing utilities](http://li3.me/docs/manual/quality-code/testing.wiki).
 
 I'm not going to do a full treatment of unit testing or TDD (Test Driven Development) here. The absolute best book on the subject is [Kent Beck's Test-Driven Development by example](http://books.google.com/books/about/Test_Driven_Development.html?id=gFgnde_vwMAC&redir_esc=y) - it really is fantastic!
 

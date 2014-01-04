@@ -7,7 +7,7 @@ We went through all that business, and we can't even log in! There's not point t
 
 Symfony2 has a bundle called FOSUserBundle which has functionality to add users via the command line. We're going to build something similar, but more lightweight. In the process, we'll learn about writing command line tasks in Lithium - it's more than "just" a web framework!
 
-The [Lithium console documentation](http://lithify.me/docs/lithium/console) shows us how to create a console command, and we're going to do just that :-)
+The [Lithium console documentation](http://li3.me/docs/lithium/console) shows us how to create a console command, and we're going to do just that :-)
 
 Create app/extensions/command/AdministratorCreate.php and add:
 

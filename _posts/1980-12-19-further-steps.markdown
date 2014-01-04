@@ -27,5 +27,5 @@ Well, hopefully we've done enough to get you up and running with Lithium develop
 
 * IRC - join #li3 on FreeNode
 
-> **Note on filters** Here we've seen, for the first time, the concept of a **Filter**. The [Lithium docs on filters](http://lithify.me/docs/manual/lithium-basics/filters.wiki) are worth reading - filters are a very powerful concept in Lithium, rooted in AOP (Aspect Oriented Programming).
+> **Note on filters** Here we've seen, for the first time, the concept of a **Filter**. The [Lithium docs on filters](http://li3.me/docs/manual/lithium-basics/filters.wiki) are worth reading - filters are a very powerful concept in Lithium, rooted in AOP (Aspect Oriented Programming).
 

@@ -15,7 +15,7 @@ Oh dear! Hmm. Let's take a look at this error message in detail. The pertinent b
 
 > Fatal error: Uncaught exception 'lithium\core\ClassNotFoundException' with message 'Class `Home` of type `controllers` not found.'
 
-So, it's looking for a **controller** named **home**... Right, just to shut it up, let's make a [controller](http://lithify.me/docs/manual/handling-http-requests/controllers.wiki)! We'll create this file in app/controller/HomeController.php - on my computer, that's /var/www/staff-rolodex/app/controllers/HomeController.php
+So, it's looking for a **controller** named **home**... Right, just to shut it up, let's make a [controller](http://li3.me/docs/manual/handling-http-requests/controllers.wiki)! We'll create this file in app/controller/HomeController.php - on my computer, that's /var/www/staff-rolodex/app/controllers/HomeController.php
 
 Here's my file:
 
