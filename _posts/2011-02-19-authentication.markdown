@@ -5,7 +5,7 @@ title:  Authentication
 
 We have a working app that we can add users to. Thing is, we don't want just any old sausage coming along and mucking things up! Let's modify the app so that there are administrators (as per our user stories, waaaay back in the mists of time!)
 
-We *could* use our existing Employees object as the Administrator - we could call it "User" and make it more generic. Instead, though, we're going to simpy have the model "Administrator".
+We *could* use our existing Employees object as the Administrator - we could call it "User" and make it more generic. Instead, though, we're going to simply have the model "Administrator".
 
 We'll need to add:
 
@@ -21,7 +21,7 @@ That's quite a bit! Good news is it's not super difficult in Lithium :-)
 
 ## Create authentication configuration
 
-Now open app/config/bootstrap.php - you should have something like:
+Now open `app/config/bootstrap.php` - you should have something like:
 
 {% highlight php %}
 <?php
@@ -37,7 +37,7 @@ Now open app/config/bootstrap.php - you should have something like:
 
 Uncomment that line so that session.php is getting included.
 
-Open up app/config/bootstrap/session.php. Here's mine - don't just blindly copy it (not that I think you would! I have every confidence in you!), but have a read through it first and take note of the comments in the default version. Might be a good idea to keep those comments in there rather than dump them :-)
+Open up `app/config/bootstrap/session.php`. Here's mine - don't just blindly copy it (not that I think you would! I have every confidence in you!), but have a read through it first and take note of the comments in the default version. Might be a good idea to keep those comments in there rather than dump them :-)
 
 {% highlight php %}
 <?php
@@ -63,7 +63,7 @@ What this is saying is "configure sessions to use PHP sessions with a name based
 
 Right, but this isn't enough codes - we're talking about a model that doesn't even exist yet! Have we lost our minds?
 
-Far from it! Let's create the Administrators model in app/models/Administrators.php:
+Far from it! Let's create the Administrators model in `app/models/Administrators.php`:
 
 {% highlight php %}
 <?php
@@ -86,7 +86,7 @@ class Administrators extends \lithium\data\Model {
 
 ## Creating our controller
 
-Create app/controllers/AdministratorsController.php:
+Create `app/controllers/AdministratorsController.php`:
 
 {% highlight php %}
 <?php
@@ -118,7 +118,7 @@ class AdministratorsController extends \lithium\action\Controller {
 
 One more thing! You might be overloading, but as Terry Wogan said on his Secret Pirate Radio Podcast, stay with me, stay with me! We're nearly there!
 
-Create app/views/administrators/login.html.php:
+Create `app/views/administrators/login.html.php`:
 
 {% highlight php %}
 <?php if ($loginFailed): ?>
@@ -163,7 +163,6 @@ use lithium\security\Auth;
 {% endhighlight %}
 
 Now, still not logged in, let's try adding a user by clicking "Employees" at the top and then "Add" - and we get taken to the administrator login form - great!
-
 
 Right, now let's log in using the credentials username "brucewayne", password "gothamknight" (of course, he wouldn't be so stupid as to use those credentials, but I can't guess what the great detective would choose!) - but obviously there are no users so we get an error message:
 
