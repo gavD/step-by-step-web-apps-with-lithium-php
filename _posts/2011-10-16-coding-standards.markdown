@@ -5,7 +5,21 @@ title:  Coding standards
 
 Now that we've got a couple of simple things up and running, we're going to introduce the concept of **coding standards**. Having a set of coding standards help us to write code in a consistent style and avoid common pitfalls.
 
-There's a library called [li3 quality](https://github.com/UnionOfRAD/li3_quality) which adds syntax checking to your /test area and also makes it available from the command line. Here's a way to run a quick syntax check of the app:
+There's a library called [li3 quality](https://github.com/UnionOfRAD/li3_quality) which adds syntax checking to your /test area and also makes it available from the command line. Here's how I installed it, but check the Github page for specific instructions:
+
+	$ cd app/libraries
+	$ git clone https://github.com/UnionOfRAD/li3_quality.git
+	Cloning into 'li3_quality'...
+	remote: Reusing existing pack: 1950, done.
+	remote: Total 1950 (delta 0), reused 0 (delta 0)
+	Receiving objects: 100% (1950/1950), 369.49 KiB | 335 KiB/s, done.
+	Resolving deltas: 100% (978/978), done.
+	$ cd ../../
+	$ ./libraries/lithium/console/li3 quality syntax app
+
+> I've put it in `app/libraries` rather than `libraries`. Both should work.
+
+Now, run a quick syntax check of the app:
 
 {% highlight bash %}
 ./libraries/lithium/console/li3 quality syntax app
@@ -38,4 +52,8 @@ I ended up with:
 
 > See  [https://github.com/UnionOfRAD/li3_quality](https://github.com/UnionOfRAD/li3_quality) for full documentation of the li3 quality library - it's definitely worth getting to grips with!
 
-You may notice that there are still a couple of problems in the HelloWorldController - I think we can just delete that one now, we're not using it :-) In fact, what else can we declutter? Onwards!
+Always make sure that you run your tests after any change!
+
+## Starting to declutter
+
+You may notice that there are still a couple of problems in the `HelloWorldController` - I think we can just delete that one now, we're not using it :-) In fact, what else can we declutter? Onwards!

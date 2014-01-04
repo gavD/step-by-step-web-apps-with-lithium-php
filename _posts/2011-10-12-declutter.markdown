@@ -3,21 +3,23 @@ layout: post
 title:  Declutter
 ---
 
-We now have a working homepage AND a menu - that's pretty sweet! Next thing to do, though, it to remove the stuff that comes with the framework project that we're not going to use. It's all good stuff, I recommend you have a good look at it before you delete it. To be honest, it won't matter if you don't but for my sample code I have removed it.
+We now have a working homepage AND a menu, PLUS we've using the Lithium coding standards - that's pretty sweet! Next thing to do, though, is to remove the stuff that comes with the framework project that we're not going to use.
+
+> It's all good stuff, I recommend you have a good look at it before you delete it. To be honest, it won't matter if you don't but for my sample project, I have removed it.
 
 ## Removing Pages
 
 Pages demonstrates simple blog functionality. Remove:
 
-* app/controllers/PagesController.php
-* app/views/pages
-* app/views/hello_world (deleted its controller in the last chapter)
+* `app/controllers/PagesController.php`
+* `app/views/pages`
+* `app/views/hello_world` (deleted its controller in the last chapter)
 
 ## Updating our home screen
 
-Notice that now there is no "Pages" controller to handle the default route
+Notice that now there is no "Pages" controller to handle the default route:
 
-TODO screenshot
+![No pages controller to handle default route](images/no-pages-controller.png)
 
 So, let's make our HomeController the default! Open up app/config/routes.php and remove this code:
 
@@ -54,8 +56,8 @@ Router::connect('/', 'Home::index');
 
 Now, when you hit [http://employee-rolodex.localhost/](http://employee-rolodex.localhost/), you should see your "This is a HOME PAGE!" screen. Result!
 
-TODO screenshot
+![Homepage controller now responding on root](images/home-default-route.png)
 
 ## About "empty"
 
-You'll notice a bunch of files just named "empty" - that's to make sure that they stay in the Git repo. You can delete them, but I recommend leave them alone - at least until you've put something else in each empty directory - so you can easily figure out where things need to go.
+You'll notice a bunch of files just named "`empty`" - that's to make sure that they stay in the Git repo. Thinks of them like a dressmaker's pins - they're there to hold the shape. You can delete them, but I recommend leave them alone - at least until you've put something else in each empty directory - so you can easily figure out where things need to go.

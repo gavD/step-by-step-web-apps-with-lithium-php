@@ -15,9 +15,7 @@ _From the [Lithium source code](https://github.com/UnionOfRAD/lithium/blob/maste
 
 ## Schemas
 
-You might have used Symfony2 or Zend where you generally define model fields in PHP. In Lithium, you can have the fields automatically loaded from the database, which is pretty interesting. In MySQL, for example, Lithium uses DESCRIBE on a corresponding table to work out what fields a data type has.
-
-The schema (TODO DEFINE) is:
+A schema is a formal description of the structure of a database. You might have used Symfony2 or Zend where you generally define model fields in PHP. In Lithium, you can have the fields automatically loaded from the database, which is pretty interesting. In MySQL, for example, Lithium uses DESCRIBE on a corresponding table to work out what fields a data type has.
 
 > Lazy-initialize the schema for this Model object, if it is not already manually set in the object. You can declare `protected $_schema = array(...)` to define the schema manually.
 
@@ -65,9 +63,9 @@ You should see something along the lines of:
 
 	See `li3 help COMMAND` for more information on a specific command.
 
-So what have we just done? Well, this is the Lithium console - it's a command line utility that can do helpful jobs for you! It's nothing to be scared of, and it can help you out quite a bit! We're going to use the "create" command. I suggest you try "./libraries/lithium/console/li3 help create" to find out a bit more about this!
+So what have we just done? Well, this is the Lithium console - it's a command line utility that can do helpful jobs for you! It's nothing to be scared of, and it can help you out quite a bit! We're going to use the "create" command. I suggest you try `./libraries/lithium/console/li3 help create` to find out a bit more about this!
 
-> A lot of people alias this command so they can type "li3" rather than banging in the full path to the command. That's probably a good idea but I'll stick with the full path!
+> A lot of people alias this command so they can type `li3` rather than banging in the full path to the command. That's probably a good idea but I'll stick with the full path because I have multiple Lithium installs on my system :-)
 
 Righty-ho, let's create our "Employees" model.
 
@@ -75,7 +73,7 @@ Righty-ho, let's create our "Employees" model.
 ./libraries/lithium/console/li3 create Employees
 {% endhighlight %}
 
-Here's the output from my terminal (side note - I use [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) and [Zsh](http://www.zsh.org/) with [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) for maximum terminal goodness!)
+Here's the output from my terminal (side note - I use [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) and [Zsh](http://www.zsh.org/) with [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) for maximum goodness!)
 
 	$ ./libraries/lithium/console/li3 create Employees
 	Employees created in models/Employees.php.
