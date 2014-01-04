@@ -131,7 +131,7 @@ Create app/views/administrators/login.html.php:
 <?=$this->form->end();?>
 {% endhighlight %}
 
-This creates a small, simple form, much like the add user form. Now, head on over to [http://staff-rolodex.localhost/administrators/login](http://staff-rolodex.localhost/administrators/login) and you should get an error like:
+This creates a small, simple form, much like the add user form. Now, head on over to [http://employee-rolodex.localhost/administrators/login](http://employee-rolodex.localhost/administrators/login) and you should get an error like:
 
     Fatal error: Uncaught exception 'lithium\data\model\QueryException' with message 'DESCRIBE `administrators`: Table 'Employee.administrators' doesn't exist'
 
@@ -144,7 +144,7 @@ Right, I guess we'd better create one! Open your database in MySQL and enter:
 	   PRIMARY KEY (`id`)
 	);
 
-Now, when we go to [http://staff-rolodex.localhost/administrators/login](http://staff-rolodex.localhost/administrators/login) we should see:
+Now, when we go to [http://employee-rolodex.localhost/administrators/login](http://employee-rolodex.localhost/administrators/login) we should see:
 
 ![Login screen](images/loginscreen.png)
 

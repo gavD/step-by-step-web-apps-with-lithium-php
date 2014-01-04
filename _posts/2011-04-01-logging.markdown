@@ -23,11 +23,11 @@ require __DIR__ . '/bootstrap/logging.php';
 // ...
 {% endhighlight %}
 
-Then, hit [http://staff-rolodex.localhost/employees](http://staff-rolodex.localhost/employees). You should see an error message:
+Then, hit [http://employee-rolodex.localhost/employees](http://employee-rolodex.localhost/employees). You should see an error message:
 
-	Warning: require(/var/www/staff-rolodex/app/config/bootstrap/logging.php): failed to open stream: No such file or directory in /var/www/staff-rolodex/app/config/bootstrap.php on line 62
+	Warning: require(/var/www/employee-rolodex/app/config/bootstrap/logging.php): failed to open stream: No such file or directory in /var/www/employee-rolodex/app/config/bootstrap.php on line 62
 
-	Fatal error: require(): Failed opening required '/var/www/staff-rolodex/app/config/bootstrap/logging.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/staff-rolodex/app/config/bootstrap.php on line 62
+	Fatal error: require(): Failed opening required '/var/www/employee-rolodex/app/config/bootstrap/logging.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/employee-rolodex/app/config/bootstrap.php on line 62
 
 Now we create app/bootstrap/logging.php with these contents:
 
@@ -65,7 +65,7 @@ class EmployeesController extends \lithium\action\Controller {
     // ...
 {% endhighlight %}
 
-Now, hit the URL [http://staff-rolodex.localhost/employees](http://staff-rolodex.localhost/employees) to trigger a log write.
+Now, hit the URL [http://employee-rolodex.localhost/employees](http://employee-rolodex.localhost/employees) to trigger a log write.
 
 Finally, from the terminal, let's have a look at our log file:
 

@@ -18,7 +18,7 @@ We've got a new test for our administrator controller, but unfortunately a quick
 	1 fail and 0 exceptions
 
 	Failed assertion assertEqual.
-	 File    : /var/www/staff-rolodex/app/tests/cases/controllers/EmployeesControllerTest.php
+	 File    : /var/www/employee-rolodex/app/tests/cases/controllers/EmployeesControllerTest.php
 	 Class   : app\tests\cases\controllers\EmployeesControllerTest
 	 Method  : testAdd()
 	 Line    : 61

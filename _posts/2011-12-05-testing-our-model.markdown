@@ -48,7 +48,7 @@ class EmployeesTest extends \lithium\test\Unit {
 ?>
 {% endhighlight %}
 
-I've removed setUp and tearDown because we don't need them yet, but we have a whole other class now (MockEmployees) - sorry about that! I'll explain, I promise, but first head over to [http://staff-rolodex.localhost/test/](http://staff-rolodex.localhost/test/) and you should see something like this:
+I've removed setUp and tearDown because we don't need them yet, but we have a whole other class now (MockEmployees) - sorry about that! I'll explain, I promise, but first head over to [http://employee-rolodex.localhost/test/](http://employee-rolodex.localhost/test/) and you should see something like this:
 
 ![Homepage of the test runner](images/test-home.png)
 

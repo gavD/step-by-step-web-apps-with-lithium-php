@@ -88,7 +88,7 @@ Here's my console output:
 	1 fail and 0 exceptions
 
 	Failed assertion assertTrue.
-	 File    : /var/www/staff-rolodex/app/tests/cases/controllers/EmployeesControllerTest.php
+	 File    : /var/www/employee-rolodex/app/tests/cases/controllers/EmployeesControllerTest.php
 	 Class   : app\tests\cases\controllers\EmployeesControllerTest
 	 Method  : testIndex()
 	 Line    : 21

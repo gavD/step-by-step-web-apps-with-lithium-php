@@ -52,7 +52,7 @@ Router::connect('/', 'Home::index');
 // ...
 {% endhighlight %}
 
-Now, when you hit [http://staff-rolodex.localhost/](http://staff-rolodex.localhost/), you should see your "This is a HOME PAGE!" screen. Result!
+Now, when you hit [http://employee-rolodex.localhost/](http://employee-rolodex.localhost/), you should see your "This is a HOME PAGE!" screen. Result!
 
 TODO screenshot
 

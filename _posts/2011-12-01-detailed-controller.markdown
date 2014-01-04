@@ -11,7 +11,7 @@ Remember a couple of things we've covered - MVC (Model View Controller) and the 
 
 That will create a database "staff" (assuming you have mysql installed, you don't already have such a db, and dozens of other things!). Great, we have a DB now!
 
-Let's go to our controller at [http://staff-rolodex.localhost/employees](http://staff-rolodex.localhost/employees)!
+Let's go to our controller at [http://employee-rolodex.localhost/employees](http://employee-rolodex.localhost/employees)!
 
 ![Uncaught exception 'lithium\core\ConfigException' with message 'The data connection `default` is not configured.'](images/crashy-controller.png)
 
@@ -44,7 +44,7 @@ Total nonsense aside:
 
 > I've chopped out all the comments and stuff from the default connections.php file, you don't have to do that! I'm trying to save trees - or pixels or bytes or whatever is inside computers - I hear there's lots of stuff inside computers these days. There used to be 8 "bits", now there are 64 or more "bits"! OK I stole that joke from Mr Biffo. Anyone remember Digitiser? No? Moc-moc-a-moc!
 
-Right, back to [http://staff-rolodex.localhost/employees](http://staff-rolodex.localhost/employees)! Will it work? Will it not work? Will it catapult your HDD into space? Only several ways to find out!
+Right, back to [http://employee-rolodex.localhost/employees](http://employee-rolodex.localhost/employees)! Will it work? Will it not work? Will it catapult your HDD into space? Only several ways to find out!
 
 ![ Uncaught exception 'lithium\data\model\QueryException' with message 'SELECT * FROM `Employees` AS `Employee`;: Table 'Employee.Employees' doesn't exist' i](images/crashy-db.png)
 
@@ -63,9 +63,9 @@ You should get a message like:
 
 	Query OK, 0 rows affected (0.02 sec)
 
-Right! Let's hit this controller again! Back to [http://staff-rolodex.localhost/employees](http://staff-rolodex.localhost/employees)!
+Right! Let's hit this controller again! Back to [http://employee-rolodex.localhost/employees](http://employee-rolodex.localhost/employees)!
 
-![Template not found at path `/var/www/staff-rolodex/app/views/employees/index.html.php`'](images/crashy-no-template.png)
+![Template not found at path `/var/www/employee-rolodex/app/views/employees/index.html.php`'](images/crashy-no-template.png)
 
 So, do you remember way back in the mists of time when we built our own controller? It were alllll fields back then... Ah, happy times. Anyway, we need to build some basic templates now.
 
