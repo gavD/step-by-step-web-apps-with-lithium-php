@@ -43,12 +43,12 @@ You should see something along the lines of:
 	COMMANDS via lithium
 		create
 		The `create` command allows you to rapidly develop your models, views,
-        controllers, and tests by generating the minimum code necessary to test
-        and run your application.
+		controllers, and tests by generating the minimum code necessary to test
+		and run your application.
 
 		g11n
 		The `G11n` set of commands deals with the extraction and merging of
-        message templates.
+		message templates.
 
 		help
 		Get information about a particular class including methods, properties,
@@ -56,15 +56,15 @@ You should see something along the lines of:
 
 		library
 		The Library command is used to archive and extract Phar::GZ archives. 
-        Requires zlib extension.
+		Requires zlib extension.
 
 		In addition, communicate with the a given server to add plugins and
-        extensions to the current application. Push archived plugins to the
-        server.
+		extensions to the current application. Push archived plugins to the
+		server.
 
 		route
 		The route command lets you inspect your routes and issue requests
-        against the router.
+		against the router.
 
 		test
 		Runs a given set of tests and outputs the results.

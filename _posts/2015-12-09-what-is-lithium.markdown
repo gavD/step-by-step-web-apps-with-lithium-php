@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  What is Lithium?
+title:  What is Li3?
 ---
 
-Lithium is a PHP web framework.
+Li3 (formerly known as Lithium) is a PHP web framework.
 
 A framework is a bunch of gubbins that allows you to make stuff.
 
