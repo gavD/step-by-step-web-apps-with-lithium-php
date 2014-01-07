@@ -9,8 +9,6 @@ Lithium's models have a fair amount of reasonably powerful methods that use a bi
 
 We're going to create a new action on the user controller to allow us to look at a specific department. Open up `app/controllers/EmployeesController.php` and add the following method:
 
-// TODO
-
 {% highlight php %}
 <?php
 // ...
@@ -64,9 +62,9 @@ Let's say we wanted to sack everyone:
 // ...
 {% endhighlight %}
 
-> TODO flash message here
-
 That will remove _all_ the Employees completely whenever you hit [/employees/sackall](http://employee-rolodex.localhost/employees/sackall) - so be careful with the `remove` method!
+
+> Hey, this feels like a good place for a flash message, right? I'll leave that as an exercise for the reader :-)
 
 If you just wanted to remove employees with department donk you could have:
 

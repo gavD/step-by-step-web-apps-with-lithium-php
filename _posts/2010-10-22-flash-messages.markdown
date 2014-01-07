@@ -103,7 +103,6 @@ Do you see it? It's a bit difficult to see! Let's give it some styling. Create a
 
 This is very basic styling - we can, of course, give it a different class based on what TYPE of message it is (e.g. red for errors and so forth) but this will do us for now :-) See `libraries/li3_flash_message/app/views/elements/flash_message.html.php` for an example of how to do that.
 
-> For more information on writing Helpers in Lithium, see [this post from Michael Ni
-tschinger](http://nitschinger.at/Write-your-own-Helper-with-Lithium)
+> For more information on writing Helpers in Lithium, see [this post from Michael Nitschinger](http://nitschinger.at/Write-your-own-Helper-with-Lithium)
 
 This is just one way of doing Flash messages with a small library I found browsing the Internet. Feel free to experiment, and it's always worth reading the source of anything you use! I wrote a blog post about trusting the libraries you use a few years back, I'd recommend scanning through it!
