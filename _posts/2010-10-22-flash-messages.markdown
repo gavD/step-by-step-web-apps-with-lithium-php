@@ -11,7 +11,8 @@ Flash messages is a way of putting a message in the session for display on the n
 
 At this point we're going to install [Michael Hue's li3_flash_message plugin](https://github.com/michaelhue/li3_flash_message). I've done it as a submodule by entering the following command in the root of my app through my console:
 
-    $ git submodule add -f https://github.com/michaelhue/li3_flash_message.git libraries/li3_flash_message
+    $ git submodule add -f https://github.com/michaelhue/li3_flash_message.git\
+      libraries/li3_flash_message
 
 > A lot of people don't like submodules. I don't either - they give me the jibblies. There's one now! (jibbly, jibbly). Later on we'll look at alternative strategies for dealing with dependencies :-)
 
