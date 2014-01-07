@@ -7,7 +7,7 @@ Thanks to [Dayle Rees](http://daylerees.com/) for the encouragement in my writin
 
 Big up [Warren, Carey, Craig, Jenko and Rod - team Unified Diff](http://unifieddiff.co.uk/)! Tech meetups are an important part of being a software developer and I'm glad we have this!
 
-Thanks to my parents for their constant support and my girl for somehow making me braver.
+Thanks to my parents for their constant support and to my girl for somehow making me braver.
 
 thanks to the #li3 room on Freenode, especially rapzo, wms and niftydigits, for helping test the book!
 

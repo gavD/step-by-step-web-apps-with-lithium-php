@@ -36,3 +36,32 @@ All that Git gubbins is a bit out of scope of what this book is trying to get ac
 ## Creating plugins
 
 You can extend Li3 with your own plugins - and then open source them back to the community! How cool is that!
+
+## Attend meetups
+
+It doesn't have to be all about Li3 (as cool as that is!). There are dozens of tech meetups all over the world - I help run one called [Unified Diff](http://unifieddiff.co.uk/) and I absolutely love it - we have talks from anyone who has something interesting and techie to say! I also attend UX meetups, big data meetups, hack nights... Of course, time is short but yeah I love these things.
+
+The one I love more than the others though is [cardiffdevworkshop.com](http://cardiffdevworkshop.com). I run these roughly every two months and provide free workshops and people kindly give their time to come and teach.
+
+There's nothing stopping you from attending, teaching, or even organising one of these!
+
+## Organising a meetup
+
+Here are my tips on running meetups:
+
+First things to decide: what's the meetup objective? Who are you serving? What format should it take? Do you want talks, or just a chat in a cafe? The two things I (co-)run, Cardiff Dev Workshop and Unified Diff, are very different in format and objective.
+
+Then, first thing I'd do is register on [meetup.com](http://meetup.com). Yes, this step costs money, but I don't think it's too much. Meetup.com makes you discoverable and gives you all kinds of tools out of the box; it's really good!
+
+Now spend some time writing your mission statement and all the info that Meetup.com requires. Once that's ready - book somewhere - have an event to promote. DO NOT GO DOWN THE ROAD of trying to please everyone and fit in with everyone!!! Pick a date and a venue and a topic or whatever and stick to it. Have an itinerary - describe what the event is about.
+
+Next, get a Twitter and follow people. Pinch similar meetup following list as a starting point! Start letting people know about your meetup. If they're not into it, that's fine, never pester people, but make the information as widely available as possible. Meetup.com is perfect for this and Twitter is a good backup.
+
+General tips:
+
+* **Cross promote.** It's not a competition! Tell your peoples about other meetups they might enjoy.
+* **Don't worry about numbers.** Two people can learn from each other; any more is a bonus.
+* **People will whinge at you.** They'll moan that you're being unfair. They will complain about all sorts of things - especially in our industry, where a lot of us lack social graces - it might take a while but it'll happen. When it does, look back at your original mission statement and check you're still on course. If you are, then simply ignore them as politely as possible!
+* regularly look for people on Twitter that match your target audience
+
+Feel free to do it your own way, of course, this is just based on the last two years of organising meetups!
