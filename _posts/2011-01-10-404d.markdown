@@ -22,7 +22,7 @@ Now, if you hit a missing route, you should see something like:
 
 ![404'd!](images/404-default-error.png)
 
-This is the default Lithium Framework distribution error page, and it pretty much tells you what to do to make custom error pages :-) Let's open up `app/views/layouts/error.html.php` and have a look!
+This is the default Li3 Framework distribution error page, and it pretty much tells you what to do to make custom error pages :-) Let's open up `app/views/layouts/error.html.php` and have a look!
 
 What I'd recommend doing now is making `app/views/layouts/error.html.php` and `app/views/layouts/default.html.php` similar - I created two **elements** (partial templates):
 

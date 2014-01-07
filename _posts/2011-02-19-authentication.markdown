@@ -15,7 +15,7 @@ We'll need to add:
 * Tests that make sure non-authenticated users cannot administrate users
 * Tests that make sure administrators can administrate users
 
-That's quite a bit! Good news is it's not super difficult in Lithium :-)
+That's quite a bit! Good news is it's not super difficult in Li3 :-)
 
 > I've adapted some of this chapter from [Matt Vandel's tutorial](https://sites.google.com/a/mattvanandel.com/lithium-framework/home) - it's been around a few years but is still well worth a read
 
@@ -59,7 +59,7 @@ Auth::config(array(
 ?>
 {% endhighlight %}
 
-What this is saying is "configure sessions to use PHP sessions with a name based on the LITHIUM_APP_PATH - so, if you have multiple Lithium instances on a single node, they won't conflict. Then, we're configuring Auth saying "we have a model called **Administrators** that we're going to log in with using the model's fields **username** and **password**. All good?
+What this is saying is "configure sessions to use PHP sessions with a name based on the LITHIUM_APP_PATH - so, if you have multiple Li3 instances on a single node, they won't conflict. Then, we're configuring Auth saying "we have a model called **Administrators** that we're going to log in with using the model's fields **username** and **password**. All good?
 
 Right, but this isn't enough codes - we're talking about a model that doesn't even exist yet! Have we lost our minds?
 
@@ -82,7 +82,7 @@ class Administrators extends \lithium\data\Model {
 ?>
 {% endhighlight %}
 
-> ** Note on fields** Although we've used validation, we haven't defined fields for this class. In Lithium, we don't need to, but it'll perform a tiny bit better if we do as it skips a DESCRIBE operation (or equivalent). In Employees, we specified fields. I've not specified fields here so you can get a feel for both options.
+> ** Note on fields** Although we've used validation, we haven't defined fields for this class. In Li3, we don't need to, but it'll perform a tiny bit better if we do as it skips a DESCRIBE operation (or equivalent). In Employees, we specified fields. I've not specified fields here so you can get a feel for both options.
 
 ## Creating our controller
 

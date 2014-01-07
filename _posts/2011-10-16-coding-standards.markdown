@@ -25,7 +25,7 @@ Now, run a quick syntax check of the app:
 ./libraries/lithium/console/li3 quality syntax app
 {% endhighlight %}
 
-I'd suggest that any code you write should adhere to these standards. If you are writing plugins, libraries or soforth for Lithium, or even committing back to core, it gives you a head start in getting accepted because you're doing things the same way as everyone else.
+I'd suggest that any code you write should adhere to these standards. If you are writing plugins, libraries or soforth for Li3, or even committing back to core, it gives you a head start in getting accepted because you're doing things the same way as everyone else.
 
 Take a few minutes to make sure your code meets the coding standards. Don't worry - I'll wait!
 

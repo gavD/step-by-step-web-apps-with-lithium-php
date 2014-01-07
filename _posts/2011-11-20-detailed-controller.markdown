@@ -20,7 +20,7 @@ You should get a message like:
 
 	Query OK, 0 rows affected (0.02 sec)
 
-> By default, Lithium looks for a table with the same name as the controller, all in lowercase, so model Foos will look for a table foos
+> By default, Li3 looks for a table with the same name as the controller, all in lowercase, so model Foos will look for a table foos
 
 Right! Let's hit this controller again! Back to [http://employee-rolodex.localhost/employees](http://employee-rolodex.localhost/employees)!
 

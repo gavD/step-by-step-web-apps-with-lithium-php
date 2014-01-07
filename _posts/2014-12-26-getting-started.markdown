@@ -3,15 +3,15 @@ layout: post
 title:  Getting started
 ---
 
-OK, so we know what Lithium is and what we're going to build with it! Roughly. Well, we know what we want to get out of it, anyway.
+OK, so we know what Li3 is and what we're going to build with it! Roughly. Well, we know what we want to get out of it, anyway.
 
-I guess to get started we'd better get Lithium installed... Before that, though, make sure you have PHP installed and a web server - I generally use Nginx but Lithium has instructions for plenty of servers.
+I guess to get started we'd better get Li3 installed... Before that, though, make sure you have PHP installed and a web server - I generally use Nginx but Li3 has instructions for plenty of servers.
 
-I won't duplicate the Lithium docs here - see [the requirements page for Lithium](http://li3.me/docs/manual/getting-started/requirements.wiki) and [the Lithium installation guide](http://li3.me/docs/manual/getting-started/installation.wiki) to get up and running.
+I won't duplicate the Li3 docs here - see [the requirements page for Li3](http://li3.me/docs/manual/getting-started/requirements.wiki) and [the Li3 installation guide](http://li3.me/docs/manual/getting-started/installation.wiki) to get up and running.
 
-We'll start with the sample app and go from there! Check out [Union of Rad's Framework from Github](https://github.com/UnionOfRAD/framework) and set it up as per the Lithium docs. What you want to get to is seeing this screen:
+We'll start with the sample app and go from there! Check out [Union of Rad's Framework from Github](https://github.com/UnionOfRAD/framework) and set it up as per the Li3 docs. What you want to get to is seeing this screen:
 
-![Default Lithium framework screen](images/default-lithium.png)
+![Default Li3 framework screen](images/default-lithium.png)
 
 ## Here's how I did it
 
@@ -74,7 +74,7 @@ Then I restarted nginx:
 
 (Again, I'm on Ubuntu, so your specific instructions may vary)
 
-OK now if you browse to [http://employee-rolodex.localhost/](http://employee-rolodex.localhost/) - well, initially Chrome will probably try to search for that, but if you glare at it for a bit and make sure to include the http:// at the start and / at the end, it generally gets the message eventually! You should have a lovely encouraging error message now. It means that Lithium hasn't been installed. The "framework" repo includes Lithium as a submodule, so run:
+OK now if you browse to [http://employee-rolodex.localhost/](http://employee-rolodex.localhost/) - well, initially Chrome will probably try to search for that, but if you glare at it for a bit and make sure to include the http:// at the start and / at the end, it generally gets the message eventually! You should have a lovely encouraging error message now. It means that Li3 hasn't been installed. The "framework" repo includes Li3 as a submodule, so run:
 
 {% highlight bash %}
 cd /var/www/employee-rolodex
@@ -83,6 +83,6 @@ git submodule init && git submodule update
 
 Now, if you browse to [http://employee-rolodex.localhost/](http://employee-rolodex.localhost/) you should see a nice screen!
 
-![Default Lithium framework screen](images/default-lithium.png)
+![Default Li3 framework screen](images/default-lithium.png)
 
 OK that's pretty sweet right now, we have a page up! Let's do some coding!

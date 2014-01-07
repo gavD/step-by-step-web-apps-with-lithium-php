@@ -5,9 +5,9 @@ title:  Authentication - creating a user
 
 We went through all that business, and we can't even log in! There's not point trying to add the user in MySQL because the password would not be hashed, and as Tempa T might say, that would be a STRONG PAR.
 
-Symfony2 has a bundle called FOSUserBundle which has functionality to add users via the command line. We're going to build something similar, but much simpler. In the process, we'll learn about writing command line tasks in Lithium - it's more than "just" a web framework!
+Symfony2 has a bundle called FOSUserBundle which has functionality to add users via the command line. We're going to build something similar, but much simpler. In the process, we'll learn about writing command line tasks in Li3 - it's more than "just" a web framework!
 
-The [Lithium console documentation](http://li3.me/docs/lithium/console) shows us how to create a console command, and we're going to do just that :-)
+The [Li3 console documentation](http://li3.me/docs/lithium/console) shows us how to create a console command, and we're going to do just that :-)
 
 Create `app/extensions/command/AdministratorCreate.php` and add:
 

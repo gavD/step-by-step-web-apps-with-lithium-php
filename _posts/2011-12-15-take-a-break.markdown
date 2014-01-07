@@ -53,4 +53,4 @@ title:  Take a break
     |                 |                ] |o
     ======================================
 
-OK bored of that now! Back to Lithium :-)
+OK bored of that now! Back to Li3 :-)

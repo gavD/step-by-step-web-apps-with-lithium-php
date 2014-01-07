@@ -11,15 +11,15 @@ So, your models, they're generally the things that model the real world - the th
 > Models are tasked with providing meaning to otherwise raw and unprocessed data (e.g.
 > user profile).
 
-_From the [Lithium source code](https://github.com/UnionOfRAD/lithium/blob/master/data/Model.php) (which is marvellously well documented! It's a good idea to have a look through the source when you're trying to work out a problem. I certainly had to when I was writing this book!)_
+_From the [Li3 source code](https://github.com/UnionOfRAD/lithium/blob/master/data/Model.php) (which is marvellously well documented! It's a good idea to have a look through the source when you're trying to work out a problem. I certainly had to when I was writing this book!)_
 
 ## Schemas
 
-A schema is a formal description of the structure of a database. You might have used Symfony2 or Zend where you generally define model fields in PHP. In Lithium, you can have the fields automatically loaded from the database, which is pretty interesting. In MySQL, for example, Lithium uses DESCRIBE on a corresponding table to work out what fields a data type has.
+A schema is a formal description of the structure of a database. You might have used Symfony2 or Zend where you generally define model fields in PHP. In Li3, you can have the fields automatically loaded from the database, which is pretty interesting. In MySQL, for example, Li3 uses DESCRIBE on a corresponding table to work out what fields a data type has.
 
 > Lazy-initialize the schema for this Model object, if it is not already manually set in the object. You can declare `protected $_schema = array(...)` to define the schema manually.
 
-So this means you can either say up front what fields something has, or you can let Lithium inspect the database to work it out. Either approach has pros and cons - managing changes to a database can be quite a headache.
+So this means you can either say up front what fields something has, or you can let Li3 inspect the database to work it out. Either approach has pros and cons - managing changes to a database can be quite a headache.
 
 If we have the fields in the database only, it means we have less code, but it's a bit harder to write automated tests for because our code doesn't "know" about those fields.
 
@@ -27,7 +27,7 @@ If we have the fields in the database only, it means we have less code, but it's
 
 I ended a sentence with "already". I'm not American but I am "from the Internet" so my sentence structure is pretty globalised! More on "G11n" later...
 
-Right let's create a model. No, not like in Weird Science (even Lithium can't build people).
+Right let's create a model. No, not like in Weird Science (even Li3 can't build people).
 
 From the command line, go to the root of your project and type:
 
@@ -71,9 +71,9 @@ You should see something along the lines of:
 
 	See `li3 help COMMAND` for more information on a specific command.
 
-So what have we just done? Well, this is the Lithium console - it's a command line utility that can do helpful jobs for you! It's nothing to be scared of, and it can help you out quite a bit! We're going to use the "create" command. I suggest you try `./libraries/lithium/console/li3 help create` to find out a bit more about this!
+So what have we just done? Well, this is the Li3 console - it's a command line utility that can do helpful jobs for you! It's nothing to be scared of, and it can help you out quite a bit! We're going to use the "create" command. I suggest you try `./libraries/lithium/console/li3 help create` to find out a bit more about this!
 
-> A lot of people alias this command so they can type `li3` rather than banging in the full path to the command. That's probably a good idea but I'll stick with the full path because I have multiple Lithium installs on my system :-)
+> A lot of people alias this command so they can type `li3` rather than banging in the full path to the command. That's probably a good idea but I'll stick with the full path because I have multiple Li3 installs on my system :-)
 
 Righty-ho, let's create our "Employees" model.
 
@@ -102,7 +102,7 @@ OK, file by file, here's what we've got:
 
 The Employees model. This is the bit that will represent and manipulate Employee in the system.
 
-> I chose "Employees" over "Staff" because "Employees" allows me to follow the Lithium convention of plurality in model names. As "Staff" is already plural, it didn't work! Also "Person" doesn't pluralise neatly to "Persons". Yes, there are ways around these things, but consistency is very important when you're learning a new framework!
+> I chose "Employees" over "Staff" because "Employees" allows me to follow the Li3 convention of plurality in model names. As "Staff" is already plural, it didn't work! Also "Person" doesn't pluralise neatly to "Persons". Yes, there are ways around these things, but consistency is very important when you're learning a new framework!
 
 ## controllers/EmployeesController.php
 

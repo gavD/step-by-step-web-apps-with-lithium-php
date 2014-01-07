@@ -79,6 +79,6 @@ Here, I check that with a concurrency level of 100 (`-c 100`) I can service 1000
 
 Yep, that's all good - on my machine, at least! YMMV.
 
-I won't go into any more detail here. The point is - never guess at your figures, in Lithium, or in any other framework! It's a really bad idea to GUESS at how much our application can handle. If you want to know more about this, there's a chapter on it in my book, [Deal With It: Attitude for Coders](https://leanpub.com/dealwithit).
+I won't go into any more detail here. The point is - never guess at your figures, in Li3, or in any other framework! It's a really bad idea to GUESS at how much our application can handle. If you want to know more about this, there's a chapter on it in my book, [Deal With It: Attitude for Coders](https://leanpub.com/dealwithit).
 
 How can we perform better? Let's take a look at caching...

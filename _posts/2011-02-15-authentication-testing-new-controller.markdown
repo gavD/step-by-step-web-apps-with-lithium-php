@@ -91,7 +91,7 @@ class AdministratorsControllerTest extends \lithium\test\Integration {
 
 There are a few things to note here. I create `$sut` for "System Under Test". This is just a little convention I use, you don't have to. The SUT is the controller, and I feed it a standard request. It works when there is a user in the database, just as we expect.
 
-Notice also I clear the session on every `tearDown` - Lithium persists the session between tests otherwise so always work to make your tests **idempotent** - that is, that they can be run in any order, that they don't affect one another.
+Notice also I clear the session on every `tearDown` - Li3 persists the session between tests otherwise so always work to make your tests **idempotent** - that is, that they can be run in any order, that they don't affect one another.
 
 Let's run just this new test, let's not run the whole suite just yet:
 

@@ -22,7 +22,7 @@ class EmployeesTest extends \lithium\test\Unit {
 ?>
 {% endhighlight %}
 
-There's not much going on in here either. Lithium has its own unit testing gubbins - it doesn't use PHPUnit or whatever. I suppose you COULD use PHPUnit (or Behat or SimpleTest), but we're going to stick with the [default Lithium testing utilities](http://li3.me/docs/manual/quality-code/testing.wiki).
+There's not much going on in here either. Li3 has its own unit testing gubbins - it doesn't use PHPUnit or whatever. I suppose you COULD use PHPUnit (or Behat or SimpleTest), but we're going to stick with the [default Li3 testing utilities](http://li3.me/docs/manual/quality-code/testing.wiki).
 
 I'm not going to do a full treatment of unit testing or TDD (Test Driven Development) here. The absolute best book on the subject is [Kent Beck's Test-Driven Development by example](http://books.google.com/books/about/Test_Driven_Development.html?id=gFgnde_vwMAC&redir_esc=y) - it really is fantastic!
 
@@ -52,7 +52,7 @@ I've removed setUp and tearDown because we don't need them yet, but we have a wh
 
 ![Homepage of the test runner](images/test-home.png)
 
-Here is Lithium's web based test runner. OK now you see EmployeesTest under app? Click it! Click it now! Drink your weak lemon drink and click that fussy little link!
+Here is Li3's web based test runner. OK now you see EmployeesTest under app? Click it! Click it now! Drink your weak lemon drink and click that fussy little link!
 
 What you should get is:
 
@@ -60,7 +60,7 @@ What you should get is:
 
 1/1 passes - great! Now, I know I promised I'd explain why there's so much code.
 
-You see, Lithium requires a connection to a database (sorta, ish - we'll talk more about connections later :-)). So, if we tried to run this test without `MockEmployees` in the middle, it tries to connect to the database and, unless you've been a clever sausage and done some reading around, you probably haven't done yet! So, when you come to run the tests, you get all kind of errors. Try clicking a few of the links in the in the test runner under "lithium" - these run the core Lithium tests. Some might not work if you don't have a connection set up.
+You see, Li3 requires a connection to a database (sorta, ish - we'll talk more about connections later :-)). So, if we tried to run this test without `MockEmployees` in the middle, it tries to connect to the database and, unless you've been a clever sausage and done some reading around, you probably haven't done yet! So, when you come to run the tests, you get all kind of errors. Try clicking a few of the links in the in the test runner under "lithium" - these run the core Li3 tests. Some might not work if you don't have a connection set up.
 
 Now, generally, there are a couple of things you can do with connections and testing:
 
@@ -81,7 +81,7 @@ class MockEmployees extends Employees {
 
 {% endhighlight %}
 
-So we've used inheritance to override connection and set it to false, then we've done all our testing based on that. This prevents Lithium's Model class from scurrying around trying to find a database connection. This is a bit icky to do it this way but it does work. Generally, I prefer to test real things as they are where possible - so like I say we'll look at better testing strategies later.
+So we've used inheritance to override connection and set it to false, then we've done all our testing based on that. This prevents Li3's Model class from scurrying around trying to find a database connection. This is a bit icky to do it this way but it does work. Generally, I prefer to test real things as they are where possible - so like I say we'll look at better testing strategies later.
 
 OK so the actual test is quite simple really. `Employees::hasField` simply returns the field if it has it (I know, I expected it to be a boolean as well! It returns false if the field doesn't exist on the model).
 

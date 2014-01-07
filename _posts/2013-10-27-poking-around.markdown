@@ -7,7 +7,7 @@ Open the project in your favourite editor or IDE. I tend to use [Netbeans](https
 
 ## What are we working with here?
 
-The Framework project that we cloned is a sample Lithium application with all the proper directories set up. It's a nice structure that we are using as a starting point.
+The Framework project that we cloned is a sample Li3 application with all the proper directories set up. It's a nice structure that we are using as a starting point.
 
 ## What's what?
 
@@ -33,7 +33,7 @@ With that said, there are a bunch of folders in here where you put your 1337 c0d
 
 * `app/config` - application configuration lives in here
 * `app/controllers` - we'll talk about MVC (Model/View/Controller) - the controllers are the C of this!
-* `app/extensions` - you can create custom commands and extend Lithium in here
+* `app/extensions` - you can create custom commands and extend Li3 in here
 * `app/libraries`
 * `app/models` - The M of MVC!
 * `app/resources` - holds, well, resources for your application - things like translations and so forth
@@ -51,7 +51,7 @@ Feel free to skip this bit if you know this bit! There aren't any good jokes in 
 
 MVC is a way of organising an application (we call it a "design pattern" because it's a common pattern in software design to organise code this way). It separates code into Model (the data gubbins and all the thinky-worky bits), View (the pretty-looky HTML and so forth that displays the model) and Controller (the thing that sends information to and from models and plonks said information into views for display).
 
-MVC is very common in web applications and Lithium works well with this pattern right out of the box (not a real box).
+MVC is very common in web applications and Li3 works well with this pattern right out of the box (not a real box).
 
 ![My crummy MVC diagram](images/mvc.png)
 _My crummy effort at an MVC diagram_

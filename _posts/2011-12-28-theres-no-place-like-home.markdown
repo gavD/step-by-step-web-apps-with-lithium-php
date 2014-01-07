@@ -39,7 +39,7 @@ So that's a _different_ error message! They say that a change is as good as a re
 
 > Fatal error: Uncaught exception 'lithium\template\TemplateException' with message 'Template not found at path `/var/www/employee-rolodex/app/views/home/index.html.php`
 
-Well, it's been super duper helpful this time - we know what file we have to create! Remember how we have the `app/views` folder? That's where we put this stuff - and the folder `app/views/home` is called "home" because it corresponds to the "home" controller. You see, Lithium does a lot by default, including saying "well, if the controller is called foo, I'll look for the views in foo". A sensible enough assumption!
+Well, it's been super duper helpful this time - we know what file we have to create! Remember how we have the `app/views` folder? That's where we put this stuff - and the folder `app/views/home` is called "home" because it corresponds to the "home" controller. You see, Li3 does a lot by default, including saying "well, if the controller is called foo, I'll look for the views in foo". A sensible enough assumption!
 
 So here's what to put in `app/views/home/index.html.php`:
 
@@ -65,7 +65,7 @@ Now, we still have a lot of the Union of RAD's sample code in here - we can see 
 
 So, your code "This is a HOME PAGE!" in `app/views/home/index.html.php`, that is pulled out by the line `<?php echo $this->content(); ?>`.
 
-Feel free to tinker around with these templates! Here's one I've made as an example! Because Lithium's framework distribution comes with Twitter Bootstrap, it's easy to make a theme that renders decently cross-device straight out of the box. (Again, there's no literal box. If there were, I'm certain a cat would have sat in it by now, this being the Internet and all...)
+Feel free to tinker around with these templates! Here's one I've made as an example! Because Li3's framework distribution comes with Twitter Bootstrap, it's easy to make a theme that renders decently cross-device straight out of the box. (Again, there's no literal box. If there were, I'm certain a cat would have sat in it by now, this being the Internet and all...)
 
 So, open up `app/views/layouts/default.html.php` and enter the following:
 
@@ -124,10 +124,10 @@ This should render something like:
 Well, we've set up a route, very quickly, and we have a working site, and we didn't have to edit 1023 YAML files (or, worse still, XML!) to accomplish this!
 
 We've used:
-* Lithium framework as a submodule
+* Li3 framework as a submodule
 * Controller
 * View
 
-Now, of course, up until this point we could have achieved the same site with static HTML, or even Post-It notes and crayons! Lithium offers us so much more though... It will become clear how Lithium can get us building real, interactive applications lickety-split!
+Now, of course, up until this point we could have achieved the same site with static HTML, or even Post-It notes and crayons! Li3 offers us so much more though... It will become clear how Li3 can get us building real, interactive applications lickety-split!
 
 We have a homepage, we have Bootstrap, now we can start building interactivity... On to the next!

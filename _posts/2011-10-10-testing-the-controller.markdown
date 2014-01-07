@@ -7,9 +7,9 @@ Remember a couple chapters back, we looked at unit testing our models? Here's ho
 
 ![Testing Pyramid](images/testing-pyramid.png)
 
-I think I copped this off Kent Beck or Bob Martin, but here's my take on it. **Unit tests** are for the developer. For us, developing our Lithium application, we're testing the low level logic in our models behaves _as we understand it_, so we're verifying our comprehension of the system (as well as looking out for regressions).
+I think I copped this off Kent Beck or Bob Martin, but here's my take on it. **Unit tests** are for the developer. For us, developing our Li3 application, we're testing the low level logic in our models behaves _as we understand it_, so we're verifying our comprehension of the system (as well as looking out for regressions).
 
-**Integration tests** check that the subsystems play nice. For our Lithium application, this is testing our controllers - a lot of people don't test controllers so much but for me it's a point I like to test at because it's simulating user input and the output that comes back to the user.
+**Integration tests** check that the subsystems play nice. For our Li3 application, this is testing our controllers - a lot of people don't test controllers so much but for me it's a point I like to test at because it's simulating user input and the output that comes back to the user.
 
 **System tests** I like to tie directly into **user stories** using **functional testing**, we'll look at that later. How exciting!
 
@@ -101,7 +101,7 @@ Here's my console output:
 
 Hey, that's pretty cool - it's told us that our test has failed, which is exactly what we wanted! Now we're not scared of failing tests because we know it tells us what line the problem is on! It's very important to not be scared to try stuff! For me, tests are one of the main ways I build my confidence as I go.
 
-Right, let's actually test this thing. What's really cool about controllers in Lithium is they simply return an array and you can call the methods directly, just like any other class, which makes them far easier to test than controllers in other frameworks I've come across - it's remarkably simple and elegant. Let's see what I mean.
+Right, let's actually test this thing. What's really cool about controllers in Li3 is they simply return an array and you can call the methods directly, just like any other class, which makes them far easier to test than controllers in other frameworks I've come across - it's remarkably simple and elegant. Let's see what I mean.
 
 {% highlight php %}
 <?php
@@ -179,4 +179,4 @@ Notice that it simply returns the result of the all() static method on the Emplo
 
 We tested that the controller returns a collection of Employees. It would be useful, at this point, to have a test database and some fixtures perhaps, rather than using the MySQL connection we set up earlier. Otherwise, our system isn't in a "known state", and you using the app could affect results of tests. Tests have to be **idempotent** (i.e. same results no matter how they are run and in what sequence).
 
-> For more on testing controllers in Lithium, [see this article from Richard McIntyre](http://mackstar.com/blog/2012/02/02/testing-controllers-lithium). There is also a very good article on testing Lithium [from Michael Nitschinger](http://nitschinger.at/Testing-the-Lithium-core-for-fun-and-profit).
+> For more on testing controllers in Li3, [see this article from Richard McIntyre](http://mackstar.com/blog/2012/02/02/testing-controllers-lithium). There is also a very good article on testing Li3 [from Michael Nitschinger](http://nitschinger.at/Testing-the-Lithium-core-for-fun-and-profit).

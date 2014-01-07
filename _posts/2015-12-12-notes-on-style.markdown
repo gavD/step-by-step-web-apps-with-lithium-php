@@ -19,10 +19,10 @@ I'm keeping each chapter short. I don't know about you, but when reading long te
 
 ## Why step-by-step?
 
-Firstly, Lithium is, in some ways, pretty well documented - the code itself is wonderfully commented in great detail and has a whole bunch of unit tests. The documentation at [http://li3.me/docs/manual](http://li3.me/docs/manual) is really well written (although there are some bits missing) and takes you through the features very well. What I wanted, when I was getting to grips with it, was an end-to-end tutorial that covered the things that I want to know.
+Firstly, Li3 is, in some ways, pretty well documented - the code itself is wonderfully commented in great detail and has a whole bunch of unit tests. The documentation at [http://li3.me/docs/manual](http://li3.me/docs/manual) is really well written (although there are some bits missing) and takes you through the features very well. What I wanted, when I was getting to grips with it, was an end-to-end tutorial that covered the things that I want to know.
 
 I'm a software developer, mostly doing websites and mobile applications. There's a lot of things that we commonly do in web development (routing, MVC, and testing in particular), so I figured we'd go through building something that we might actually build that covers a lot of the concepts we use every day. If you're not from a web background, that's fine, I'm sure you'll pick up some pointers!
 
-## Why do you keep saying "Lithium PHP"?
+## A quick note on Li3
 
-Well, there are a few things called Lithium - lithium batteries, the metal, etc - and mostly, when you search for "lithium" you get medical or electronics information. Therefore, when I search for Lithium resources, I usually put "PHP" in the query. I'm fully aware that Lithium is NOT called "Lithium PHP", it's purely to help people find this resource!
+Li3 was previously called "Lithium" and I might slip here and there and refer to it as such. There are a other few things called Lithium - lithium batteries, the metal, etc - and mostly, when you search for "lithium" you get medical or electronics information. Therefore, when I search for Lithium resources, I usually put "PHP" in the query.

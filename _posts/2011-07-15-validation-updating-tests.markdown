@@ -88,4 +88,4 @@ use app\models\Employees;
 
 This test ensures that the user cannot save a member of Employees to the database without specifying a department.
 
-> For more on validation, read the [Lithium documentation](http://li3.me/docs/manual/working-with-data/validation.wiki)
+> For more on validation, read the [Li3 documentation](http://li3.me/docs/manual/working-with-data/validation.wiki)

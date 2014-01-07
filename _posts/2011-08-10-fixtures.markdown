@@ -108,9 +108,9 @@ So now, we've got a pretty cool test that has a temporary database, puts some da
 	3 / 3 passes
 	0 fails and 0 exceptions
 
-## Notes on running tests in Lithium
+## Notes on running tests in Li3
 
 * Each "test*" method has setUp automatically run before it and tearDown run at the end.
-* If you're used to PHPUnit, one quirk of Lithium's testing is that, if you're expecting it to stop if an assertion fails! It'll carry on executing the test!
+* If you're used to PHPUnit, one quirk of Li3's testing is that, if you're expecting it to stop if an assertion fails! It'll carry on executing the test!
 
 > If you want more detail on fixtures (and I'd say it's a good thing to get fixated on), check out [li3 fixtures](https://github.com/UnionOfRAD/li3_fixtures) on Github and read through the documentation.

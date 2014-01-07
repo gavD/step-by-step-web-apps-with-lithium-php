@@ -5,7 +5,7 @@ title:  Querying models
 
 We've built a complete application, but that's far from the whole story! We've glossed over a lot of topics, so let's delve into them a bit further!
 
-Lithium's models have a fair amount of reasonably powerful methods that use a bit of magic. Let's try some out!
+Li3's models have a fair amount of reasonably powerful methods that use a bit of magic. Let's try some out!
 
 We're going to create a new action on the user controller to allow us to look at a specific department. Open up `app/controllers/EmployeesController.php` and add the following method:
 

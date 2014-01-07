@@ -7,9 +7,9 @@ That was a LOT of stuff very quickly. Let's take a breath and go back through so
 
 ## Escaping
 
-If you've done web dev for more than a couple of months, you'll be concerned about sanitising outputs. After all, no-one wants to be the victim of an XSS (Cross-Site Scripting) attack, or SQL injection. Lithium does a lot to protect you from that. The `<?= ?>` output? That isn't just the regular PHP shorttag echo. That's actually a thing that the template engine in Lithium looks for and anything output through there is escaped. Now, there's more to learn about that but for now, this will suffice.
+If you've done web dev for more than a couple of months, you'll be concerned about sanitising outputs. After all, no-one wants to be the victim of an XSS (Cross-Site Scripting) attack, or SQL injection. Li3 does a lot to protect you from that. The `<?= ?>` output? That isn't just the regular PHP shorttag echo. That's actually a thing that the template engine in Li3 looks for and anything output through there is escaped. Now, there's more to learn about that but for now, this will suffice.
 
-> For more info, see the [Lithium manual's section on auto-escaping](http://li3.me/docs/manual/handling-http-requests/views.wiki).
+> For more info, see the [Li3 manual's section on auto-escaping](http://li3.me/docs/manual/handling-http-requests/views.wiki).
 
 ## About the controller
 
@@ -27,11 +27,11 @@ The controller at `app/controllers/EmployeesController.php` is pretty much the s
 	// ...
 {% endhighlight %}
 
-This pulls out ALL the Employee. Notice that it uses the Employee model and makes a **static method call** to `all()`. If you've tried Doctrine, Hibernate or another ORM (Object-Relational Mapper), you'll be a bit familiar with these concepts. Lithium's model is quite straightforward - it's got static methods for all the data retrieval operations.
+This pulls out ALL the Employee. Notice that it uses the Employee model and makes a **static method call** to `all()`. If you've tried Doctrine, Hibernate or another ORM (Object-Relational Mapper), you'll be a bit familiar with these concepts. Li3's model is quite straightforward - it's got static methods for all the data retrieval operations.
 
 This particular one pulls out ALL the Employee. It's good enough for a simple system that doesn't require pagination.
 
-The [compact function is documented on PHP.Net](http://www.php.net/compact). A lot of Lithium pros use it to send information to the view. Whatever array a controller returns is sent to the view, and so becomes available to be displayed in the template.
+The [compact function is documented on PHP.Net](http://www.php.net/compact). A lot of Li3 pros use it to send information to the view. Whatever array a controller returns is sent to the view, and so becomes available to be displayed in the template.
 
 ### View
 
@@ -45,7 +45,7 @@ The [compact function is documented on PHP.Net](http://www.php.net/compact). A l
 	// ...
 {% endhighlight %}
 
-This is similar, except a single member of Employees is pulled out by ID. Lithium is smart enough to know the auto incremented primary key field "id" is the one to use. This member of Employees is returned and sent off to the view. We're not going to go into huge detail on the request lifecycle (this is more a "how to" than a "how does..."), but you can read more about this in the [Lithium manual section on handling HTTP requests](http://li3.me/docs/manual/handling-http-requests/).
+This is similar, except a single member of Employees is pulled out by ID. Li3 is smart enough to know the auto incremented primary key field "id" is the one to use. This member of Employees is returned and sent off to the view. We're not going to go into huge detail on the request lifecycle (this is more a "how to" than a "how does..."), but you can read more about this in the [Li3 manual section on handling HTTP requests](http://li3.me/docs/manual/handling-http-requests/).
 
 ### Edit
 
@@ -57,6 +57,6 @@ This one would require a delete form. We'll leave it alone for now.
 
 ## All good?
 
-OK, how are we doing? All caught up and making at least some loose semblance of sense? I hope so! If not, feel free to tinker around. Most of learning Lithium will come from reading [the docs](http://li3.me/), trying things out, and experience. It won't happen overnight but don't worry, it'll come!
+OK, how are we doing? All caught up and making at least some loose semblance of sense? I hope so! If not, feel free to tinker around. Most of learning Li3 will come from reading [the docs](http://li3.me/), trying things out, and experience. It won't happen overnight but don't worry, it'll come!
 
 Let's crack on and become more pro!

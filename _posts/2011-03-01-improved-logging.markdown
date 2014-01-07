@@ -13,13 +13,13 @@ It's a good idea to make use of the full spectrum of logging levels. In developm
 
 Well, if you run your tests again (which, by the way, you should do if you make any changes. Sorry, I probably should have said that earlier! It helps to prevent bugs from creeping in!), you'll notice that, because we have a test that covers EmployeesController::index, that writes to the log file now! I don't particularly want my unit tests writing to the logs.
 
-Once again, Lithium to the rescue! Lithium has the concept of *environments* - if you've done and Rails or Symfony2 or similar you'll probably be familiar with the concept. Generally, environments take the form of:
+Once again, Li3 to the rescue! Li3 has the concept of *environments* - if you've done and Rails or Symfony2 or similar you'll probably be familiar with the concept. Generally, environments take the form of:
 
 * `test` - running unit and integration tests.
 * `development` - your workspace on your machine, as you're building and testing your app. Often kind of like a motorbike stripped down and strewn over the living room floor.
 * `production` - the app in "running fully optimised" mode.
 
-We're going to tell Lithium "in test mode, don't bother with that logging gubbins".
+We're going to tell Li3 "in test mode, don't bother with that logging gubbins".
 
 Open up `app/config/bootstrap/logging.php` and change it to:
 

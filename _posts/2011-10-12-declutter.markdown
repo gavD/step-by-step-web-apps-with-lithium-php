@@ -3,7 +3,7 @@ layout: post
 title:  Declutter
 ---
 
-We now have a working homepage AND a menu, PLUS we've using the Lithium coding standards - that's pretty sweet! Next thing to do, though, is to remove the stuff that comes with the framework project that we're not going to use.
+We now have a working homepage AND a menu, PLUS we've using the Li3 coding standards - that's pretty sweet! Next thing to do, though, is to remove the stuff that comes with the framework project that we're not going to use.
 
 > It's all good stuff, I recommend you have a good look at it before you delete it. To be honest, it won't matter if you don't but for my sample project, I have removed it.
 

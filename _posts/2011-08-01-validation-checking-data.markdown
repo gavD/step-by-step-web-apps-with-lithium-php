@@ -3,7 +3,7 @@ layout: post
 title:  Validation - checking data
 ---
 
-It's a common requirement to have some checks on data. For example, we might not want to save a member of Employee unless the department has been entered. Thankfully, in Lithium, this is quite straightforward!
+It's a common requirement to have some checks on data. For example, we might not want to save a member of Employee unless the department has been entered. Thankfully, in Li3, this is quite straightforward!
 
 ## Tweak the model
 

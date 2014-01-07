@@ -5,9 +5,9 @@ title:  Logging
 
 It's extremely important to have logging in your application - things WILL go wrong, and the more insight you have into problems, the better.
 
-Check out [Lithium's Logger.php](https://github.com/UnionOfRAD/lithium/blob/master/analysis/Logger.php) - this well-documented class is a good place to start to learn about logging in detail. We're going to add a few basic log messages to our app!
+Check out [Li3's Logger.php](https://github.com/UnionOfRAD/lithium/blob/master/analysis/Logger.php) - this well-documented class is a good place to start to learn about logging in detail. We're going to add a few basic log messages to our app!
 
-Good news, everybody! It's REALLY EASY to configure logging in Lithium!
+Good news, everybody! It's REALLY EASY to configure logging in Li3!
 
 OK first up we modify `app/config/bootstrap.php` and add an include:
 
@@ -77,7 +77,7 @@ _Yes, I am writing this on Christmas day!_
 
 > *Did something go wrong?* Make sure `app/resources/tmp/logs` exists and is writeable by your web user.
 
-Right, so what did we do here? Well, we defined two logging destinations - one to the system log, for all logging, and the other, 'problems', to a File. Lithium's File logger will log to `app/resources/tmp/logs/{message type}.log`. Because we used `Logger::alert`, it created `alert.log`. If we used "error", it would write to "`error.log`". Notice also this line:
+Right, so what did we do here? Well, we defined two logging destinations - one to the system log, for all logging, and the other, 'problems', to a File. Li3's File logger will log to `app/resources/tmp/logs/{message type}.log`. Because we used `Logger::alert`, it created `alert.log`. If we used "error", it would write to "`error.log`". Notice also this line:
 
 		'priority' => array('emergency', 'alert', 'critical', 'error')
 
