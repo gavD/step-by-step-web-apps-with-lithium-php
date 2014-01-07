@@ -5,9 +5,9 @@ title:  Flash messages
 
 _"Flash! Ahhh-ahhhh!" - Queen, Flash Gordon soundtrack_
 
-Flash messages is a way of putting a message in the session for display on the next page. It's really useful when you have some stuff to tell the user but you don't want to interrupt processing. It's a nice "set it and forget it" way of putting message out to the user.
+Flash messages is a way of putting a message in the session for display on the next page. It's really useful when you have some stuff to tell the user but you don't want to interrupt processing. It's a nice "set it and forget it" way of putting message out to the user. It works really well with pages that do a redirect. Once the flash message has been shown, it's removed from the system - i.e. it's "flashed up" once - so it's best used for one-off pieces of information, like "setting changed", "file saved", "message sent" - things like that.
 
-Because we're using Twitter Bootstrap in our project, we already have some nice looking themes we can use for rendering flash messages.
+> Because we're using [Twitter Bootstrap](http://getbootstrap.com) in our project, we already have some nice looking themes we can use for rendering flash messages. Bootstrap is a fantastic springboard for producing decent looking sites quickly - I use it for pretty much anything I'm building! (although, that being said, competing framework [Foundation](http://foundation.zurb.com/) actually got me a date with an amazing girl, Bootstrap can't say that!)
 
 At this point we're going to install [Michael Hue's li3_flash_message plugin](https://github.com/michaelhue/li3_flash_message). I've done it as a submodule by entering the following command in the root of my app through my console:
 
@@ -105,4 +105,6 @@ This is very basic styling - we can, of course, give it a different class based 
 
 > For more information on writing Helpers in Lithium, see [this post from Michael Nitschinger](http://nitschinger.at/Write-your-own-Helper-with-Lithium)
 
-This is just one way of doing Flash messages with a small library I found browsing the Internet. Feel free to experiment, and it's always worth reading the source of anything you use! I wrote a blog post about trusting the libraries you use a few years back, I'd recommend scanning through it!
+This is just one way of doing Flash messages with a small library I found browsing the Internet. Feel free to experiment, and it's always worth reading the source of anything you use! I wrote [a blog post about trusting the libraries you use](http://www.boxuk.com/blog/trusting-the-libraries-you-use/) a few years back, I'd recommend scanning through it!
+
+Now we've got a nice way of relaying messages to our users, let's take a look at more sophisticated ways of querying our data!
