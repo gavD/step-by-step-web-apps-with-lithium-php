@@ -35,7 +35,7 @@ All that Git gubbins is a bit out of scope of what this book is trying to get ac
 
 ## Creating plugins
 
-You can extend Li3 with your own plugins - and then open source them back to the community! How cool is that!
+You can extend Li3 with your own plugins - and then open source them back to the community! How cool is that! [The Li3 docs on creating plugins](http://li3.me/docs/manual/extending-lithium/plugins.wiki) should be your first port of call. I would like to add a chapter on plugins at some point so hopefully the book will sell enough copies to keep me writing!
 
 ## Attend meetups
 

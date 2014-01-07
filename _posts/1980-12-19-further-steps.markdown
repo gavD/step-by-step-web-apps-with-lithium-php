@@ -3,7 +3,7 @@ layout: post
 title:  Further steps
 ---
 
-Well, hopefully we've done enough to get you up and running with Lithium development, but that's never the whole story! I'd recommend you do some research into:
+Well, hopefully we've done enough to get you up and running with Li3 development, but that's never the whole story! I'd recommend you do some research into:
 
 * Source control (e.g. Git)
 * PHP performance and configuration
