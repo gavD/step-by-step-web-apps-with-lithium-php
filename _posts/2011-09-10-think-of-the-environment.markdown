@@ -73,6 +73,24 @@ In-memory is a lot faster, though, so prefer that!
 
 > For more on environments in Lithium, see [Michael Nitschinger's post on "Using Environments in Lithium"](http://nitschinger.at/Using-Environments-in-Lithium) - it's perhaps a bit dated but generally still seems to work! Michael makes some good points about how the /test route is only included in non-production environments.
 
+## But really, why Sqlite?
+
+    12:08 <niftydigits> so why use sqlite?
+    12:09 <gavd_UK> I use SQLite 'cos it's in memory and fast as balls
+    12:09 <gavd_UK> you could use any DB really
+    12:09 <gavd_UK> Also - CI
+    12:09 <gavd_UK> that's the main reason I use SQLite
+    12:09 <gavd_UK> because it's easier to set up Jenkins or whatever with an in memory DB
+    12:09 <gavd_UK> rather than create/drop databases all the time
+    12:09 <gavd_UK> down that path lies pain
+    12:10 <niftydigits> right
+    12:10 <gavd_UK> I guess if you had more time to devote to your CI then a more representative DB makes sense
+    12:10 <gavd_UK> there's always a tradeoff in time/effort
+    12:10 <gavd_UK> in fact I'll add that to the docs, that's a very good question
+    12:11 <niftydigits> well yeah, I guess my only comment would be it's not like-for-like, but hey it's a test
+    12:11 <gavd_UK> yep. As Li3 and other frameworks use a lot of ORM type abstraction, the distinction SHOULD be academic
+    12:12 <gavd_UK> (same as Debian and Redhat SHOULD behave the same in PHP, but often don't!)
+
 ## Moving on...
 
 Right, we've now got some nice, clean separation between production, development and test. Let's go on to fixtures!

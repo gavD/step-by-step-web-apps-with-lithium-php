@@ -3,6 +3,8 @@ layout: post
 title:  Unscientific benchmarking
 ---
 
+_"Speed don't kill and I'm the proof" - Lemmy_
+
 What we need to do now is figure out roughly how much computar machines we need to make our application run! It depends on a lot of factors - most notably, how many users we are likely to need to support.
 
 If we assume we have 1000 Employees, and that 10% of them want to use this application at once, what we can do is benchmark the application and work out roughly how many servers we'd need.
