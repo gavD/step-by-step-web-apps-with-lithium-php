@@ -3,6 +3,8 @@ layout: post
 title:  Getting help
 ---
 
+_"Don't be scared, homie!" - Nick Diaz_
+
 This book is by no means the only resource for learning Li3! (thank goodness!) That said, I plan to grow it over time and make it into a really comprehensive resource, so [please do buy a copy](https://leanpub.com/step-by-step-li3/)!
 
 ## IRC

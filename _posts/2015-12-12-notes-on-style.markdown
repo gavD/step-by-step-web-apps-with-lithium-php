@@ -3,6 +3,8 @@ layout: post
 title:  Notes on style
 ---
 
+_"Style profile, I said, it always brings me back when I hear Ooh Child" - Beastie Boy's, Intergalactic_
+
 This is just a quick section about the style this book's written in. A lot of other books have one, so why not this one?
 
 ## Code snippets

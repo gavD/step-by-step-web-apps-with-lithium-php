@@ -3,6 +3,8 @@ layout: post
 title:  User stories
 ---
 
+_"Then the LORD said to me, 'Write my answer plainly on tablets, so that a runner can carry the correct message to others.'" - Habakkukk 2:2, NLT_
+
 At this point we're going to describe the system we're going to build. You might not have heard of user stories - that's OK. What they are NOT is the kind of stories users tend to tell me sometimes. Stories like "the website is broken". These stories are mystery stories because often that's all they say\*!
 
 No, this is about another kind of story. It's a story that defines a person using a service, what the person needs it for, and what the person's goal is\*\*. Generally, you can write them on a post-it note or an index card - they're pretty high level.

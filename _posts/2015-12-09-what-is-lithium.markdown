@@ -3,6 +3,8 @@ layout: post
 title:  What is Li3?
 ---
 
+_"One of L.I.'s finest, and this is 'MY LIFE', Which is filled with bad minutes and good hours, And, good months and bad years and with my peers" - Posdonus, De La Soul_
+
 Li3 (formerly known as Lithium) is a PHP web framework.
 
 A framework is a bunch of gubbins that allows you to make stuff.

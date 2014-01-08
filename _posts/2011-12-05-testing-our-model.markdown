@@ -3,6 +3,8 @@ layout: post
 title:  Testing our model
 ---
 
+_"Kick! Punch! It's all in the mind. If you wanna test me, I'm sure you'll find. The things I'll teach ya is sure to beat ya." - Chop Chop Master Onion's Rap, Parappa the Rapper_
+
 Right, let's give this a test! A lot of people leave testing to later on. Not me, no! Over to `app/tests/cases/models/EmployeesTest.php`:
 
 {% highlight php %}

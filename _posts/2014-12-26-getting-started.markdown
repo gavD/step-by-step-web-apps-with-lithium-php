@@ -3,6 +3,8 @@ layout: post
 title:  Getting started
 ---
 
+_"A journey of a thousand miles begins with a single step" - Laozi_
+
 OK, so we know what Li3 is and what we're going to build with it! Roughly. Well, we know what we want to get out of it, anyway.
 
 I guess to get started we'd better get Li3 installed... Before that, though, make sure you have PHP installed and a web server - I generally use Nginx but Li3 has instructions for plenty of servers.

@@ -3,6 +3,8 @@ layout: post
 title:  Getting involved
 ---
 
+_"If you can feel what I'm feeling then it's a musical masterpiece" - Beastie Boys, Pass the Mic_
+
 If I can be personal for one moment, I'd like to say that open source software has been a big part of my life. I've learned a lot from working with people in all sorts of projects, and being able to read code on Github and docs that people write has really helped me. That's why I've made these docs available for free on my Github, as well as for sale on Leanpub.
 
 I'd recommend that all devs contribute to open source software. It helps you learn, to say nothing of the potential benefits for others! In fact, I feel so strongly about it that I gave a talk at the 2013 Bristol IT MegaMeet on the topic "Coding in Community". It helps others who have helped you. Also, it raises your profile. I used to do a lot of interviewing in my last job and believe me, candidates with a lot of open source activity always appealed to me more than the Joey Jobsworths of this world!

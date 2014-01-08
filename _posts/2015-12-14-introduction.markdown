@@ -3,6 +3,8 @@ layout: post
 title:  Introduction
 ---
 
+_"Allow me to reintroduce myself..." - Jay Z_
+
 As is traditional, like my father before me, I issue the greeting of our people:
 
 {% highlight php %}

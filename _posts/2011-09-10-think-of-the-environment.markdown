@@ -3,6 +3,8 @@ layout: post
 title:  Think of the environment
 ---
 
+_"I get mad frustrated when I rhyme, thinking of all the kids who try to do this, for all the wrong reasons..." - Lauryn Hill, "How Many Mics"_
+
 We made some progress with testing, but really, we need to be able to write to and read from a database. We don't want to use the database that we're using for our development, though, otherwise every time we run tests, the data could be in any old state! Imagine your test does something like "test we can delete all users" - when you ran the test, it would shred your data! Thankfully, Li3 supports the concept of multiple environments, so we're going to set up a separate **environment** for testing.
 
 An environment is a setup of how your system runs. Similar to Rails or Symfony2, there are development (usually your local machine), test (automated tests), and production (live) environments. For example, you might want caching switched off on your development environment, but in production you want to cache aggressively. We're going to use it to say "in unit tests, don't write to our MySQL database, write to an in-memory SQLite database instead". If you have't got [SQLite](http://www.sqlite.org/) installed, do it now! SQLite is a great tool for testing because it works pretty much like any other relational database, but you can store it in memory so it's nice and clean and it's all gone after the test run - the perfect crime!
