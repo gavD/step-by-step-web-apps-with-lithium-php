@@ -19,25 +19,32 @@ Once again, Li3 to the rescue! Li3 has the concept of *environments* - if you've
 * `development` - your workspace on your machine, as you're building and testing your app. Often kind of like a motorbike stripped down and strewn over the living room floor.
 * `production` - the app in "running fully optimised" mode.
 
-We're going to tell Li3 "in test mode, don't bother with that logging gubbins".
-
-Open up `app/config/bootstrap/logging.php` and change it to:
+We're going to tell Li3 "in test mode, only log emergencies" but to log more types of error in dev/production. Open up `app/config/bootstrap/logging.php` and change it to:
 
 {% highlight php %}
 <?php
 use lithium\analysis\Logger;
-use lithium\core\Environment;
 
-if (!Environment::is('test')) {
-	Logger::config(array(
-		'default' => array('adapter' => 'Syslog'),
-		'problems' => array(
-			'adapter' => 'File',
-			'priority' => array('emergency', 'alert', 'critical', 'error')
-		)
-	));
-}
+Logger::config(
+    array ('default' =>
+        array(
+            'production' => array(
+                'adapter' => 'File',
+                'priority' => array('emergency', 'alert', 'critical', 'error')
+            ),
+            'development' => array(
+                'adapter' => 'File',
+                'priority' => array('emergency', 'alert', 'critical', 'error', 'warning')
+            ),
+            'test' => array(
+                'adapter' => 'File',
+                'priority' => array('emergency')
+            )
+    )
+));
 ?>
 {% endhighlight %}
 
-TODO why doesn't this work? - It is because the detector isn't initialised... If we do the test in the controller, it's fine. Placed in routes.php, it works.... Action.php uses a filter, could that work for us?
+This means that running tests won't spam our logs. Cool!
+
+> Do make sure that `app/config/bootstrap/logging.php` is included from `app/config/bootstrap.php`
