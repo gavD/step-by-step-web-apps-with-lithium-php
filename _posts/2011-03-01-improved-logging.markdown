@@ -49,4 +49,9 @@ This means that running tests won't spam our logs. Cool!
 
 > Do make sure that `app/config/bootstrap/logging.php` is included from `app/config/bootstrap.php`
 
+As an exercise to the reader: rapzo on the #li3 channel pointed out that you can log per-environment. Why not give it a go?
+
+    16:43 <rapzo> you can name the logs according to the env
+    16:43 <rapzo> li3.me/docs/lithium/analysis/logger/adapter/File::__construct()
+
 Remember that file based logs are output to `app/resources/tmp/logs`. Right that's it for logging for now - let's do some authentication!
