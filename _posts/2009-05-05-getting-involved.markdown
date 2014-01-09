@@ -23,6 +23,8 @@ The next level up, in my view, is creating docs. In fact, this book started beca
 
 For example, I [contributed to documentation](https://github.com/michaelhue/li3_flash_message/pull/3) when writing this book - it can be really valuable. If you have a question, and you've done a bit of research, chance are others may have that question also.
 
+You can even [contribute to this book via Github](https://github.com/gavD/step-by-step-web-apps-with-lithium-php)! I'll happily credit you as a contributor should you submit some content that I end up using.
+
 ## Fixing bugs
 
 If you've reported an issue, perhaps you can fix it? Generally, my process is:

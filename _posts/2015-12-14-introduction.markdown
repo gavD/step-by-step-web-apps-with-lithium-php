@@ -29,6 +29,9 @@ Anyway, this application is a good choice (YES IT IS, HUSH YOU) because it will 
 * User access control
 * Error handling
 * Performance analysis
-* File uploads [TODO - maybe?]
+* Flash messages
+* Model-based data queries
+
+> My source code is up at [https://github.com/gavd/employee-rolodex](https://github.com/gavd/employee-rolodex) - you might find it useful to refer to it when you get stuck.
 
 Sounds pretty hashtag swag to me! Let's roll.
