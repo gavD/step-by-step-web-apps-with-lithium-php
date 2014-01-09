@@ -19,7 +19,7 @@ Once again, Li3 to the rescue! Li3 has the concept of *environments* - if you've
 * `development` - your workspace on your machine, as you're building and testing your app. Often kind of like a motorbike stripped down and strewn over the living room floor.
 * `production` - the app in "running fully optimised" mode.
 
-We're going to tell Li3 "in test mode, only log emergencies" but to log more types of error in dev/production. Open up `app/config/bootstrap/logging.php` and change it to:
+Logger is an **adapter**, and in Li3 all **adapters** accept the environment name as a key, we're going to tell Li3 "in test mode, only log emergencies" but to log more types of error in dev/production. Open up `app/config/bootstrap/logging.php` and change it to:
 
 {% highlight php %}
 <?php
@@ -48,3 +48,5 @@ Logger::config(
 This means that running tests won't spam our logs. Cool!
 
 > Do make sure that `app/config/bootstrap/logging.php` is included from `app/config/bootstrap.php`
+
+Remember that file based logs are output to `app/resources/tmp/logs`. Right that's it for logging for now - let's do some authentication!
